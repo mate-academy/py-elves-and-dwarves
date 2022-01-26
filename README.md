@@ -1,4 +1,4 @@
-# Python boilerplate for GitHub tasks
+# Elves and Dwarves
 
 - Read [the guideline](https://github.com/mate-academy/py-task-guideline/blob/main/README.md) before start
 
@@ -56,15 +56,64 @@ All of these classes should have implementations of `player_info` and
 * `"Dwarf warrior {nickname}. {nickname} has a hummer of the {hummer_level} level"` for `DwarfWarrior` instances
 * `"Dwarf blacksmith {nickname} with skill of the {skill_level} level"` for `DwarfBlacksmith` instances
 
+
 `get_rating` method should return:
 * 3 * `bow_level` for `ElfRanger`
 * length of `favourite_spell` for `Druid`
 * `hummer_level` + 4 for `DwarfWarrior`
 * `skill_level` + 4 for `DwarfBlacksmith`
 
+```python
+ranger = ElfRanger(
+    nickname="Nardual Chaekian",
+    musical_instrument="flute",
+    bow_level=7
+)
+ranger.get_rating() == 21
+ranger.player_info() == "Elf ranger Nardual Chaekian. Nardual Chaekian has bow of the 7 level"
+ranger.play_elf_song()  # "Nardual Chaekian is playing a song on the flute" 
+```
+
+```python
+warrior = DwarfWarrior(
+    nickname="Thiddeal",
+    favourite_dish="French Fries",
+    hummer_level=7
+)
+ranger.get_rating() == 11
+ranger.player_info() == "Dwarf warrior Thiddeal. Thiddeal has a hummer of the 7 level"
+ranger.play_elf_song()  # "Thiddeal is eating French Fries" 
+```
+
+
 
 Write following functions:
 * `calculate_team_total_rating` - 
 it should take list of `Player`s and return the sum of the ratings for all team members
+```python
+team = [
+    Druid(nickname="Druid", musical_instrument="flute", favourite_spell="ABC"),
+    ElfRanger(nickname="Ranger", musical_instrument="trumpet", bow_level=33),
+]
+calculate_team_total_rating(team) == 99
+```
 * `elves_concert` - it should take a list of `Elf` and call `play_elf_song` method for each elf.
+```python
+elves = [
+    Druid(nickname="Nardual", musical_instrument="flute", favourite_spell="aaa"),
+    ElfRanger(nickname="Rothilion", musical_instrument="trumpet", bow_level=33),
+],
+elves_concert(elves)
+# "Nardual is playing a song on the flute"
+# "Rothilion is playing a song on the trumpet"
+```
 * `feast_of_the_dwarves` - it should take a list of `Dwarf` and call `eat_favourite_dish` method for each dwarf.
+```python
+dwarves = [
+    DwarfWarrior(nickname="Thiddeal", favourite_dish="French Fries", hummer_level=3),
+    DwarfWarrior(nickname="Dwarf", favourite_dish="Caesar Salad", hummer_level=3),
+]
+feast_of_the_dwarves(dwarves)
+# "Thiddeal is eating French Fries"
+# "Dwarf is eating Caesar Salad"
+```
