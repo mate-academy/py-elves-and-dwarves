@@ -137,4 +137,4 @@ app/
             dwarf_blacksmith.py
 ```
 All classes should be defined in the corresponding modules.
-Function should be defined in the `main.py` module.
+Functions should be defined in the `main.py` module.
