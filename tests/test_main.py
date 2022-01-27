@@ -4,8 +4,14 @@ from contextlib import redirect_stdout
 
 import pytest
 
-from app.main import Player, Elf, Dwarf, ElfRanger, Druid, DwarfWarrior, DwarfBlacksmith, calculate_team_total_rating, \
-    elves_concert, feast_of_the_dwarves
+from app.main import calculate_team_total_rating, elves_concert, feast_of_the_dwarves
+from app.players.dwarves.dwarf import Dwarf
+from app.players.dwarves.dwarf_blacksmith import DwarfBlacksmith
+from app.players.dwarves.dwarf_warrior import DwarfWarrior
+from app.players.elves.druid import Druid
+from app.players.elves.elf import Elf
+from app.players.elves.elf_ranger import ElfRanger
+from app.players.player import Player
 
 
 @pytest.mark.parametrize(
@@ -23,7 +29,7 @@ from app.main import Player, Elf, Dwarf, ElfRanger, Druid, DwarfWarrior, DwarfBl
 def test_classes_should_have_corresponding_methods(class_, methods):
     for method in methods:
         assert (
-                hasattr(class_, method) is True
+                hasattr(class_, method)
         ), f"Class '{class_.__name__}' should have method {method}"
 
 
@@ -34,7 +40,7 @@ def test_classes_should_have_corresponding_methods(class_, methods):
     ]
 )
 def test_classes_should_be_abstract(class_):
-    assert inspect.isabstract(class_) is True, (
+    assert inspect.isabstract(class_), (
         f"Class '{class_.__name__}' should be abstract"
     )
 
@@ -46,7 +52,7 @@ def test_classes_should_be_abstract(class_):
     ]
 )
 def test_classes_should_not_be_abstract(class_):
-    assert inspect.isabstract(class_) is False, (
+    assert not inspect.isabstract(class_), (
         f"Class '{class_.__name__}' shouldn't be abstract"
     )
 

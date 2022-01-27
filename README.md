@@ -8,7 +8,7 @@ Both races are divided into two groups. For elves, these are the `ElfRanger` and
 Dwarves have the `DwarfWarrior` and `DwarfBlacksmith` classes.
 
 Thus, each player should be an instance of one of these four classes.
-But to have better code design, you should implement the abstract classes `Elf`, `Gnome` and `Player`, 
+But to have better code design, you should implement the abstract classes `Elf`, `Dwarf` and `Player`, 
 where you can put the common logic.
 
 The base class should be the `Player` class, 
@@ -38,14 +38,17 @@ Constructor should store it in the protected attribute.
 `Druid` should be a child of `Elf`.
 Its constructor should take one additional parameter: 
 `favourite_spell` - the text of the favourite spell.
+Constructor should store it in the protected attribute.
 
 `DwarfWarrior` should be a child of `Dwarf`.
 Its constructor should take one additional parameter: 
 `hummer_level` - an integer that shows the power of the hummer.
+Constructor should store it in the protected attribute.
 
 `DwarfBlacksmith` should be a child of `Dwarf`.
 Its constructor should take one additional parameter: 
 `skill_level` - an integer that shows the level of blacksmith's skills.
+Constructor should store it in the protected attribute.
 
 All of these classes should have implementations of `player_info` and 
 `get_rating` methods.
@@ -95,7 +98,7 @@ team = [
     Druid(nickname="Druid", musical_instrument="flute", favourite_spell="ABC"),
     ElfRanger(nickname="Ranger", musical_instrument="trumpet", bow_level=33),
 ]
-calculate_team_total_rating(team) == 99
+calculate_team_total_rating(team) == 102  # 33 * 3 + 3
 ```
 * `elves_concert` - it should take a list of `Elf` and call `play_elf_song` method for each elf.
 ```python
@@ -117,3 +120,21 @@ feast_of_the_dwarves(dwarves)
 # "Thiddeal is eating French Fries"
 # "Dwarf is eating Caesar Salad"
 ```
+
+Use the following project structure:
+```
+app/
+    main.py
+    players/
+        player.py
+        elves/
+            elf.py
+            elf_ranger.py
+            druid.py
+        dwarfs/
+            dwarf.py
+            dwarf_warrior.py
+            dwarf_blacksmith.py
+```
+All classes should be defined in the corresponding modules.
+Function should be defined in the `main.py` module.
