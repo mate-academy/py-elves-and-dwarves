@@ -64,7 +64,7 @@ All of these classes should have implementations of `player_info` and
 * 3 * `bow_level` for `ElfRanger`
 * length of `favourite_spell` for `Druid`
 * `hummer_level` + 4 for `DwarfWarrior`
-* `skill_level` + 4 for `DwarfBlacksmith`
+* `skill_level` for `DwarfBlacksmith`
 
 ```python
 ranger = ElfRanger(
