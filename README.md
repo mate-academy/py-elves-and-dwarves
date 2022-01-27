@@ -131,7 +131,7 @@ app/
             elf.py
             elf_ranger.py
             druid.py
-        dwarfs/
+        dwarves/
             dwarf.py
             dwarf_warrior.py
             dwarf_blacksmith.py
