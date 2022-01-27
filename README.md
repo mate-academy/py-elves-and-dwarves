@@ -83,9 +83,9 @@ warrior = DwarfWarrior(
     favourite_dish="French Fries",
     hummer_level=7
 )
-ranger.get_rating() == 11
-ranger.player_info() == "Dwarf warrior Thiddeal. Thiddeal has a hummer of the 7 level"
-ranger.play_elf_song()  # "Thiddeal is eating French Fries" 
+warrior.get_rating() == 11
+warrior.player_info() == "Dwarf warrior Thiddeal. Thiddeal has a hummer of the 7 level"
+warrior.eat_favourite_dish()  # "Thiddeal is eating French Fries" 
 ```
 
 
