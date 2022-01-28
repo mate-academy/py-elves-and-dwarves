@@ -1,5 +1,5 @@
 def calculate_team_total_rating(dream_team: list):
-    return sum((mate.get_rating() for mate in dream_team))
+    return sum(mate.get_rating() for mate in dream_team)
 
 
 def elves_concert(elves: list):
