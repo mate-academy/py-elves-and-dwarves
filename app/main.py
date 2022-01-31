@@ -9,9 +9,7 @@ to provide some information about a player.
 
 def calculate_team_total_rating(players):
     return sum(
-        [
-            player.get_rating() for player in players
-        ]
+        player.get_rating() for player in players
     )
 
 
