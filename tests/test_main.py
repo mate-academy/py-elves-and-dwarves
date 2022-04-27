@@ -58,6 +58,21 @@ def test_classes_should_not_be_abstract(class_):
 
 
 @pytest.mark.parametrize(
+    "class_,methods",
+    [
+        (Elf, ["get_rating", "player_info"]),
+        (Dwarf, ["get_rating", "player_info"]),
+    ],
+)
+def test_abstract_methods_should_not_be_redefined(class_, methods):
+    for method in methods:
+        assert (
+            getattr(class_, method) is getattr(Player, method)
+        ), f"Class '{class_.__name__}' should not redefine " \
+           f"abstract method '{method}'"
+
+
+@pytest.mark.parametrize(
     "nickname,musical_instrument,bow_level,rating,song,player_info",
     [
         (
