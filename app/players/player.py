@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 class Player(ABC):
 
-    def __init__(self, nickname):
+    def __init__(self, nickname: str):
         self.nickname = nickname
 
     @abstractmethod
