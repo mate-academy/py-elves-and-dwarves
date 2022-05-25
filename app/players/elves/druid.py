@@ -8,10 +8,6 @@ class Druid(Elf):
         super().__init__(nickname, musical_instrument)
         self._favourite_spell = favourite_spell
 
-    def play_elf_song(self):
-        print(f"{self.nickname} is playing a song"
-              f" on the {self._musical_instrument}")
-
     def get_rating(self):
         return len(self._favourite_spell)
 

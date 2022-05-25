@@ -8,9 +8,6 @@ class DwarfWarrior(Dwarf):
         super().__init__(nickname, favourite_dish)
         self._hummer_level = hummer_level
 
-    def eat_favourite_dish(self):
-        print(f"{self.nickname} is eating {self._favourite_dish}")
-
     def get_rating(self):
         return self._hummer_level + 4
 

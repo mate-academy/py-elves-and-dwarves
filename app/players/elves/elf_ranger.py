@@ -8,10 +8,6 @@ class ElfRanger(Elf):
         super().__init__(nickname, musical_instrument)
         self._bow_level = bow_level
 
-    def play_elf_song(self):
-        print(f"{self.nickname} is playing a song"
-              f" on the {self._musical_instrument}")
-
     def get_rating(self):
         return 3 * self._bow_level
 
