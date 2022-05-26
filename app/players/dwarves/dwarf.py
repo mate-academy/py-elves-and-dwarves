@@ -2,7 +2,11 @@ from app.players.player import Player
 
 
 class Dwarf(Player):
-    def __init__(self, nickname: str, favourite_dish: str):
+    def __init__(
+        self,
+        nickname: str,
+        favourite_dish: str
+    ):
         super().__init__(nickname)
         self._favourite_dish = favourite_dish
 
