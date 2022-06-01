@@ -2,13 +2,18 @@ from app.players.elves.elf import Elf
 
 
 class Druid(Elf):
-    def __init__(self, nickname: str, favourite_spell: str, musical_instrument):
+    def __init__(self,
+                 nickname: str,
+                 favourite_spell: str,
+                 musical_instrument
+                 ):
         super().__init__(nickname, musical_instrument)
         self._favourite_spell = favourite_spell
 
     def player_info(self):
         return (f"Druid {self.nickname}. "
-                f"{self.nickname} has a favourite spell: {self._favourite_spell}"
+                f"{self.nickname} has a favourite spell:"
+                f" {self._favourite_spell}"
                 )
 
     def get_rating(self):
