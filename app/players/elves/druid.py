@@ -5,7 +5,7 @@ class Druid(Elf):
     def __init__(self,
                  nickname: str,
                  favourite_spell: str,
-                 musical_instrument
+                 musical_instrument: str
                  ):
         super().__init__(nickname, musical_instrument)
         self._favourite_spell = favourite_spell
