@@ -10,5 +10,5 @@ class DwarfBlacksmith(Dwarf):
         return self._skill_level
 
     def player_info(self):
-        print(f"Dwarf blacksmith {self.nickname} with "
-              f"skill of the {self._skill_level} level")
+        return (f"Dwarf blacksmith {self.nickname} with "
+                f"skill of the {self._skill_level} level")
