@@ -1,8 +1,7 @@
-from abc import ABC
 from app.players.dwarves.dwarf import Dwarf
 
 
-class DwarfWarrior(Dwarf, ABC):
+class DwarfWarrior(Dwarf):
     def __init__(self, nickname, favourite_dish, hummer_level: int):
         super().__init__(nickname, favourite_dish)
         self._hummer_level = hummer_level
