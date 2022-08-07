@@ -245,7 +245,9 @@ def test_dwarf_blacksmith_class(
     [
         ([],  0),
         (
-            [Druid(nickname="Druid", musical_instrument="", favourite_spell="aaa")],
+            [
+                Druid(nickname="Druid", musical_instrument="", favourite_spell="aaa")
+            ],
             3
         ),
         (

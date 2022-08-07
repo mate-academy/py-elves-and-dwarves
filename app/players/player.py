@@ -1,10 +1,10 @@
-from abc import abstractmethod, ABC
+from abc import ABC, abstractmethod
 
 
 class Player(ABC):
 
-    def __init__(self, name: str):
-        self.name = name
+    def __init__(self, nickname: str):
+        self.nickname = nickname
 
     @abstractmethod
     def get_rating(self):

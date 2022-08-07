@@ -4,9 +4,10 @@ from app.players.player import Player
 
 class Elf(Player, ABC):
 
-    def __init__(self, name, music_instrument):
-        super().__init__(name)
-        self._music_instrument = music_instrument
+    def __init__(self, nickname, musical_instrument):
+        super().__init__(nickname)
+        self._musical_instrument = musical_instrument
 
     def play_elf_song(self):
-        print(f"{self.name} is paying a song on the {self._music_instrument}")
+        print(f"{self.nickname} is paying "
+              f"a song on the {self._musical_instrument}")
