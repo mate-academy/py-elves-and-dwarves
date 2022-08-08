@@ -11,5 +11,5 @@ class Player(ABC):
         pass
 
     @abstractmethod
-    def payer_info(self):
+    def player_info(self):
         pass
