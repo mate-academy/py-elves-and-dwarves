@@ -1,7 +1,7 @@
 def calculate_team_total_rating(players: list):
     all_rating = 0
-    for i in players:
-        all_rating += i.get_rating()
+    for player in players:
+        all_rating += player.get_rating()
     return all_rating
 
 
