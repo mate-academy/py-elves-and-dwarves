@@ -84,7 +84,7 @@ warrior = DwarfWarrior(
     hummer_level=7
 )
 warrior.get_rating() == 11
-warrior.player_info() == "Dwarf warrior Thiddeal. Thiddeal has a hummer of the 7 level"
+warrior.player_info() == "Dwarf dwarf_warrior.py Thiddeal. Thiddeal has a hummer of the 7 level"
 warrior.eat_favourite_dish()  # "Thiddeal is eating French Fries" 
 ```
 
