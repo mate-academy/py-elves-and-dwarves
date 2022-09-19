@@ -253,14 +253,14 @@ def test_dwarf_blacksmith_class(
                 Druid(nickname="Druid", musical_instrument="", favourite_spell="aaa"),
                 ElfRanger(nickname="Ranger", musical_instrument="", bow_level=33),
             ],
-            99
+            102
         ),
         (
             [
                 DwarfWarrior(nickname="Dwarf", favourite_dish="", hummer_level=6),
                 ElfRanger(nickname="Ranger", musical_instrument="", bow_level=2),
             ],
-            12
+            16
         ),
         (
             [
@@ -269,12 +269,12 @@ def test_dwarf_blacksmith_class(
                 ElfRanger(nickname="Ranger2", musical_instrument="", bow_level=6),
                 DwarfBlacksmith(nickname="DwarfBlacksmith", favourite_dish="", skill_level=10),
             ],
-            34
+            44
         ),
     ]
 )
 def test_calculate_team_total_rating(team, rating):
-    return calculate_team_total_rating(team) == rating
+    assert calculate_team_total_rating(team) == rating
 
 
 @pytest.mark.parametrize(
