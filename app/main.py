@@ -3,9 +3,12 @@ from app.players.dwarves import dwarf
 
 
 def calculate_team_total_rating(team: list):
+    result = 0
     if not team:
         return 0
-    return [player.get_rating() for player in team]
+    for player in team:
+        result += player.get_rating()
+    return result
 
 
 def elves_concert(elves: list):
