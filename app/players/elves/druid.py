@@ -2,7 +2,7 @@ from app.players.elves.elf import Elf
 
 
 class Druid(Elf):
-    def __init__(self, favourite_spell, musical_instrument, nickname):
+    def __init__(self, nickname, musical_instrument, favourite_spell):
         super().__init__(musical_instrument, nickname)
         self._favourite_spell = favourite_spell
 
