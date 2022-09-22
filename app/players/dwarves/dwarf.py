@@ -8,4 +8,5 @@ class Dwarf(Player, ABC):
         super().__init__(nickname)
 
     def eat_favourite_dish(self):
-        print(f"{self.nickname} is eating {self._favourite_dish}")
+        print(f"{self.nickname} is eating"
+              f" {self._favourite_dish}")
