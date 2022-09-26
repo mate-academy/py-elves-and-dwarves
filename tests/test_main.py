@@ -346,7 +346,7 @@ def test_feast_of_the_dwarves(dwarves, feast_output):
 
 
 @pytest.mark.parametrize(
-    "class_,",
+    "class_",
     [
         ElfRanger, Druid, DwarfWarrior, DwarfBlacksmith
     ],
