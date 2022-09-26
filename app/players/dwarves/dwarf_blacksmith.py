@@ -1,8 +1,7 @@
-from app.players.player import Player
 from app.players.dwarves.dwarf import Dwarf
 
 
-class DwarfBlacksmith(Dwarf, Player):
+class DwarfBlacksmith(Dwarf):
 
     def __init__(self, nickname: str,
                  favourite_dish: str,
