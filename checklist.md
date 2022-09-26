@@ -29,7 +29,7 @@ class Base(ABC):
         pass
 
 
-class Derived(Base):
+class Derived(Base, ABC):
     pass
 
 
