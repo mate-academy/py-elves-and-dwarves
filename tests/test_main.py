@@ -343,3 +343,14 @@ def test_feast_of_the_dwarves(dwarves, feast_output):
     with redirect_stdout(f):
         feast_of_the_dwarves(dwarves)
     assert f.getvalue() == feast_output
+
+
+@pytest.mark.parametrize(
+    "class_,",
+    [
+        ElfRanger, Druid, DwarfWarrior, DwarfBlacksmith
+    ],
+)
+def test_some_classes_not_subclass_of_abc(class_):
+    lines = inspect.getsource(class_)
+    assert "ABC" not in lines
