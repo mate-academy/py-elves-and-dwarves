@@ -1,8 +1,7 @@
 from app.players.elves.elf import Elf
-from abc import ABC
 
 
-class Druid(Elf, ABC):
+class Druid(Elf):
     def __init__(
             self,
             nickname: str,

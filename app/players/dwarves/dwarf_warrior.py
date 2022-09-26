@@ -1,8 +1,7 @@
 from app.players.dwarves.dwarf import Dwarf
-from abc import ABC
 
 
-class DwarfWarrior(Dwarf, ABC):
+class DwarfWarrior(Dwarf):
     def __init__(
             self,
             nickname: str,

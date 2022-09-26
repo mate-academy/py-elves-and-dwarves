@@ -1,8 +1,7 @@
 from app.players.elves.elf import Elf
-from abc import ABC
 
 
-class ElfRanger(Elf, ABC):
+class ElfRanger(Elf):
     def __init__(
             self,
             nickname: str,
