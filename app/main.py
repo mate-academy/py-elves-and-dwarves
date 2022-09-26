@@ -1,8 +1,5 @@
 def calculate_team_total_rating(team: list) -> int:
-    total_rating = 0
-    for member in team:
-        total_rating += member.get_rating()
-    return total_rating
+    return sum(member.get_rating() for member in team)
 
 
 def elves_concert(elves: list) -> None:
@@ -11,5 +8,5 @@ def elves_concert(elves: list) -> None:
 
 
 def feast_of_the_dwarves(dwarves: list) -> None:
-    for Dwarf in dwarves:
-        Dwarf.eat_favourite_dish()
+    for dwarf in dwarves:
+        dwarf.eat_favourite_dish()
