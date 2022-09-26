@@ -1,11 +1,9 @@
-from abc import ABCMeta, abstractmethod
+from abc import ABC
 
 from app.players.player import Player
 
 
-# metaclass=ABCMeta makes IDE recognize that this is also an abstract class.
-class Dwarf(Player, metaclass=ABCMeta):
-    @abstractmethod
+class Dwarf(Player, ABC):
     def __init__(self, nickname: str, favourite_dish: str) -> None:
         super().__init__(nickname)
         self._favourite_dish = favourite_dish

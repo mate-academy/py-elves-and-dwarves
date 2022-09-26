@@ -1,11 +1,9 @@
-from abc import ABCMeta, abstractmethod
+from abc import ABC
 
 from app.players.player import Player
 
 
-# metaclass=ABCMeta makes IDE recognize that this is also an abstract class.
-class Elf(Player, metaclass=ABCMeta):
-    @abstractmethod
+class Elf(Player, ABC):
     def __init__(self, nickname: str, musical_instrument: str) -> None:
         super().__init__(nickname)
         self._musical_instrument = musical_instrument
