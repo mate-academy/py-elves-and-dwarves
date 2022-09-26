@@ -4,6 +4,7 @@ from contextlib import redirect_stdout
 
 import pytest
 
+from app import main
 from app.main import calculate_team_total_rating, elves_concert, feast_of_the_dwarves
 from app.players.dwarves.dwarf import Dwarf
 from app.players.dwarves.dwarf_blacksmith import DwarfBlacksmith
@@ -354,3 +355,8 @@ def test_feast_of_the_dwarves(dwarves, feast_output):
 def test_some_classes_not_subclass_of_abc(class_):
     lines = inspect.getsource(class_)
     assert "ABC" not in lines
+
+
+def test_comment_deleted():
+    lines = inspect.getsource(main)
+    assert "# write your code here" not in lines
