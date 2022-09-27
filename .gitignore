@@ -3,6 +3,6 @@
 *.iml
 .env
 .DS_Store
-venv/
+venv_for_elf_dwarves/
 .pytest_cache/
 **__pycache__/
