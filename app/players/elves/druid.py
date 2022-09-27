@@ -7,9 +7,7 @@ class Druid(Elf):
             favourite_spell: str,
             musical_instrument: str
     ) -> None:
-        super().__init__(nickname)
-        self.nickname = nickname
-        self.musical_instrument = musical_instrument
+        super().__init__(nickname, musical_instrument)
         self.__favourite_spell = favourite_spell
 
     def player_info(self) -> str:
