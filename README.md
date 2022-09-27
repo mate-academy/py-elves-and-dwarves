@@ -1,6 +1,6 @@
 # Elves and Dwarves
 
-- Read [the guideline](https://github.com/mate-academy/py-task-guideline/blob/main/README.md) before start
+- Read [the guideline](https://github.com/mate-academy/py-task-guideline/blob/main/README.md) before starting.
 
 Imagine that you have started developing your meta universe.
 In your universe, all players are divided into two races - `Elves` and `Dwarves`. 
@@ -138,3 +138,5 @@ app/
 ```
 All classes should be defined in the corresponding modules.
 Functions should be defined in the `main.py` module.
+
+### Note: Check your code using this [checklist](checklist.md) before pushing your solution.
