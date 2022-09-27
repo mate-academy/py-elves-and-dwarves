@@ -82,7 +82,7 @@ def test_abstract_methods_should_not_be_redefined(class_, methods):
             7,
             21,
             "Nardual Chaekian is playing a song on the flute\n",
-            "Elf ranger Nardual Chaekian. Nardual Chaekian has bow of the 7 level",
+            "elves ranger Nardual Chaekian. Nardual Chaekian has bow of the 7 level",
         ),
         (
             "Rothilion Yinfiel",
@@ -90,7 +90,7 @@ def test_abstract_methods_should_not_be_redefined(class_, methods):
             5,
             15,
             "Rothilion Yinfiel is playing a song on the trumpet\n",
-            "Elf ranger Rothilion Yinfiel. Rothilion Yinfiel has bow of the 5 level",
+            "elves ranger Rothilion Yinfiel. Rothilion Yinfiel has bow of the 5 level",
         ),
     ]
 )
@@ -166,15 +166,15 @@ def test_druid_class(
             7,
             11,
             "Thiddeal is eating French Fries\n",
-            "Dwarf warrior Thiddeal. Thiddeal has a hummer of the 7 level",
+            "dwarves warrior Thiddeal. Thiddeal has a hummer of the 7 level",
         ),
         (
-            "Dwarf",
+            "dwarves",
             "Caesar Salad",
             10,
             14,
-            "Dwarf is eating Caesar Salad\n",
-            "Dwarf warrior Dwarf. Dwarf has a hummer of the 10 level",
+            "dwarves is eating Caesar Salad\n",
+            "dwarves warrior dwarves. dwarves has a hummer of the 10 level",
         ),
     ]
 )
@@ -208,15 +208,15 @@ def test_dwarf_warrior_class(
             14,
             14,
             "Thiddeal is eating French Fries\n",
-            "Dwarf blacksmith Thiddeal with skill of the 14 level",
+            "dwarves blacksmith Thiddeal with skill of the 14 level",
         ),
         (
-            "Dwarf",
+            "dwarves",
             "Caesar Salad",
             8,
             8,
-            "Dwarf is eating Caesar Salad\n",
-            "Dwarf blacksmith Dwarf with skill of the 8 level",
+            "dwarves is eating Caesar Salad\n",
+            "dwarves blacksmith dwarves with skill of the 8 level",
         ),
     ]
 )
@@ -258,14 +258,14 @@ def test_dwarf_blacksmith_class(
         ),
         (
             [
-                DwarfWarrior(nickname="Dwarf", favourite_dish="", hummer_level=6),
+                DwarfWarrior(nickname="dwarves", favourite_dish="", hummer_level=6),
                 ElfRanger(nickname="Ranger", musical_instrument="", bow_level=2),
             ],
             16
         ),
         (
             [
-                DwarfWarrior(nickname="Dwarf", favourite_dish="", hummer_level=6),
+                DwarfWarrior(nickname="dwarves", favourite_dish="", hummer_level=6),
                 ElfRanger(nickname="Ranger1", musical_instrument="", bow_level=2),
                 ElfRanger(nickname="Ranger2", musical_instrument="", bow_level=6),
                 DwarfBlacksmith(nickname="DwarfBlacksmith", favourite_dish="", skill_level=10),
@@ -318,22 +318,22 @@ def test_elves_concert(elves, songs):
         (
             [
                 DwarfWarrior(nickname="Thiddeal", favourite_dish="French Fries", hummer_level=3),
-                DwarfWarrior(nickname="Dwarf", favourite_dish="Caesar Salad", hummer_level=3),
+                DwarfWarrior(nickname="dwarves", favourite_dish="Caesar Salad", hummer_level=3),
             ],
             (
                 "Thiddeal is eating French Fries\n"
-                "Dwarf is eating Caesar Salad\n"
+                "dwarves is eating Caesar Salad\n"
             )
         ),
         (
                 [
                     DwarfWarrior(nickname="Thiddeal", favourite_dish="French Fries", hummer_level=3),
-                    DwarfWarrior(nickname="Dwarf", favourite_dish="Caesar Salad", hummer_level=3),
+                    DwarfWarrior(nickname="dwarves", favourite_dish="Caesar Salad", hummer_level=3),
                     DwarfWarrior(nickname="Dwarf2", favourite_dish="French Fries", hummer_level=3),
                 ],
                 (
                         "Thiddeal is eating French Fries\n"
-                        "Dwarf is eating Caesar Salad\n"
+                        "dwarves is eating Caesar Salad\n"
                         "Dwarf2 is eating French Fries\n"
                 )
         )
