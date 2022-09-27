@@ -5,13 +5,13 @@ from contextlib import redirect_stdout
 import pytest
 
 from app.main import calculate_team_total_rating, elves_concert, feast_of_the_dwarves
-from app.players import Dwarf
-from app.players import DwarfBlacksmith
-from app.players import DwarfWarrior
-from app.players import Druid
-from app.players import Elf
-from app.players import ElfRanger
-from app.players import Player
+from app.players.dwarves.dwarf import Dwarf
+from app.players.dwarves.dwarf_blacksmith import DwarfBlacksmith
+from app.players.dwarves.dwarf_warrior import DwarfWarrior
+from app.players.elves.druid import Druid
+from app.players.elves.elf import Elf
+from app.players.elves.elf_ranger import ElfRanger
+from app.players.player import Player
 
 
 @pytest.mark.parametrize(
