@@ -11,6 +11,3 @@ class Elf(Player, ABC):
         nick = self.nickname
         musical_instrument = self._musical_instrument
         print(f"{nick} is playing a song on the {musical_instrument}")
-
-        super().player_info()
-        super().get_rating()

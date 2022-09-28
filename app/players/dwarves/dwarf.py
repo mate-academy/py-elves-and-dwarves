@@ -9,6 +9,3 @@ class Dwarf(Player, ABC):
 
     def eat_favourite_dish(self):
         print(f"{self.nickname} is eating {self._favourite_dish}")
-
-        super().get_rating()
-        super().player_info()
