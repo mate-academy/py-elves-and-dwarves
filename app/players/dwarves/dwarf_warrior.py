@@ -13,6 +13,3 @@ class DwarfWarrior(Dwarf):
 
     def get_rating(self) -> int:
         return self._hummer_level + 4
-
-    def eat_favourite_dish(self) -> None:
-        print(f"{self.nickname} is eating {self._favourite_dish}")

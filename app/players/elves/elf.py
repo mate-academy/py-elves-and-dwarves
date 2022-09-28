@@ -1,4 +1,4 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 from app.players.player import Player
 
 
@@ -7,6 +7,6 @@ class Elf(Player, ABC):
         super().__init__(nickname)
         self._musical_instrument = musical_instrument
 
-    @abstractmethod
-    def play_elf_song(self):
-        pass
+    def play_elf_song(self) -> None:
+        print(f"{self.nickname} is playing a song on the "
+              f"{self._musical_instrument}")
