@@ -84,7 +84,7 @@ warrior = DwarfWarrior(
     hummer_level=7
 )
 warrior.get_rating() == 11
-warrior.player_info() == "dwarves warrior Thiddeal. Thiddeal has a hummer of the 7 level"
+warrior.player_info() == "Dwarf warrior Thiddeal. Thiddeal has a hummer of the 7 level"
 warrior.eat_favourite_dish()  # "Thiddeal is eating French Fries" 
 ```
 
@@ -114,11 +114,11 @@ elves_concert(elves)
 ```python
 dwarves = [
     DwarfWarrior(nickname="Thiddeal", favourite_dish="French Fries", hummer_level=3),
-    DwarfWarrior(nickname="dwarves", favourite_dish="Caesar Salad", hummer_level=3),
+    DwarfWarrior(nickname="Dwarf", favourite_dish="Caesar Salad", hummer_level=3),
 ]
 feast_of_the_dwarves(dwarves)
 # "Thiddeal is eating French Fries"
-# "dwarves is eating Caesar Salad"
+# "Dwarf is eating Caesar Salad"
 ```
 
 Use the following project structure:
