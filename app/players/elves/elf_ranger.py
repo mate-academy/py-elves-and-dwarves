@@ -1,8 +1,7 @@
-from abc import ABC
 from app.players.elves.elf import Elf
 
 
-class ElfRanger(Elf, ABC):
+class ElfRanger(Elf):
     def __init__(
             self, nickname: str,
             musical_instrument: str,
