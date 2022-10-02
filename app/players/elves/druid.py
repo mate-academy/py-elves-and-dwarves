@@ -9,7 +9,7 @@ class Druid(Elf):
 
     def player_info(self):
         return f"Druid {self.nickname}. {self.nickname} has a \
-            favourite spell: {self._favourite_spell}"
+favourite spell: {self._favourite_spell}"
 
     def get_rating(self):
         return len(self._favourite_spell)

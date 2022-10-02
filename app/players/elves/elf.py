@@ -9,4 +9,4 @@ class Elf(Player):
 
     def play_elf_song(self):
         print(f"{self.nickname} is playing \
-            a song on the {self._musical_instrument}")
+a song on the {self._musical_instrument}")
