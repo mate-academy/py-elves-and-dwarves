@@ -1,15 +1,12 @@
-def calculate_team_total_rating(players):
-    result = 0
-    for player in players:
-        result += player.get_rating()
-    return result
+def calculate_team_total_rating(players: list) -> int:
+    return sum(player.get_rating() for player in players)
 
 
-def elves_concert(players):
+def elves_concert(players: list) -> str:
     for player in players:
         player.play_elf_song()
 
 
-def feast_of_the_dwarves(players):
+def feast_of_the_dwarves(players: list) -> str:
     for player in players:
         player.eat_favourite_dish()
