@@ -105,7 +105,7 @@ calculate_team_total_rating(team) == 102  # 33 * 3 + 3
 elves = [
     Druid(nickname="Nardual", musical_instrument="flute", favourite_spell="aaa"),
     ElfRanger(nickname="Rothilion", musical_instrument="trumpet", bow_level=33),
-],
+]
 elves_concert(elves)
 # "Nardual is playing a song on the flute"
 # "Rothilion is playing a song on the trumpet"
