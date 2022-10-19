@@ -13,8 +13,10 @@ class ElfRanger(Elf):
         self._bow_level = bow_level
 
     def player_info(self):
-        return f"Elf ranger {self.nickname}. \
-{self.nickname} has bow of the {self._bow_level} level"
+        return "Elf ranger {0}. {0} has bow of the {1} level".format(
+            self.nickname,
+            self._bow_level
+        )
 
     def get_rating(self):
         return 3 * self._bow_level
