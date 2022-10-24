@@ -15,17 +15,3 @@ class ElfRanger(Elf):
 
     def get_rating(self) -> int:
         return 3 * self._bow_level
-
-
-if __name__ == "__main__":
-    ranger = ElfRanger(
-        nickname="Nardual Chaekian",
-        musical_instrument="flute",
-        bow_level=7
-    )
-    print(ranger.get_rating())
-    # == 21
-    print(ranger.player_info())
-    # == "Elf ranger Nardual Chaekian. Nardual Chaekian has bow of the 7 level"
-    print(ranger.play_elf_song())
-    # "Nardual Chaekian is playing a song on the flute"

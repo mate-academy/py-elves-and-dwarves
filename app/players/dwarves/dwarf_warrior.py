@@ -15,17 +15,3 @@ class DwarfWarrior(Dwarf):
 
     def get_rating(self) -> int:
         return self._hummer_level + 4
-
-
-if __name__ == "__main__":
-    warrior = DwarfWarrior(
-        nickname="Thiddeal",
-        favourite_dish="French Fries",
-        hummer_level=7)
-
-    print(warrior.get_rating())
-# == 11
-    print(warrior.player_info())
-# == "Dwarf warrior Thiddeal. Thiddeal has a hummer of the 7 level"
-    print(warrior.eat_favourite_dish())
-# "Thiddeal is eating French Fries"
