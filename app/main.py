@@ -5,10 +5,8 @@ def calculate_team_total_rating(players: list) -> int:
 def elves_concert(list_of_elf: list) -> None:
     for els in list_of_elf:
         els.play_elf_song()
-    pass
 
 
 def feast_of_the_dwarves(dwarves: list) -> None:
     for dwarf in dwarves:
         dwarf.eat_favourite_dish()
-    pass
