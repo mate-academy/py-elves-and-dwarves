@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class Player(ABS):
+class Player(ABC):
 
     def __init__(self, nickname):
         self.nickname = nickname
@@ -13,5 +13,4 @@ class Player(ABS):
     @abstractmethod
     def player_info(self):
         pass
-
     
