@@ -1,6 +1,6 @@
 from app.players import Player
 class Dwarf(Player):
 
-    def __init__(self, nickname, musical_instrument) -> None:
+    def __init__(self, nickname, favourite_dish) -> None:
         super().__init__(nickname)
-        self.musical_instrument = musical_instrument
+        self._favourite_dish = favourite_dish
