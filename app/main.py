@@ -1,8 +1,17 @@
 from abc import ABC, abstractmethod
 
+
 class Player(ABC):
     def __init__(self, nickname: str) -> None:
         self.nickname = nickname
+
+    @abstractmethod
+    def get_rating(self) -> None:
+        pass
+
+    @abstractmethod
+    def player_info(self) -> None:
+        pass
 
 
 class Elves(Player):
@@ -12,17 +21,88 @@ class Elves(Player):
 
     def play_elf_song(self) -> None:
         print(f"{self.nickname} is playing a song on the {self._musical_instrument}")
+
+    def player_info(self) -> None:
+        print()
+
+    def get_rating(self) -> int:
+        pass
+
+
 class Dwarves(Player):
+    def __init__(self, nickname: str, favourite_dish: str) -> None:
+        super().__init__(nickname)
+        self._favourite_dish = favourite_dish
+
+    def eat_favourite_dish(self) -> None:
+        print(f"{self.nickname} is eating {self._favourite_dish}")
+
+    def player_info(self) -> None:
+        print()
+
+    def get_rating(self) -> int:
+        pass
 
 
 class ElfRanger(Elves):
+    def __init__(self,
+                 nickname: str,
+                 musical_instrument: str,
+                 bow_level: int
+                 ) -> None:
+        super().__init__(nickname, musical_instrument)
+        self._bow_level = bow_level
+
+    def player_info(self) -> None:
+        print()
+
+    def get_rating(self) -> int:
+        pass
 
 
 class Druid(Elves):
+    def __init__(self,
+                 nickname: str,
+                 musical_instrument: str,
+                 favourite_spell: str
+                 ) -> None:
+        super().__init__(nickname, musical_instrument)
+        self._favourite_spell = favourite_spell
+
+    def player_info(self) -> None:
+        print()
+
+    def get_rating(self) -> int:
+        pass
 
 
 class DwarfWarrior(Dwarves):
+    def __init__(self,
+                 nickname: str,
+                 musical_instrument: str,
+                 hummer_level: int
+                 ) -> None:
+        super().__init__(nickname, musical_instrument)
+        self._hummer_level = hummer_level
+
+    def player_info(self) -> None:
+        print()
+
+    def get_rating(self) -> int:
+        pass
 
 
 class DwarfBlacksmith(Dwarves):
+    def __init__(self,
+                 nickname: str,
+                 musical_instrument: str,
+                 skill_level: int
+                 ) -> None:
+        super().__init__(nickname, musical_instrument)
+        self._skill_level = skill_level
 
+    def player_info(self) -> None:
+        print()
+
+    def get_rating(self) -> int:
+        pass
