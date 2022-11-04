@@ -5,3 +5,9 @@ class ElfRanger(Elf):
         super().__init__(nickname)
         self._bow_level = bow_level
 
+    def get_rating(self):
+        pass
+
+    def player_info(self):
+        pass
+
