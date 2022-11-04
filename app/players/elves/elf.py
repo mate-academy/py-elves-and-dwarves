@@ -1,4 +1,4 @@
-from app.players import Player
+from app.players.player import Player
 class Elf(Player):
 
     def __init__(self, nickname, musical_instrument) -> None:

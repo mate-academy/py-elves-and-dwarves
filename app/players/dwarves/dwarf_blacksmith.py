@@ -1,4 +1,4 @@
-from app.players.dwarves import Dwarf
+from app.players.dwarves.dwarf import Dwarf
 
 class DwarfBlacksmith(Dwarf):
     def __init__(self, nickname, skill_level):
