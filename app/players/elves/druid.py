@@ -5,9 +5,9 @@ class Druid(Elf):
         super().__init__(nickname)
         self._favourite_spell = favourite_spell
 
-    def get_rating(self):
+    def get_rating(self) -> int:
         return len(self._favourite_spell)
 
-    def player_info(self):
+    def player_info(self) -> str:
         return f"Druid {self.nickname}. \
                {self.nickname} has a favourite spell: {self.favourite_spell}"
