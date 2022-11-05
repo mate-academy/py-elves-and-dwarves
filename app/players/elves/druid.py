@@ -1,7 +1,7 @@
 from app.players.elves.elf import Elf
 
 class Druid(Elf):
-    def __init__(self, nickname, favourite_spell):
+    def __init__(self, nickname: str, favourite_spell: str):
         super().__init__(nickname)
         self._favourite_spell = favourite_spell
 
