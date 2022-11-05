@@ -1,7 +1,3 @@
-from app.players.player import Player
-from app.players.elves.elf import Elf
-from app.players.dwarves.dwarf import Dwarf
-
 def calculate_team_total_rating(players: list) -> int:
     total_rating = 0
     for player in players:
