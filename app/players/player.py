@@ -13,4 +13,3 @@ class Player(ABC):
     @abstractmethod
     def player_info(self) -> None:
         pass
-    
