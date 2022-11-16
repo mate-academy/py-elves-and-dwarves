@@ -1,12 +1,16 @@
+from .players.elves.elf import Elf
+from .players.dwarves.dwarf import Dwarf
+
+
 def calculate_team_total_rating(players_list: list) -> int:
     return sum([player.get_rating() for player in players_list])
 
 
-def elves_concert(elves_list: list) -> None:
+def elves_concert(elves_list: list[Elf]) -> None:
     for elf in elves_list:
         elf.play_elf_song()
 
 
-def feast_of_the_dwarves(dwarf_list: list) -> None:
+def feast_of_the_dwarves(dwarf_list: list[Dwarf]) -> None:
     for dwarf in dwarf_list:
         dwarf.eat_favourite_dish()
