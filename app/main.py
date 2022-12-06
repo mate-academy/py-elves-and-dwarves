@@ -28,7 +28,8 @@ def elves_concert(elves_team: list[ElfRanger, Druid]) -> None:
 def feast_of_the_dwarves(
         dwarfs_team: list[
             DwarfWarrior,
-            DwarfBlacksmith]
+            DwarfBlacksmith
+        ]
 ) -> None:
     for dwarf in dwarfs_team:
         dwarf.eat_favourite_dish()
