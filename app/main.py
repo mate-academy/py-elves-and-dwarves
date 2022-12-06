@@ -6,10 +6,14 @@ from app.players.dwarves.dwarf_warrior import DwarfWarrior
 from app.players.dwarves.dwarf_blacksmith import DwarfBlacksmith
 
 
-def calculate_team_total_rating(players_team: list[ElfRanger,
-                                                   Druid,
-                                                   DwarfWarrior,
-                                                   DwarfBlacksmith]) -> int:
+def calculate_team_total_rating(
+    players_team: list[
+        ElfRanger,
+        Druid,
+        DwarfWarrior,
+        DwarfBlacksmith
+    ]
+) -> int:
     total_rating = 0
     for player in players_team:
         total_rating += player.get_rating()
@@ -21,7 +25,10 @@ def elves_concert(elves_team: list[ElfRanger, Druid]) -> None:
         elf.play_elf_song()
 
 
-def feast_of_the_dwarves(dwarfs_team: list[DwarfWarrior,
-                                           DwarfBlacksmith]) -> None:
+def feast_of_the_dwarves(
+        dwarfs_team: list[
+            DwarfWarrior,
+            DwarfBlacksmith]
+) -> None:
     for dwarf in dwarfs_team:
         dwarf.eat_favourite_dish()
