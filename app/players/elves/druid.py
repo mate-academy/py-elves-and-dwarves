@@ -9,11 +9,11 @@ class Druid(Elf):
             favourite_spell: str
     ) -> None:
         super().__init__(nickname, musical_instrument)
-        self.protected = favourite_spell
+        self._favourite_spell = favourite_spell
 
     def player_info(self) -> str:
         return f"Druid {self.nickname}. {self.nickname} " \
-               f"has a favourite spell: {self.protected}"
+               f"has a favourite spell: {self._favourite_spell}"
 
     def get_rating(self) -> int:
-        return len(self.protected)
+        return len(self._favourite_spell)
