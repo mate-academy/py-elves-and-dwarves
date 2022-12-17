@@ -1,5 +1,5 @@
 def calculate_team_total_rating(team: list) -> list:
-    return sum([player.get_rating() for player in team])
+    return sum(player.get_rating() for player in team)
 
 
 def elves_concert(list_elf: list) -> None:
