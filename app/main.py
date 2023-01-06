@@ -1,7 +1,4 @@
 from __future__ import annotations
-
-from typing import Any, Generator
-
 from app.players.elves.elf import Elf
 from app.players.dwarves.dwarf import Dwarf
 from app.players.player import Player
