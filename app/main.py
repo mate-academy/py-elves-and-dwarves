@@ -1,7 +1,7 @@
-def calculate_team_total_rating(pleyers: list) -> int:
+def calculate_team_total_rating(team: list) -> int:
     result = 0
-    for pleyer in pleyers:
-        result += pleyer.get_rating()
+    for player in team:
+        result += player.get_rating()
     return result
 
 
