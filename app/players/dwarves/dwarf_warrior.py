@@ -3,7 +3,8 @@ from app.players.dwarves.dwarf import Dwarf
 
 class DwarfWarrior(Dwarf):
 
-    def __init__(self, nickname: str,
+    def __init__(self,
+                 nickname: str,
                  favourite_dish: str,
                  hummer_level: int
                  ) -> None:
