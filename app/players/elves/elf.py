@@ -1,11 +1,7 @@
-from __future__ import annotations
-from abc import ABC
-
-
 from app.players.player import Player
 
 
-class Elf(Player, ABC):
+class Elf(Player):
 
     def __init__(self, nickname: str, musical_instrument: str) -> None:
         super().__init__(nickname)
