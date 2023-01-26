@@ -17,9 +17,3 @@ class Elf(Player, ABC):
             f" is playing a song on the "
             f"{self._musical_instrument}"
         )
-
-    def get_rating(self) -> None:
-        pass
-
-    def get_info(self) -> None:
-        pass

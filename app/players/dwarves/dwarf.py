@@ -6,20 +6,13 @@ class Dwarf(Player, ABC):
     def __init__(
             self,
             nickname: str,
-            favorite_dish: str
+            favourite_dish: str
     ) -> None:
         super().__init__(nickname)
-        self._favorite_dish = favorite_dish
+        self._favourite_dish = favourite_dish
 
-    def eat_favorite_dish(self) -> None:
+    def eat_favourite_dish(self) -> None:
         print(
             f"{self.nickname}"
-            f" is eating "
-            f"{self._favorite_dish}"
+            f" is eating {self._favourite_dish}"
         )
-
-    def get_rating(self) -> None:
-        pass
-
-    def get_info(self) -> None:
-        pass
