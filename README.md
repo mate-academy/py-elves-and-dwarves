@@ -100,7 +100,7 @@ team = [
 ]
 calculate_team_total_rating(team) == 102  # 33 * 3 + 3
 ```
-* `elves_concert` -it should take  a list of `Elf` and call `play_elf_song` method for each elf.
+* `elves_concert` - it should take  a list of `Elf` and call `play_elf_song` method for each elf.
 ```python
 elves = [
     Druid(nickname="Nardual", musical_instrument="flute", favourite_spell="aaa"),
