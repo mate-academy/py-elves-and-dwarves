@@ -6,17 +6,12 @@ from app.players.player import Player
 
 
 def calculate_team_total_rating(lst: List[Player]) -> int:
-    rating = 0
-    for player in lst:
-        rating += player.get_rating()
-    return rating
+    return sum(list(map(lambda x: x.get_rating(), lst)))
 
 
 def elves_concert(lst: List[Elf]) -> None:
-    for elf in lst:
-        elf.play_elf_song()
+    list(map(lambda x: x.play_elf_song(), lst))
 
 
 def feast_of_the_dwarves(lst: List[Dwarf]) -> None:
-    for dwarf in lst:
-        dwarf.eat_favourite_dish()
+    list(map(lambda x: x.eat_favourite_dish(), lst))

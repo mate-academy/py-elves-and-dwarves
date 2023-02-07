@@ -10,6 +10,6 @@ class Elf(Player):
         self._musical_instrument = musical_instrument
 
     def play_elf_song(self) -> None:
-        first_part = f"{self.nickname} is playing a"
-        second_part = f" song on the {self._musical_instrument}"
+        first_part = f"{self.nickname} is playing a "
+        second_part = f"song on the {self._musical_instrument}"
         print(first_part + second_part)

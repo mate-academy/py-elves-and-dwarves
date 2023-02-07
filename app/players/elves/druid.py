@@ -12,8 +12,8 @@ class Druid(Elf):
         self._favourite_spell = favourite_spell
 
     def player_info(self) -> str:
-        first_part = f"Druid {self.nickname}."
-        second_part = f" {self.nickname} has a "
+        first_part = f"Druid {self.nickname}. "
+        second_part = f"{self.nickname} has a "
         third_part = f"favourite spell: {self._favourite_spell}"
         return first_part + second_part + third_part
 
