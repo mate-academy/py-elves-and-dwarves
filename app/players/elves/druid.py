@@ -6,13 +6,13 @@ class Druid(Elf):
                  nickname: str,
                  musical_instrument: str,
                  favourite_spell: str) -> None:
-
         super().__init__(nickname, musical_instrument)
         self._favourite_spell = favourite_spell
 
     def player_info(self) -> str:
-        return f"Druid {self.nickname}. {self.nickname} has a favourite" \
-               f" spell: {self._favourite_spell}"
+        nick = self.nickname
+        level = self._favourite_spell
+        return f"Druid {nick}. {nick} has a favourite spell: {level}"
 
     def get_rating(self) -> int:
         return len(self._favourite_spell)
