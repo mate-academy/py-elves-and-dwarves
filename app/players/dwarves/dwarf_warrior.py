@@ -19,10 +19,3 @@ class DwarfWarrior(Dwarf):
 
     def get_rating(self) -> int:
         return self._hummer_level + 4
-
-
-warrior = DwarfWarrior(
-    nickname="Thiddeal",
-    favourite_dish="French Fries",
-    hummer_level=7
-)
