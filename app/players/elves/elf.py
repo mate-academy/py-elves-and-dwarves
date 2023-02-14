@@ -1,5 +1,4 @@
 import abc
-
 from app.players.player import Player
 
 
