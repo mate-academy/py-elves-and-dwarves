@@ -1,3 +1,9 @@
+from app.players.elves.druid import Druid
+from app.players.elves.elf_ranger import ElfRanger
+from app.players.dwarves.dwarf_blacksmith import DwarfBlacksmith
+from app.players.dwarves.dwarf_warrior import DwarfWarrior
+
+
 def calculate_team_total_rating(team: list) -> int:
     return sum([player.get_rating() for player in team])
 
