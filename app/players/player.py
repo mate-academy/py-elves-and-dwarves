@@ -3,9 +3,10 @@ from abc import abstractmethod, ABC
 
 class Player(ABC):
 
-    def __init__(self,
-                 nickname: str
-                 ) -> None:
+    def __init__(
+            self,
+            nickname: str
+    ) -> None:
         self.nickname = nickname
 
     @abstractmethod
