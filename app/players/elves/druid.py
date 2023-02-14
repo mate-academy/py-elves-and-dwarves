@@ -10,9 +10,6 @@ class Druid(Elf):
         super().__init__(nickname, musical_instrument)
         self._favourite_spell = favourite_spell
 
-    def __str__(self) -> str:
-        return f"Druid {self.nickname}"
-
     def get_rating(self) -> int:
         return len(self._favourite_spell)
 
