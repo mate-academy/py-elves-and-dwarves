@@ -1,8 +1,8 @@
-from abc import abstractmethod
+from abc import abstractmethod, ABC
 
 
-class Player:
-    def __init__(self, nickname) -> None:
+class Player(ABC):
+    def __init__(self, nickname: str) -> None:
         self.nickname = nickname
 
     @abstractmethod
