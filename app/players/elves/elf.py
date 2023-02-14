@@ -11,6 +11,6 @@ class Elf(Player, ABC):
               f"on the {self._musical_instrument}")
 
     @staticmethod
-    def elves_concert(elfs: list) -> None:
-        for elf in elfs:
+    def elves_concert(elves: list) -> None:
+        for elf in elves:
             elf.play_elf_song()
