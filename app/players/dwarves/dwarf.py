@@ -1,7 +1,7 @@
-from app.players.player import Player
+from app.players.player import Player, ABC
 
 
-class Dwarf(Player):
+class Dwarf(Player, ABC):
     def __init__(
             self,
             nickname: str,
