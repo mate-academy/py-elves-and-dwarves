@@ -15,3 +15,9 @@ class Druid(Elf):
     def player_info(self) -> str:
         return (f"Druid {self.nickname}. {self.nickname} "
                 f"has a favourite spell: {self._favourite_spell}")
+
+    def play_music(self) -> str:
+        print(
+            f"{self.nickname} "
+            f"is playing a song on the {self._musical_instrument} "
+            f"while casting magic with a magic level of {self._magic_level}")

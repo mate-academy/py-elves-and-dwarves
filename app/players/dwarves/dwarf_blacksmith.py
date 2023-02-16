@@ -15,3 +15,7 @@ class DwarfBlacksmith(Dwarf):
     def player_info(self) -> str:
         return (f"Dwarf blacksmith {self.nickname} "
                 f"with skill of the {self._skill_level} level")
+
+    def do_work(self) -> None:
+        print(f"{self.nickname} "
+              f"is crafting with a craft level of {self._craft_level}")
