@@ -5,11 +5,11 @@ class ElfRanger(Elf):
     def __init__(
         self,
         bow_level: int,
+        nickname: str,
         musical_instrument: str,
-        nickname: str
     ) -> None:
 
-        super().__init__(musical_instrument, nickname)
+        super().__init__(nickname, musical_instrument)
         self._bow_level = bow_level
 
     def player_info(self) -> str:
