@@ -82,7 +82,7 @@ def test_abstract_methods_should_not_be_redefined(class_, methods):
             7,
             21,
             "Nardual Chaekian is playing a song on the flute\n",
-            "Elf ranger Nardual Chaekian. Nardual Chaekian has bow of the 7 level",
+            "elves ranger Nardual Chaekian. Nardual Chaekian has bow of the 7 level",
         ),
         (
             "Rothilion Yinfiel",
@@ -90,7 +90,7 @@ def test_abstract_methods_should_not_be_redefined(class_, methods):
             5,
             15,
             "Rothilion Yinfiel is playing a song on the trumpet\n",
-            "Elf ranger Rothilion Yinfiel. Rothilion Yinfiel has bow of the 5 level",
+            "elves ranger Rothilion Yinfiel. Rothilion Yinfiel has bow of the 5 level",
         ),
     ]
 )
