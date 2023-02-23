@@ -19,36 +19,36 @@ thus we guarantee that all players in our universe will have them defined.
 Two classes `Elf` and `Dwarf` should be inherited from the `Player`.
 
 All elves like playing songs so
-`Elf` constructor should take an additional argument `musical_instrument` -  and stored it in the **protected** attribute.
+`Elf` `__init__` method should take an additional argument `musical_instrument` -  and stored it in the **protected** attribute.
 Also, it should have a method `play_elf_song` that should print the following string:
 `"{nickname} is playing a song on the {musical_instrument}"`
 
 All dwarves like delicious food so
-`Dwarf` constructor should take an additional argument `favourite_dish` -  and stored it in the **protected** attribute.
+`Dwarf` `__init__` method should take an additional argument `favourite_dish` -  and stored it in the **protected** attribute.
 Also, it should have a method `eat_favourite_dish` that should print the following string:
 `"{nickname} is eating {favourite_dish}"`
 
 Finally, create four classes: `ElfRanger`, `Druid`, `DwarfWarrior` and `DwarfBlacksmith`.
 
 `ElfRanger` should be a child of `Elf`.
-Its constructor should take one additional parameter: 
+Its `__init__` method should take one additional parameter: 
 `bow_level` - an integer that shows the quality of the bow.
-Constructor should store it in the protected attribute.
+The `__init__` method should store it in the protected attribute.
 
 `Druid` should be a child of `Elf`.
-Its constructor should take one additional parameter: 
+Its `__init__` method should take one additional parameter: 
 `favourite_spell` - the text of the favourite spell.
-Constructor should store it in the protected attribute.
+The `__init__` method should store it in the protected attribute.
 
 `DwarfWarrior` should be a child of `Dwarf`.
-Its constructor should take one additional parameter: 
+Its `__init__` method should take one additional parameter: 
 `hummer_level` - an integer that shows the power of the hummer.
-Constructor should store it in the protected attribute.
+The `__init__` method should store it in the protected attribute.
 
 `DwarfBlacksmith` should be a child of `Dwarf`.
-Its constructor should take one additional parameter: 
+Its `__init__` method should take one additional parameter: 
 `skill_level` - an integer that shows the level of blacksmith's skills.
-Constructor should store it in the protected attribute.
+The `__init__` method should store it in the protected attribute.
 
 All of these classes should have implementations of `player_info` and 
 `get_rating` methods.
