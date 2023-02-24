@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from app.players.dwarves.dwarf_warrior import DwarfWarrior
 from app.players.dwarves.dwarf_blacksmith import DwarfBlacksmith
 from app.players.elves.druid import Druid
