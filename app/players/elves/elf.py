@@ -3,9 +3,6 @@ from app.players.player import Player
 
 
 class Elf(Player, ABC):
-
-    __musical_instrument: str
-
     def __init__(self, nickname: str, musical_instrument: str) -> None:
         super().__init__(nickname)
         self.__musical_instrument = musical_instrument
