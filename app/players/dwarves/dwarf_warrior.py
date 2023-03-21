@@ -9,9 +9,9 @@ class DwarfWarrior(Dwarf):
         self._hummer_level = hummer_level
 
     def player_info(self) -> str:
-        return f"Dwarf warrior {self.nickname}." \
-               f" {self.nickname} has a hummer of the" \
-               f" {self._hummer_level} level"
+        return (f"Dwarf warrior {self.nickname}." 
+               f" {self.nickname} has a hummer of the" 
+               f" {self._hummer_level} level")
 
     def get_rating(self) -> None:
         return self._hummer_level + 4
