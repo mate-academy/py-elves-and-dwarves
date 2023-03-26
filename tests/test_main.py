@@ -107,7 +107,7 @@ def test_elf_ranger_class(
         musical_instrument=musical_instrument,
         bow_level=bow_level
     )
-    assert ranger.get_rating() == rating
+    assert ranger.get_rating == rating
     assert ranger.player_info() == player_info
     f = io.StringIO()
     with redirect_stdout(f):
@@ -149,7 +149,7 @@ def test_druid_class(
         musical_instrument=musical_instrument,
         favourite_spell=favourite_spell
     )
-    assert ranger.get_rating() == rating
+    assert ranger.get_rating == rating
     assert ranger.player_info() == player_info
     f = io.StringIO()
     with redirect_stdout(f):
@@ -191,7 +191,7 @@ def test_dwarf_warrior_class(
         favourite_dish=favourite_dish,
         hummer_level=hummer_level
     )
-    assert warrior.get_rating() == rating
+    assert warrior.get_rating == rating
     assert warrior.player_info() == player_info
     f = io.StringIO()
     with redirect_stdout(f):
@@ -233,7 +233,7 @@ def test_dwarf_blacksmith_class(
         favourite_dish=favourite_dish,
         skill_level=skill_level
     )
-    assert blacksmith.get_rating() == rating
+    assert blacksmith.get_rating == rating
     assert blacksmith.player_info() == player_info
     f = io.StringIO()
     with redirect_stdout(f):
