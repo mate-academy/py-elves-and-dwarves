@@ -4,7 +4,7 @@ from abc import ABC
 
 class Elf(Player, ABC):
     def __init__(self, nickname: str, musical_instrument: str) -> None:
-        super().__init__(nickname)
+        super().__init__(nickname=nickname)
         self.musical_instrument = musical_instrument
 
     def play_elf_song(self) -> None:
