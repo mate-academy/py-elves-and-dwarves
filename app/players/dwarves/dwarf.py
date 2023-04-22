@@ -1,5 +1,4 @@
 from app.players.player import Player
-from abc import abstractmethod
 
 
 class Dwarf(Player):
@@ -9,11 +8,3 @@ class Dwarf(Player):
 
     def eat_favourite_dish(self) -> None:
         print(f"{self.nickname} is eating {self.favourite_dish}")
-
-        @abstractmethod
-        def get_rating(self) -> None:
-            pass
-
-        @abstractmethod
-        def player_info(self) -> None:
-            pass
