@@ -167,3 +167,18 @@ dwarves = [
     DwarfWarrior(nickname="Dwarf", favourite_dish="Caesar Salad", hummer_level=3),
 ]
 feast_of_the_dwarves(dwarves)
+
+
+
+# app/
+#     main.py
+#     players/
+#         player.py
+#         elves/
+#             elf.py
+#             elf_ranger.py
+#             druid.py
+#         dwarves/
+#             dwarf.py
+#             dwarf_warrior.py
+#             dwarf_blacksmith.py
