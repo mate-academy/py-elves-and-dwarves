@@ -1,4 +1,3 @@
-from app.players.player import Player
 from app.players.dwarves.dwarf import Dwarf
 
 class DwarfBlacksmith(Dwarf):

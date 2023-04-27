@@ -1,6 +1,6 @@
 from app.players.player import Player
-from dwarf_warrior import DwarfWarrior
-from dwarf_blacksmith import DwarfBlacksmith
+# from dwarf_warrior import DwarfWarrior
+# from dwarf_blacksmith import DwarfBlacksmith
 
 
 class Dwarf(Player):

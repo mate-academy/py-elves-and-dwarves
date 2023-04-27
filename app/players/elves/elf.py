@@ -1,6 +1,6 @@
 from app.players.player import Player
-from elf_ranger import ElfRanger
-from druid import Druid
+# from elf_ranger import ElfRanger
+# from druid import Druid
 
 
 
