@@ -28,19 +28,6 @@ class Elf(Player):
               f"{self._musical_instrument}")
 
 
-class Dwarf(Player):
-    def __init__(
-            self,
-            nickname: str,
-            favourite_dish: str
-    ) -> None:
-        super().__init__(nickname=nickname)
-        self._favourite_dish = favourite_dish
-
-    def eat_favourite_dish(self) -> None:
-        print(f"{self.nickname} is eating {self._favourite_dish}")
-
-
 class ElfRanger(Elf):
     def __init__(
             self,
@@ -83,6 +70,19 @@ class Druid(Elf):
         return len(self._favourite_spell)
 
 
+class Dwarf(Player):
+    def __init__(
+            self,
+            nickname: str,
+            favourite_dish: str
+    ) -> None:
+        super().__init__(nickname=nickname)
+        self._favourite_dish = favourite_dish
+
+    def eat_favourite_dish(self) -> None:
+        print(f"{self.nickname} is eating {self._favourite_dish}")
+
+
 class DwarfWarrior(Dwarf):
     def __init__(
             self,
@@ -117,3 +117,17 @@ class DwarfBlacksmith(Dwarf):
 
     def get_rating(self) -> int:
         return self._skill_level
+
+
+def calculate_team_total_rating(players):
+    return sum(player.get_rating() for player in players)
+
+
+def elves_concert(elves):
+    for elf in elves:
+        elf.play_elf_song()
+
+
+def feast_of_the_dwarves(dwarves):
+    for dwarf in dwarves:
+        dwarf.eat_favourite_dish()
