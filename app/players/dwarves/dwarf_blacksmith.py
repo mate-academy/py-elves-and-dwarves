@@ -1,3 +1,6 @@
+from app.players.dwarves.dwarf import Dwarf
+
+
 class DwarfBlacksmith(Dwarf):
     def __init__(self, skill_level: int) -> str:
         self._skill_level = skill_level
@@ -7,4 +10,3 @@ class DwarfBlacksmith(Dwarf):
 
     def get_rating(self, skill_level):
         return skill_level
-

@@ -1,6 +1,9 @@
-class Dwarf:
-    def __init__(self, skill_level: int) -> str:
-        self._skill_level = skill_level
-    def player_info(self):
+from app.players.player import Player
 
-    def get_rating(self):
+
+class Dwarf(Player):
+    def __init__(self, favourite_dish: int) -> str:
+        self._favourite_dish = favourite_dish
+    def eat_favourite_dish(self, nickname):
+        print(f'{nickname} їсть {self._favourite_dish}')
+
