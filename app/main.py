@@ -3,8 +3,8 @@ from app.players.elves.elf_ranger import *
 from app.players.elves.druid import *
 
 
-def calculate_team_total_rating(self, bow_level: int) -> int:
-    print(bow_level * 3 + 3)
+def calculate_team_total_rating(self) -> int:
+    print(self._bow_level * 3 + 3)
 
 def elves_concert(self, list_main: str) -> int:
     return
