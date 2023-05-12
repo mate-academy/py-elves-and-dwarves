@@ -2,17 +2,19 @@ from app.players.elves.elf import Elf
 
 
 class ElfRanger(Elf):
-    def __init__(self, bow_level: int, nickname: str, musical_instrument: str =None) -> str:
-        self._bow_level = bow_level
+    def __init__(self, bow_level: int, nickname: str, musical_instrument: str = None) -> str:
+        self.bow_level = bow_level
         self.nickname = nickname
         self.musical_instrument = musical_instrument
 
     def player_info(self):
         print(f"Elf ranger {self.nickname}. {self.nickname} has bow of the {self._bow_level} level")
 
+    @staticmethod
     def get_rating(self):
         print(3 * self._bow_level)
 
+    @staticmethod
     def play_elf_song(self):
         print(f"{self.nickname} is playing a song on the {self.musical_instrument}")
 

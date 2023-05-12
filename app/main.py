@@ -1,10 +1,14 @@
 from app.players.player import *
-from app.players.elves.elf_ranger import *
-from app.players.elves.druid import *
+from app.players.elves.elf_ranger import ElfRanger
+from app.players.elves.druid import Druid
 
 
 def calculate_team_total_rating(self) -> int:
-    print(self._bow_level * 3 + 3)
+    for ir in team:
+        print(ir)
+    #print(type(self.bow_level))
+    #aq = self._bow_level * 3 + 3
+    #print(aq)
 
 def elves_concert(self, list_main: str) -> int:
     return
