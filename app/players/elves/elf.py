@@ -8,5 +8,7 @@ class Elf(Player, ABC):
 
     @abstractmethod
     def play_elf_song(self) -> None:
-        print(f"{self.nickname} is playing a song on the "
-              f"{self.musical_instrument}")
+        print(
+            f"{self.nickname} is playing a "
+            f"song on the {self.musical_instrument}"
+        )

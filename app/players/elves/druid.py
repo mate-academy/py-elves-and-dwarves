@@ -12,9 +12,13 @@ class Druid(Elf):
         return len(self.favourite_spell)
 
     def player_info(self) -> str:
-        return f"Druid {self.nickname}. {self.nickname} " \
-               f"has a favourite spell: {self.favourite_spell}"
+        return (
+            f"Druid {self.nickname}. {self.nickname} "
+            f"has a favourite spell: {self.favourite_spell}"
+        )
 
     def play_elf_song(self) -> None:
-        print(f"{self.nickname} is playing a song on the "
-              f"{self.musical_instrument}")
+        print(
+            f"{self.nickname} is playing "
+            f"a song on the {self.musical_instrument}"
+        )
