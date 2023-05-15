@@ -12,16 +12,6 @@ def elves_concert(elves: list[Elf]) -> None:
               f"{team_members.musical_instrument}")
 
 
-def play_elf_song(elves: list) -> None:
-    print(
-        f"{elves.nickname} is playing a song on the {elves.musical_instrument}"
-    )
-
-
 def feast_of_the_dwarves(dwarves: list[Dwarf]) -> None:
     for dwarf in dwarves:
         dwarf.eat_favourite_dish()
-
-
-def eat_favourite_dish(dwarves: list) -> None:
-    print(f"{dwarves.nickname} is eating {dwarves.favourite_dish}")
