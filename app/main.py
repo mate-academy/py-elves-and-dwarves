@@ -3,14 +3,7 @@ from app.players.elves.elf import Elf
 
 
 def calculate_team_total_rating(team: list) -> int:
-    if team is None:
-        return 0
-    else:
-        return sum(
-            team_member.get_rating() for team_member in team if
-            type(team_member).__name__ in ["Druid", "ElfRanger",
-                                           "DwarfWarrior", "DwarfBlacksmith"]
-        )
+    return sum(player.get_rating() for player in team)
 
 
 def elves_concert(elves: list[Elf]) -> None:
@@ -26,10 +19,8 @@ def play_elf_song(elves: list) -> None:
 
 
 def feast_of_the_dwarves(dwarves: list[Dwarf]) -> None:
-    for team_members in dwarves:
-        print(
-            f"{team_members.nickname} is eating {team_members.favourite_dish}"
-        )
+    for dwarf in dwarves:
+        dwarf.eat_favourite_dish()
 
 
 def eat_favourite_dish(dwarves: list) -> None:
