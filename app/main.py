@@ -3,36 +3,30 @@ from app.players.elves.elf import Elf
 
 
 def calculate_team_total_rating(team: list) -> int:
-    calculate_total_rating = []
-    for races in team:
-        if type(races).__name__ == "Druid":
-            calculate_total_rating.append(races.get_rating())
-        elif type(races).__name__ == "ElfRanger":
-            calculate_total_rating.append(races.get_rating())
-        elif type(races).__name__ == "DwarfWarrior":
-            calculate_total_rating.append(races.get_rating())
-        elif type(races).__name__ == "DwarfBlacksmith":
-            calculate_total_rating.append(races.get_rating())
-        elif races is None:
-            return 0
-    return sum(calculate_total_rating)
+    if team is None:
+        return 0
+    else:
+        return sum(team_member.get_rating() for team_member in team if
+                   type(team_member).__name__ in
+                   ["Druid", "ElfRanger", "DwarfWarrior", "DwarfBlacksmith"])
 
 
-def elves_concert(elves: list[Elf]) -> int:
-    for races in elves:
-        print(f"{races.nickname} is playing a song on the "
-              f"{races.musical_instrument}")
+def elves_concert(elves: list[Elf]) -> None:
+    for team_members in elves:
+        print(f"{team_members.nickname} is playing a song on the "
+              f"{team_members.musical_instrument}")
 
 
-def play_elf_song(elves: list) -> int:
+def play_elf_song(elves: list) -> None:
     print(f"{elves.nickname} is playing a song on the "
           f"{elves.musical_instrument}")
 
 
-def feast_of_the_dwarves(dwarves: list[Dwarf]) -> int:
-    for races in dwarves:
-        print(f"{races.nickname} is eating {races.favourite_dish}")
+def feast_of_the_dwarves(dwarves: list[Dwarf]) -> None:
+    for team_members in dwarves:
+        print(f"{team_members.nickname} is eating "
+              f"{team_members.favourite_dish}")
 
 
-def eat_favourite_dish(dwarves: list) -> int:
+def eat_favourite_dish(dwarves: list) -> None:
     print(f"{dwarves.nickname} is eating {dwarves.favourite_dish}")

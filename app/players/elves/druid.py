@@ -15,6 +15,6 @@ class Druid(Elf):
         return f"Druid {self.nickname}. {self.nickname} " \
                f"has a favourite spell: {self.favourite_spell}"
 
-    def play_elf_song(self) -> str:
+    def play_elf_song(self) -> None:
         print(f"{self.nickname} is playing a song on the "
               f"{self.musical_instrument}")

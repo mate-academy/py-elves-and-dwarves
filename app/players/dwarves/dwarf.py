@@ -7,5 +7,5 @@ class Dwarf(Player, ABC):
         self.favourite_dish = favourite_dish
 
     @abstractmethod
-    def eat_favourite_dish(self) -> str:
+    def eat_favourite_dish(self) -> None:
         print(f"{self.nickname} is eating {self.favourite_dish}")
