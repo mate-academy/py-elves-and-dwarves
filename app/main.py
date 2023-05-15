@@ -6,9 +6,11 @@ def calculate_team_total_rating(team: list) -> int:
     if team is None:
         return 0
     else:
-        return sum(team_member.get_rating() for team_member in team if
-                   type(team_member).__name__ in
-                   ["Druid", "ElfRanger", "DwarfWarrior", "DwarfBlacksmith"])
+        return sum(
+            team_member.get_rating() for team_member in team if
+            type(team_member).__name__ in ["Druid", "ElfRanger",
+                                           "DwarfWarrior", "DwarfBlacksmith"]
+        )
 
 
 def elves_concert(elves: list[Elf]) -> None:
