@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 
 class Dwarf(Player, ABC):
     def __init__(self, favourite_dish: int) -> str:
-        self.favourite_dish = favourite_dish
+        self._favourite_dish = favourite_dish
 
     @abstractmethod
     def eat_favourite_dish(self) -> None:

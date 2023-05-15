@@ -18,14 +18,16 @@ def elves_concert(elves: list[Elf]) -> None:
 
 
 def play_elf_song(elves: list) -> None:
-    print(f"{elves.nickname} is playing a song on the "
-          f"{elves.musical_instrument}")
+    print(
+        f"{elves.nickname} is playing a song on the {elves.musical_instrument}"
+    )
 
 
 def feast_of_the_dwarves(dwarves: list[Dwarf]) -> None:
     for team_members in dwarves:
-        print(f"{team_members.nickname} is eating "
-              f"{team_members.favourite_dish}")
+        print(
+            f"{team_members.nickname} is eating {team_members.favourite_dish}"
+        )
 
 
 def eat_favourite_dish(dwarves: list) -> None:
