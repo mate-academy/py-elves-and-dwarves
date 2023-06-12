@@ -4,9 +4,7 @@ from app.players.elves.elf import Elf
 
 
 def calculate_team_total_rating(players: List[Player]) -> int:
-    total_rating = 0
-    for player in players:
-        total_rating += player.get_rating()
+    total_rating = sum(player.get_rating() for player in players)
     return total_rating
 
 
