@@ -18,4 +18,3 @@ class ElfRanger(Elf):
             f"Elf ranger {self.nickname}. {self.nickname} has bow"
             f" of the {self._bow_level} level"
         )
-
