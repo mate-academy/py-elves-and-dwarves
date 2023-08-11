@@ -11,15 +11,17 @@ dwarf_blacksmith = DwarfBlacksmith
 
 
 def calculate_team_total_rating(players: list) -> int:
-    total = sum(player.rating for player in players)
+    total = 0
+    for player in players:
+        total += player.rating
     return total
 
 
-def elves_concert(play_elf_song: list) -> None:
-    for elf in play_elf_song:
+def elves_concert(Elf: list, play_elf_song: list) -> None:
+    for elf in Elf:
         elf.play_song(play_elf_song)
 
 
-def feast_of_the_dwarves(eat_favourite_dish: list) -> None:
-    for dwarf in eat_favourite_dish:
+def feast_of_the_dwarves(Dwarf: list, eat_favourite_dish: list) -> None:
+    for dwarf in Dwarf:
         dwarf.favourite_dish(eat_favourite_dish)
