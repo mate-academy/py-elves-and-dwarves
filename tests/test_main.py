@@ -6,12 +6,12 @@ import pytest
 
 from app import main
 from app.main import calculate_team_total_rating, elves_concert, feast_of_the_dwarves
-from app.players.elves import Dwarf
-from app.players.elves import DwarfBlacksmith
-from app.players.elves import DwarfWarrior
-from app.players.elves import Druid
-from app.players.elves import Elf
-from app.players.elves import ElfRanger
+from app.elves import Dwarf
+from app.elves import DwarfBlacksmith
+from app.elves import DwarfWarrior
+from app.elves import Druid
+from app.elves import Elf
+from app.elves import ElfRanger
 from app.players.player import Player
 
 
