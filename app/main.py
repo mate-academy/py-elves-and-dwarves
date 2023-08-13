@@ -5,10 +5,7 @@ from app.players.elves.elf_ranger import ElfRanger
 
 
 def calculate_team_total_rating(list_of_team: list) -> int:
-    return sum(
-        member.get_rating()
-        for member in list_of_team
-        )
+    return sum(member.get_rating() for member in list_of_team)
 
 
 def elves_concert(list_of_elfs: list[ElfRanger, Druid]) -> None:
