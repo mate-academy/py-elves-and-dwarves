@@ -16,14 +16,12 @@ def calculate_team_total_rating(
 def elves_concert(
         elfs: List[Elf]
 ) -> None:
-    [
-        elf.play_elf_song() for elf in elfs
-    ]
+    for elf in elfs:
+        elf.play_elf_song()
 
 
 def feast_of_the_dwarves(
         dwarfs: List[Dwarf]
 ) -> None:
-    [
-        dwarf.eat_favourite_dish() for dwarf in dwarfs
-    ]
+    for dwarf in dwarfs:
+        dwarf.eat_favourite_dish()
