@@ -8,7 +8,6 @@ class Dwarf(Player):
         super().__init__(nickname)
         self._favourite_dish = favourite_dish
 
-
      @abstractmethod
     def get_rating(self) -> int:
         pass
