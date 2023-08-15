@@ -1,4 +1,4 @@
-from .dwarf import Dwarf
+from app.players.dwarves.dwarf import Dwarf
 
 
 class DwarfWarrior(Dwarf):
@@ -12,8 +12,10 @@ class DwarfWarrior(Dwarf):
         self.__hummer_level = hummer_level
 
     def player_info(self) -> str:
-        return f"Dwarf warrior {self.nickname}. {self.nickname} has a " \
-               f"hummer of the {self.__hummer_level} level"
+        return (
+            f"Dwarf warrior {self.nickname}. {self.nickname} has a "
+            f"hummer of the {self.__hummer_level} level"
+        )
 
     def get_rating(self) -> int:
         return self.__hummer_level + 4
