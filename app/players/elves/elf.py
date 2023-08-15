@@ -8,6 +8,7 @@ class Elf(Player):
         super().__init__(nickname)
         self._musical_instrument = musical_instrument
 
+    
     @abstractmethod
     def get_rating(self) -> int:
         pass
