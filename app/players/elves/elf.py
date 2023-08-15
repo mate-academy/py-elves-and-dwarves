@@ -15,5 +15,5 @@ class Elf(Player):
 
     @abstractmethod
     def player_info(self) -> str:
-        print(f"{self.nickname} is playing a song on the 
-        {self._musical_instrument}")
+        print(f"{self.nickname} 
+        is playing a song on the {self._musical_instrument}")
