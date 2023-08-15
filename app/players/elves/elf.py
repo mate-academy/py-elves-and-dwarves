@@ -16,4 +16,3 @@ class Elf(Player):
     def player_info(self) -> str:
         print(f"{self.nickname} is playing a song on the"
               f"{self._musical_instrument}")
-        
