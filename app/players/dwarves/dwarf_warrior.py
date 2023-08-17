@@ -5,7 +5,7 @@ class DwarfWarrior(Dwarf):
     def __init__(
         self, nickname: str, favourite_dish: str, hummer_level: int
     ) -> None:
-        super().__init__(nickname, favourite_dish)
+        super().__init__(nickname=nickname, favourite_dish=favourite_dish)
         self.__hummer_level = hummer_level
 
     def get_rating(self) -> int:
