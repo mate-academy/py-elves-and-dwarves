@@ -1,20 +1,18 @@
-from app.players.Player import Player
+from typing import List
 
 
-def calculate_team_total_rating(players: list) -> int:
-    team_rating = 0
+def calculate_team_total_rating(players: List[int]) -> int:
+    team_rating = []
     for player in players:
-        if isinstance(player, Player):
-            player_rating = player.get_rating()
-            team_rating += player_rating
-    return team_rating
+        team_rating.append(player.get_rating())
+    return sum(team_rating)
 
 
-def elves_concert(elves: list) -> str:
+def elves_concert(elves: List[str]) -> str:
     for elf in elves:
         elf.play_elf_song()
 
 
-def feast_of_the_dwarves(dwarves: list) -> str:
+def feast_of_the_dwarves(dwarves: List[str]) -> str:
     for dwarf in dwarves:
         dwarf.eat_favourite_dish()
