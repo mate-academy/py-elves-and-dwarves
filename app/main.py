@@ -1,11 +1,9 @@
 from typing import List
+from app.players.player import Player
 
 
-def calculate_team_total_rating(players: List[int]) -> int:
-    team_rating = []
-    for player in players:
-        team_rating.append(player.get_rating())
-    return sum(team_rating)
+def calculate_team_total_rating(players: List[Player]) -> int:
+    return sum(player.get_rating() for player in players)
 
 
 def elves_concert(elves: List[str]) -> str:
