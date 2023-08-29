@@ -6,9 +6,9 @@ class Player(ABC):
         self.name = name
 
     @abstractmethod
-    def get_rating(self):
+    def get_rating(self) -> None:
         pass
 
     @abstractmethod
-    def player_info(self):
+    def player_info(self) -> None:
         pass
