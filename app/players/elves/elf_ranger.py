@@ -12,7 +12,7 @@ class ElfRanger(Elf):
     def player_info(self) -> str:
         first_part = f"Elf ranger {self.name}."
         second_part = f" {self.name} has bow of the"
-        third_part = f" {self.bow_level} level" 
+        third_part = f" {self.bow_level} level"
         return first_part + second_part + third_part
 
     def get_rating(self) -> int:
