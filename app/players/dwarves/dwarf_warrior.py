@@ -12,7 +12,7 @@ class DwarfWarrior(Dwarf):
     def player_info(self) -> str:
         first_part = f"Dwarf warrior {self.nickname}."
         second_part = f" {self.nickname} has a hummer"
-        third_part = f" of the {self.hummer_level} level"
+        third_part = f" of the {self._hummer_level} level"
         return first_part + second_part + third_part
 
     def get_rating(self) -> int:

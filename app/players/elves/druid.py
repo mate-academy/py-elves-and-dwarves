@@ -10,7 +10,7 @@ class Druid(Elf):
 
     def player_info(self) -> str:
         first_part = f"Druid {self.nickname}. {self.nickname} has a favourite"
-        second_part = f" spell: {self.favourite_spell}"
+        second_part = f" spell: {self._favourite_spell}"
         return first_part + second_part
 
     def get_rating(self) -> int:
