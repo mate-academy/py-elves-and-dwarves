@@ -10,5 +10,5 @@ class Player(ABC):
         pass
 
     @abstractmethod
-    def get_rating(self) -> str:
+    def get_rating(self) -> int:
         pass
