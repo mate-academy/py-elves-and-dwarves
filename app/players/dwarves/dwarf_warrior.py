@@ -22,5 +22,7 @@ class DwarfWarrior(Dwarf):
         return self.hummer_level + 4
 
     def player_info(self) -> str:
-        return f"Dwarf warrior {self.nickname}. {self.nickname} has " \
-               f"a hummer of the {self.hummer_level} level"
+        return (
+            f"Dwarf warrior {self.nickname}. {self.nickname} has "
+            f"a hummer of the {self.hummer_level} level"
+        )
