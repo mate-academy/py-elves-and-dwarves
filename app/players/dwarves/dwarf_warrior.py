@@ -9,8 +9,6 @@ class DwarfWarrior(Dwarf):
         super().__init__(nickname=nickname, favourite_dish=favourite_dish)
         self._hummer_level = hummer_level
 
-        pass
-
     def get_rating(self) -> int:
         return self._hummer_level + 4
 

@@ -9,7 +9,6 @@ class ElfRanger(Elf):
         super().__init__(nickname=nickname,
                          musical_instrument=musical_instrument)
         self._bow_level = bow_level
-        pass
 
     def get_rating(self) -> int:
         return 3 * self._bow_level
