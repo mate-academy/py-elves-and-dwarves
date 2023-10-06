@@ -7,6 +7,7 @@ def calculate_team_total_rating(players: list[Player]) -> int:
     sum = 0
     for player in players:
         sum += player.get_rating()
+    return sum
 
 
 def elves_concert(elfs: list[Elf]) -> None:
