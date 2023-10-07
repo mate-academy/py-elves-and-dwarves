@@ -9,8 +9,8 @@ class Dwarf(Player, ABC):
             nickname: str,
             favourite_dish: str,
     ) -> None:
+        super().__init__(nickname)
         self._favourite_dish = favourite_dish
-        Dwarf.nickname = nickname
 
     def eat_favourite_dish(self) -> None:
         print(f"{self.nickname} "
