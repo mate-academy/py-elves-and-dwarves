@@ -1,5 +1,5 @@
 from app.players.player import Player
-from abc import ABC, abstractmethod
+from abc import ABC
 
 
 class Dwarf(Player, ABC):
