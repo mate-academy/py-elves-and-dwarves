@@ -1,5 +1,4 @@
 from app.players.player import Player
-from abc import abstractmethod
 
 
 class Dwarf(Player):
