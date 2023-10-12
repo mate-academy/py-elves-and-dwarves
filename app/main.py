@@ -4,11 +4,7 @@ from app.players.player import Player
 
 
 def calculate_team_total_rating(team: list[Player]) -> int:
-    result = 0
-    for member in team:
-        result += member.get_rating()
-
-    return result
+    return sum(member.get_rating() for member in team)
 
 
 def elves_concert(elves: list[Elf]) -> None:
