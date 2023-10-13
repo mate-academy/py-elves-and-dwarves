@@ -10,6 +10,9 @@ class DwarfWarrior(Dwarf):
         super().__init__(nickname, favourite_dish)
         self._hummer_level = hummer_level
 
+    def eat_favourite_dish(self) -> None:
+        print(f"{self.nickname} is eating {self._favourite_dish}")
+
     def player_info(self) -> str:
         return (f"Dwarf warrior {self.nickname}. "
                 f"{self.nickname} has a hummer of the "
