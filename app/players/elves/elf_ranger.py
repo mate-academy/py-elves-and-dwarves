@@ -16,7 +16,7 @@ class ElfRanger(Elf):
         return (
             f"Elf ranger {self.nickname}. "
             f"{self.nickname} has bow of the "
-            f"{int(self.get_rating() / 3)} level"
+            f"{self._bow_level} level"
         )
 
     def get_rating(self) -> int:
