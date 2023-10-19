@@ -9,5 +9,6 @@ class Player(ABC):
     def get_rating(self) -> None:
         pass
 
+    @abstractmethod
     def player_info(self) -> None:
         pass
