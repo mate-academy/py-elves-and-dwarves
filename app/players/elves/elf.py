@@ -2,10 +2,9 @@ from app.players.player import Player
 
 
 class Elf(Player):
-    def __init__(self, _musical_instrument: str) -> None:
-        super().__init__()
-        self._musical_instrument = _musical_instrument
+    def __init__(self, musical_instrument: str) -> None:
+        self._musical_instrument = musical_instrument
 
     def play_elf_song(self) -> None:
-        return f"{self.nickname} is playing a \
-            song on the {self._musical_instrument}"
+        print(f"{self.nickname} is playing a song on the \
+              {self._musical_instrument}")
