@@ -20,7 +20,7 @@ class Druid(Elf):
         return len(self._favourite_spell)
 
     def play_elf_song(self) -> str:
-        return (
-            f"{self.nickname} "
-            f"is playing a song using the {self._favourite_spell}"
-        )
+        song = (f"{self.nickname} "
+                f"is playing a song on the {self._musical_instrument}")
+        print(song)
+        return song
