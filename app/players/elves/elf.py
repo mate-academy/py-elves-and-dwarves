@@ -7,7 +7,7 @@ class Elf(Player):
         self._musical_instrument = musical_instrument
 
     def play_elf_song(self) -> str:
-        return (
+        print(
             f"{self.nickname}"
             f" is playing a song on the {self._musical_instrument}"
         )
