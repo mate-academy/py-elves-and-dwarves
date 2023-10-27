@@ -23,4 +23,3 @@ class Druid(Elf):
         song = (f"{self.nickname} "
                 f"is playing a song on the {self._musical_instrument}")
         print(song)
-        return song
