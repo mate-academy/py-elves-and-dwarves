@@ -1,12 +1,10 @@
 from app.players.elves.elf_ranger import ElfRanger
 from app.players.elves.druid import Druid
-from app.players.dwarves.dwarf_warrior import DwarfWarrior
+from app.players.player import Player
 
 
-def calculate_team_total_rating(players: list) -> int:
-    total_rating = 0
-    for player in players:
-        total_rating += player.get_rating()
+def calculate_team_total_rating(players: list[Player]) -> int:
+    total_rating = sum(player.get_rating() for player in players)
     return total_rating
 
 
@@ -44,15 +42,3 @@ if __name__ == "__main__":
 
     print("Elves Concert:")
     elves_concert(elves)
-
-    dwarves = [
-        DwarfWarrior(nickname="Thiddeal",
-                     favourite_dish="French Fries",
-                     hummer_level=3),
-        DwarfWarrior(nickname="Dwarf",
-                     favourite_dish="Caesar Salad",
-                     hummer_level=3),
-    ]
-
-    print("Feast of the Dwarves:")
-    feast_of_the_dwarves(dwarves)
