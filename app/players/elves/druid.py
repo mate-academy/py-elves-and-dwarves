@@ -1,7 +1,7 @@
-from app.players.elves.elf import Elf
+from app import players
 
 
-class Druid(Elf):
+class Druid(players.Elf):
     def __init__(self,
                  nickname: str,
                  musical_instrument: str,
