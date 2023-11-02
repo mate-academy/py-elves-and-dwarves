@@ -1,8 +1,6 @@
 from app.players.player import Player
-from abc import abstractmethod
 
 
-@abstractmethod
 class Dwarf(Player):
     def __init__(
             self,

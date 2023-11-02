@@ -3,7 +3,7 @@ from abc import abstractmethod
 
 
 @abstractmethod
-class Elf(Player):
+class Elf(Player,):
     def __init__(
             self,
             nickname: str,
