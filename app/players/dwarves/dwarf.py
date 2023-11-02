@@ -1,7 +1,9 @@
 from app.players.player import Player
+from abc import abstractmethod, ABC
 
 
-class Dwarf(Player):
+@abstractmethod
+class Dwarf(Player, ABC):
     def __init__(
             self,
             nickname: str,
