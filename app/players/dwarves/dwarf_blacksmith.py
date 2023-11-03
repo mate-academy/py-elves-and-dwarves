@@ -1,4 +1,4 @@
-from players.dwarves.dwarf import Dwarf
+from app.players.dwarves.dwarf import Dwarf
 
 
 class DwarfBlacksmith(Dwarf):
@@ -14,8 +14,6 @@ class DwarfBlacksmith(Dwarf):
     def get_rating(self) -> int:
         return self._skill_level
 
-    def player_info(self) -> None:
-        print(
-            f"Dwarf blacksmith {self.nickname} "
-            f"with skill of the {self._skill_level} level"
-        )
+    def player_info(self) -> str:
+        return (f"Dwarf blacksmith {self.nickname} "
+                f"with skill of the {self._skill_level} level")
