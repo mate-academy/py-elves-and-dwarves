@@ -7,7 +7,7 @@ class DwarfBlacksmith(Dwarf):
             nickname: str,
             favourite_dish: str,
             skill_level: int
-            ) -> None:
+    ) -> None:
         self._skill_level = skill_level
         self.nickname = nickname
         self._favourite_dish = favourite_dish
