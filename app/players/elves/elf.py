@@ -1,9 +1,9 @@
+from abc import ABC
+
 from app.players.player import Player
-from abc import abstractmethod
 
 
-@abstractmethod
-class Elf(Player,):
+class Elf(Player, ABC):
     def __init__(
             self,
             nickname: str,
