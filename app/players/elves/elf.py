@@ -1,3 +1,5 @@
+from abc import abstractmethod
+
 from app.players.player import Player
 
 
@@ -14,9 +16,3 @@ class Elf(Player):
     def play_elf_song(self) -> None:
         print(f"{self.nickname} is playing a song "
               f"on the {self._musical_instrument}")
-
-    def get_rating(self):
-        pass
-
-    def player_info(self):
-        pass
