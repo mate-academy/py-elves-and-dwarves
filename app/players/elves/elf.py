@@ -6,5 +6,10 @@ class Elf(Player):
         self._musical_instrument = musical_instrument
 
     def play_elf_song(self) -> None:
-        print(f"{self.nickname} is playing a song on the \
-{self._musical_instrument}")
+        print(f"{self.nickname} is playing a song on the {self._musical_instrument}")
+
+    def get_rating(self) -> str:
+        return "NotImplemented"
+
+    def player_info(self) -> str:
+        return "NotImplemented"
