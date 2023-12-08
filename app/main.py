@@ -7,11 +7,9 @@ def calculate_team_total_rating(team: list) -> int:
     return total_rating
 
 
-def elves_concert(elves: list[Elf]) -> None:
-    for elf in elves:
-        print(elf.play_elf_song())
+def elves_concert(elves: list[Elf]) -> list[None]:
+    return [elf.play_elf_song() for elf in elves]
 
 
-def feast_of_the_dwarves(dwarves: list[Dwarf]) -> None:
-    for dwarf in dwarves:
-        print(dwarf.eat_favourite_dish())
+def feast_of_the_dwarves(dwarves: list[Dwarf]) -> list[None]:
+    return [dwarf.eat_favourite_dish() for dwarf in dwarves]
