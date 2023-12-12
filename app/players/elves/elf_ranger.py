@@ -2,13 +2,16 @@ from app.players.elves.elf import Elf
 
 
 class ElfRanger(Elf):
-    def __init__(self, bow_level: int, nickname: str, musical_instrument: str) -> None:
-        super().__init__(nickname=nickname, musical_instrument=musical_instrument)
-        self.bow_level = bow_level
+    def __init__(self,
+                 nickname: str,
+                 musical_instrument: str,
+                 bow_level: int) -> None:
+        super().__init__(nickname, musical_instrument)
+        self._bow_level = bow_level
+
+    def player_info(self) -> str:
+        return (f"Elf ranger {self.nickname}. "
+                f"{self.nickname} has bow of the {self._bow_level} level")
 
     def get_rating(self) -> int:
-        self.bow_level *= 3
-        return self.bow_level
-
-    def print_info(self) -> None:
-        print(f"Elf ranger {self.nickname}. {self.nickname} has bow of the {self.bow_level} level")
+        return 3 * self._bow_level
