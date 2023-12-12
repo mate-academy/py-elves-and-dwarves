@@ -17,3 +17,6 @@ class Druid(Elf):
 
     def get_rating(self) -> int:
         return len(self._favourite_spell)
+
+    def play_elf_song(self) -> None:
+        return super().play_elf_song()

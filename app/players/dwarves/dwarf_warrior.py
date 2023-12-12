@@ -17,3 +17,6 @@ class DwarfWarrior(Dwarf):
 
     def get_rating(self) -> int:
         return self._hummer_level + 4
+
+    def play_elf_song(self) -> None:
+        return super().play_elf_song()

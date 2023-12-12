@@ -17,3 +17,6 @@ class ElfRanger(Elf):
 
     def get_rating(self) -> float:
         return 3 * self._bow_level
+
+    def play_elf_song(self) -> None:
+        return super().play_elf_song()
