@@ -21,5 +21,5 @@ class DwarfWarrior(Dwarf):
     def play_elf_song(self) -> None:
         return super().play_elf_song()
 
-    def eat_favourite_dish(self):
+    def eat_favourite_dish(self) -> None:
         super().eat_favourite_dish()
