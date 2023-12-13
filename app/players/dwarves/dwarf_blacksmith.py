@@ -17,3 +17,6 @@ class DwarfBlacksmith(Dwarf):
 
     def get_rating(self) -> int:
         return self._skill_level
+
+    def eat_favourite_dish(self):
+        super().eat_favourite_dish()
