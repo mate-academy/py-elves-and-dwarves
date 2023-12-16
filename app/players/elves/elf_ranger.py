@@ -15,8 +15,8 @@ class ElfRanger(Elf):
         return 3 * self._bow_level
 
     def player_info(self) -> str | int:
-        return f"Elf ranger {self.nickname}. " \
-               f"{self.nickname} has bow of the {self._bow_level} level"
+        return (f"Elf ranger {self.nickname}. "
+                f"{self.nickname} has bow of the {self._bow_level} level")
 
     def play_elf_song(self) -> None:
         print(f"{self.nickname} is playing a song on the "
