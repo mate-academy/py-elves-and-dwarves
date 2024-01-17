@@ -12,3 +12,9 @@ class Dwarf(Player):
 
     def eat_favourite_dish(self) -> None:
         print(f"{self.nickname} is eating {self.__favourite_dish}")
+
+    def get_rating(self) -> int:
+        pass
+
+    def player_info(self) -> None:
+        pass
