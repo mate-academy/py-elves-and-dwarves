@@ -9,13 +9,13 @@ class ElfRanger(Elf):
             musical_instrument: str
     ) -> None:
         super().__init__(nickname, musical_instrument)
-        self.__bow_level = bow_level
+        self._bow_level = bow_level
 
     def player_info(self) -> str:
         return (f""
                 f"Elf ranger {self.nickname}. "
-                f"{self.nickname} has bow of the {self.__bow_level} level"
+                f"{self.nickname} has bow of the {self._bow_level} level"
                 )
 
     def get_rating(self) -> int:
-        return 3 * self.__bow_level
+        return 3 * self._bow_level
