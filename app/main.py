@@ -8,8 +8,8 @@ def calculate_team_total_rating(team: list[Player]) -> int:
 
 
 def elves_concert(elfs: list[Elf]) -> list:
-    return [elf.play_elf_song() for elf in elfs]
+    [elf.play_elf_song() for elf in elfs]
 
 
 def feast_of_the_dwarves(dwarves: list[Dwarf]) -> list:
-    return [dwarf.eat_favourite_dish() for dwarf in dwarves]
+    [dwarf.eat_favourite_dish() for dwarf in dwarves]
