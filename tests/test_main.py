@@ -275,6 +275,7 @@ def test_dwarf_blacksmith_class(
     ]
 )
 def test_calculate_team_total_rating(team, rating):
+
     assert calculate_team_total_rating(team) == rating
 
 
