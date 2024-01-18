@@ -1,10 +1,9 @@
 from __future__ import annotations
-
 from typing import Any
 
 
-def calculate_team_total_rating(players_list: list) -> int:
-    return sum([player.get_rating() for player in players_list])
+def calculate_team_total_rating(players: list) -> int:
+    return sum([player.get_rating() for player in players])
 
 
 def elves_concert(elves: list) -> Any:
