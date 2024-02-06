@@ -1,8 +1,3 @@
-.idea/
-.vscode/
-*.iml
-.env
-.DS_Store
-venv/
-.pytest_cache/
-**__pycache__/
+C:\Programming\Python_Core_lessons\OOP_Encapsulation_Polymorphism_Abstraction\Task\py-elves-and-dwarves\app\players\__init__.py
+C:\Programming\Python_Core_lessons\OOP_Encapsulation_Polymorphism_Abstraction\Task\py-elves-and-dwarves\app\players\elves\__init__.py
+C:\Programming\Python_Core_lessons\OOP_Encapsulation_Polymorphism_Abstraction\Task\py-elves-and-dwarves\app\players\dwarves\__init__.py
