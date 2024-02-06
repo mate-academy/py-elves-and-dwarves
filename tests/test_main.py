@@ -104,7 +104,7 @@ def test_elf_ranger_class(
 ):
     ranger = ElfRanger(
         nickname=nickname,
-        musical_instrument=musical_instrument,
+        _musical_instrument=musical_instrument,
         bow_level=bow_level
     )
     assert ranger.get_rating() == rating
@@ -146,7 +146,7 @@ def test_druid_class(
 ):
     ranger = Druid(
         nickname=nickname,
-        musical_instrument=musical_instrument,
+        _musical_instrument=musical_instrument,
         favourite_spell=favourite_spell
     )
     assert ranger.get_rating() == rating
@@ -188,7 +188,7 @@ def test_dwarf_warrior_class(
 ):
     warrior = DwarfWarrior(
         nickname=nickname,
-        favourite_dish=favourite_dish,
+        _favourite_dish=favourite_dish,
         hummer_level=hummer_level
     )
     assert warrior.get_rating() == rating
@@ -230,7 +230,7 @@ def test_dwarf_blacksmith_class(
 ):
     blacksmith = DwarfBlacksmith(
         nickname=nickname,
-        favourite_dish=favourite_dish,
+        _favourite_dish=favourite_dish,
         skill_level=skill_level
     )
     assert blacksmith.get_rating() == rating
@@ -246,29 +246,29 @@ def test_dwarf_blacksmith_class(
     [
         ([],  0),
         (
-            [Druid(nickname="Druid", musical_instrument="", favourite_spell="aaa")],
+            [Druid(nickname="Druid", _musical_instrument="", favourite_spell="aaa")],
             3
         ),
         (
             [
-                Druid(nickname="Druid", musical_instrument="", favourite_spell="aaa"),
-                ElfRanger(nickname="Ranger", musical_instrument="", bow_level=33),
+                Druid(nickname="Druid", _musical_instrument="", favourite_spell="aaa"),
+                ElfRanger(nickname="Ranger", _musical_instrument="", bow_level=33),
             ],
             102
         ),
         (
             [
-                DwarfWarrior(nickname="Dwarf", favourite_dish="", hummer_level=6),
-                ElfRanger(nickname="Ranger", musical_instrument="", bow_level=2),
+                DwarfWarrior(nickname="Dwarf", _favourite_dish="", hummer_level=6),
+                ElfRanger(nickname="Ranger", _musical_instrument="", bow_level=2),
             ],
             16
         ),
         (
             [
-                DwarfWarrior(nickname="Dwarf", favourite_dish="", hummer_level=6),
-                ElfRanger(nickname="Ranger1", musical_instrument="", bow_level=2),
-                ElfRanger(nickname="Ranger2", musical_instrument="", bow_level=6),
-                DwarfBlacksmith(nickname="DwarfBlacksmith", favourite_dish="", skill_level=10),
+                DwarfWarrior(nickname="Dwarf", _favourite_dish="", hummer_level=6),
+                ElfRanger(nickname="Ranger1", _musical_instrument="", bow_level=2),
+                ElfRanger(nickname="Ranger2", _musical_instrument="", bow_level=6),
+                DwarfBlacksmith(nickname="DwarfBlacksmith", _favourite_dish="", skill_level=10),
             ],
             44
         ),
@@ -283,8 +283,8 @@ def test_calculate_team_total_rating(team, rating):
     [
         (
             [
-                Druid(nickname="Nardual", musical_instrument="flute", favourite_spell="aaa"),
-                ElfRanger(nickname="Rothilion", musical_instrument="trumpet", bow_level=33),
+                Druid(nickname="Nardual", _musical_instrument="flute", favourite_spell="aaa"),
+                ElfRanger(nickname="Rothilion", _musical_instrument="trumpet", bow_level=33),
             ],
             (
                 "Nardual is playing a song on the flute\n"
@@ -293,9 +293,9 @@ def test_calculate_team_total_rating(team, rating):
         ),
         (
             [
-                Druid(nickname="Nardual", musical_instrument="flute", favourite_spell="aaa"),
-                ElfRanger(nickname="Rothilion", musical_instrument="trumpet", bow_level=33),
-                Druid(nickname="Faridal", musical_instrument="flute", favourite_spell="aaa"),
+                Druid(nickname="Nardual", _musical_instrument="flute", favourite_spell="aaa"),
+                ElfRanger(nickname="Rothilion", _musical_instrument="trumpet", bow_level=33),
+                Druid(nickname="Faridal", _musical_instrument="flute", favourite_spell="aaa"),
             ],
             (
                 "Nardual is playing a song on the flute\n"
@@ -317,8 +317,8 @@ def test_elves_concert(elves, songs):
     [
         (
             [
-                DwarfWarrior(nickname="Thiddeal", favourite_dish="French Fries", hummer_level=3),
-                DwarfWarrior(nickname="Dwarf", favourite_dish="Caesar Salad", hummer_level=3),
+                DwarfWarrior(nickname="Thiddeal", _favourite_dish="French Fries", hummer_level=3),
+                DwarfWarrior(nickname="Dwarf", _favourite_dish="Caesar Salad", hummer_level=3),
             ],
             (
                 "Thiddeal is eating French Fries\n"
@@ -327,9 +327,9 @@ def test_elves_concert(elves, songs):
         ),
         (
                 [
-                    DwarfWarrior(nickname="Thiddeal", favourite_dish="French Fries", hummer_level=3),
-                    DwarfWarrior(nickname="Dwarf", favourite_dish="Caesar Salad", hummer_level=3),
-                    DwarfWarrior(nickname="Dwarf2", favourite_dish="French Fries", hummer_level=3),
+                    DwarfWarrior(nickname="Thiddeal", _favourite_dish="French Fries", hummer_level=3),
+                    DwarfWarrior(nickname="Dwarf", _favourite_dish="Caesar Salad", hummer_level=3),
+                    DwarfWarrior(nickname="Dwarf2", _favourite_dish="French Fries", hummer_level=3),
                 ],
                 (
                         "Thiddeal is eating French Fries\n"
