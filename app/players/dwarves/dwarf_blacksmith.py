@@ -5,11 +5,11 @@ class DwarfBlacksmith(Dwarf):
     def __init__(
             self,
             nickname: str,
-            _favourite_dish: str,
+            favourite_dish: str,
             skill_level: int
     ) -> None:
         super().__init__(nickname)
-        self._favourite_dish = _favourite_dish
+        self._favourite_dish = favourite_dish
         self._skill_level = skill_level
 
     def eat_favourite_dish(self) -> None:

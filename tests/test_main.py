@@ -30,7 +30,7 @@ from app.players.player import Player
 def test_classes_should_have_corresponding_methods(class_, methods):
     for method in methods:
         assert (
-                hasattr(class_, method)
+            hasattr(class_, method)
         ), f"Class '{class_.__name__}' should have method {method}"
 
 
@@ -68,7 +68,7 @@ def test_classes_should_not_be_abstract(class_):
 def test_abstract_methods_should_not_be_redefined(class_, methods):
     for method in methods:
         assert (
-            getattr(class_, method) is getattr(Player, method)
+                getattr(class_, method) is getattr(Player, method)
         ), f"Class '{class_.__name__}' should not redefine " \
            f"abstract method '{method}'"
 
@@ -77,34 +77,34 @@ def test_abstract_methods_should_not_be_redefined(class_, methods):
     "nickname,musical_instrument,bow_level,rating,song,player_info",
     [
         (
-            "Nardual Chaekian",
-            "flute",
-            7,
-            21,
-            "Nardual Chaekian is playing a song on the flute\n",
-            "Elf ranger Nardual Chaekian. Nardual Chaekian has bow of the 7 level",
+                "Nardual Chaekian",
+                "flute",
+                7,
+                21,
+                "Nardual Chaekian is playing a song on the flute\n",
+                "Elf ranger Nardual Chaekian. Nardual Chaekian has bow of the 7 level",
         ),
         (
-            "Rothilion Yinfiel",
-            "trumpet",
-            5,
-            15,
-            "Rothilion Yinfiel is playing a song on the trumpet\n",
-            "Elf ranger Rothilion Yinfiel. Rothilion Yinfiel has bow of the 5 level",
+                "Rothilion Yinfiel",
+                "trumpet",
+                5,
+                15,
+                "Rothilion Yinfiel is playing a song on the trumpet\n",
+                "Elf ranger Rothilion Yinfiel. Rothilion Yinfiel has bow of the 5 level",
         ),
     ]
 )
 def test_elf_ranger_class(
-    nickname,
-    musical_instrument,
-    bow_level,
-    rating,
-    song,
-    player_info,
+        nickname,
+        musical_instrument,
+        bow_level,
+        rating,
+        song,
+        player_info,
 ):
     ranger = ElfRanger(
         nickname=nickname,
-        _musical_instrument=musical_instrument,
+        musical_instrument=musical_instrument,
         bow_level=bow_level
     )
     assert ranger.get_rating() == rating
@@ -119,34 +119,34 @@ def test_elf_ranger_class(
     "nickname,musical_instrument,favourite_spell,rating,song,player_info",
     [
         (
-            "Elenaril Paxina",
-            "flute",
-            "abrakadabra",
-            11,
-            "Elenaril Paxina is playing a song on the flute\n",
-            "Druid Elenaril Paxina. Elenaril Paxina has a favourite spell: abrakadabra",
+                "Elenaril Paxina",
+                "flute",
+                "abrakadabra",
+                11,
+                "Elenaril Paxina is playing a song on the flute\n",
+                "Druid Elenaril Paxina. Elenaril Paxina has a favourite spell: abrakadabra",
         ),
         (
-            "Althidon Perzumin",
-            "trumpet",
-            "sim-sim",
-            7,
-            "Althidon Perzumin is playing a song on the trumpet\n",
-            "Druid Althidon Perzumin. Althidon Perzumin has a favourite spell: sim-sim",
+                "Althidon Perzumin",
+                "trumpet",
+                "sim-sim",
+                7,
+                "Althidon Perzumin is playing a song on the trumpet\n",
+                "Druid Althidon Perzumin. Althidon Perzumin has a favourite spell: sim-sim",
         ),
     ]
 )
 def test_druid_class(
-    nickname,
-    musical_instrument,
-    favourite_spell,
-    rating,
-    song,
-    player_info,
+        nickname,
+        musical_instrument,
+        favourite_spell,
+        rating,
+        song,
+        player_info,
 ):
     ranger = Druid(
         nickname=nickname,
-        _musical_instrument=musical_instrument,
+        musical_instrument=musical_instrument,
         favourite_spell=favourite_spell
     )
     assert ranger.get_rating() == rating
@@ -161,34 +161,34 @@ def test_druid_class(
     "nickname,favourite_dish,hummer_level,rating,eating_message,player_info",
     [
         (
-            "Thiddeal",
-            "French Fries",
-            7,
-            11,
-            "Thiddeal is eating French Fries\n",
-            "Dwarf warrior Thiddeal. Thiddeal has a hummer of the 7 level",
+                "Thiddeal",
+                "French Fries",
+                7,
+                11,
+                "Thiddeal is eating French Fries\n",
+                "Dwarf warrior Thiddeal. Thiddeal has a hummer of the 7 level",
         ),
         (
-            "Dwarf",
-            "Caesar Salad",
-            10,
-            14,
-            "Dwarf is eating Caesar Salad\n",
-            "Dwarf warrior Dwarf. Dwarf has a hummer of the 10 level",
+                "Dwarf",
+                "Caesar Salad",
+                10,
+                14,
+                "Dwarf is eating Caesar Salad\n",
+                "Dwarf warrior Dwarf. Dwarf has a hummer of the 10 level",
         ),
     ]
 )
 def test_dwarf_warrior_class(
-    nickname,
-    favourite_dish,
-    hummer_level,
-    rating,
-    eating_message,
-    player_info,
+        nickname,
+        favourite_dish,
+        hummer_level,
+        rating,
+        eating_message,
+        player_info,
 ):
     warrior = DwarfWarrior(
         nickname=nickname,
-        _favourite_dish=favourite_dish,
+        favourite_dish=favourite_dish,
         hummer_level=hummer_level
     )
     assert warrior.get_rating() == rating
@@ -203,34 +203,34 @@ def test_dwarf_warrior_class(
     "nickname,favourite_dish,skill_level,rating,eating_message,player_info",
     [
         (
-            "Thiddeal",
-            "French Fries",
-            14,
-            14,
-            "Thiddeal is eating French Fries\n",
-            "Dwarf blacksmith Thiddeal with skill of the 14 level",
+                "Thiddeal",
+                "French Fries",
+                14,
+                14,
+                "Thiddeal is eating French Fries\n",
+                "Dwarf blacksmith Thiddeal with skill of the 14 level",
         ),
         (
-            "Dwarf",
-            "Caesar Salad",
-            8,
-            8,
-            "Dwarf is eating Caesar Salad\n",
-            "Dwarf blacksmith Dwarf with skill of the 8 level",
+                "Dwarf",
+                "Caesar Salad",
+                8,
+                8,
+                "Dwarf is eating Caesar Salad\n",
+                "Dwarf blacksmith Dwarf with skill of the 8 level",
         ),
     ]
 )
 def test_dwarf_blacksmith_class(
-    nickname,
-    favourite_dish,
-    skill_level,
-    rating,
-    eating_message,
-    player_info,
+        nickname,
+        favourite_dish,
+        skill_level,
+        rating,
+        eating_message,
+        player_info,
 ):
     blacksmith = DwarfBlacksmith(
         nickname=nickname,
-        _favourite_dish=favourite_dish,
+        favourite_dish=favourite_dish,
         skill_level=skill_level
     )
     assert blacksmith.get_rating() == rating
@@ -244,33 +244,33 @@ def test_dwarf_blacksmith_class(
 @pytest.mark.parametrize(
     "team,rating",
     [
-        ([],  0),
+        ([], 0),
         (
-            [Druid(nickname="Druid", _musical_instrument="", favourite_spell="aaa")],
-            3
+                [Druid(nickname="Druid", musical_instrument="", favourite_spell="aaa")],
+                3
         ),
         (
-            [
-                Druid(nickname="Druid", _musical_instrument="", favourite_spell="aaa"),
-                ElfRanger(nickname="Ranger", _musical_instrument="", bow_level=33),
-            ],
-            102
+                [
+                    Druid(nickname="Druid", musical_instrument="", favourite_spell="aaa"),
+                    ElfRanger(nickname="Ranger", musical_instrument="", bow_level=33),
+                ],
+                102
         ),
         (
-            [
-                DwarfWarrior(nickname="Dwarf", _favourite_dish="", hummer_level=6),
-                ElfRanger(nickname="Ranger", _musical_instrument="", bow_level=2),
-            ],
-            16
+                [
+                    DwarfWarrior(nickname="Dwarf", favourite_dish="", hummer_level=6),
+                    ElfRanger(nickname="Ranger", musical_instrument="", bow_level=2),
+                ],
+                16
         ),
         (
-            [
-                DwarfWarrior(nickname="Dwarf", _favourite_dish="", hummer_level=6),
-                ElfRanger(nickname="Ranger1", _musical_instrument="", bow_level=2),
-                ElfRanger(nickname="Ranger2", _musical_instrument="", bow_level=6),
-                DwarfBlacksmith(nickname="DwarfBlacksmith", _favourite_dish="", skill_level=10),
-            ],
-            44
+                [
+                    DwarfWarrior(nickname="Dwarf", favourite_dish="", hummer_level=6),
+                    ElfRanger(nickname="Ranger1", musical_instrument="", bow_level=2),
+                    ElfRanger(nickname="Ranger2", musical_instrument="", bow_level=6),
+                    DwarfBlacksmith(nickname="DwarfBlacksmith", favourite_dish="", skill_level=10),
+                ],
+                44
         ),
     ]
 )
@@ -282,26 +282,26 @@ def test_calculate_team_total_rating(team, rating):
     "elves,songs",
     [
         (
-            [
-                Druid(nickname="Nardual", _musical_instrument="flute", favourite_spell="aaa"),
-                ElfRanger(nickname="Rothilion", _musical_instrument="trumpet", bow_level=33),
-            ],
-            (
-                "Nardual is playing a song on the flute\n"
-                "Rothilion is playing a song on the trumpet\n"
-            )
+                [
+                    Druid(nickname="Nardual", musical_instrument="flute", favourite_spell="aaa"),
+                    ElfRanger(nickname="Rothilion", musical_instrument="trumpet", bow_level=33),
+                ],
+                (
+                        "Nardual is playing a song on the flute\n"
+                        "Rothilion is playing a song on the trumpet\n"
+                )
         ),
         (
-            [
-                Druid(nickname="Nardual", _musical_instrument="flute", favourite_spell="aaa"),
-                ElfRanger(nickname="Rothilion", _musical_instrument="trumpet", bow_level=33),
-                Druid(nickname="Faridal", _musical_instrument="flute", favourite_spell="aaa"),
-            ],
-            (
-                "Nardual is playing a song on the flute\n"
-                "Rothilion is playing a song on the trumpet\n"
-                "Faridal is playing a song on the flute\n"
-            )
+                [
+                    Druid(nickname="Nardual", musical_instrument="flute", favourite_spell="aaa"),
+                    ElfRanger(nickname="Rothilion", musical_instrument="trumpet", bow_level=33),
+                    Druid(nickname="Faridal", musical_instrument="flute", favourite_spell="aaa"),
+                ],
+                (
+                        "Nardual is playing a song on the flute\n"
+                        "Rothilion is playing a song on the trumpet\n"
+                        "Faridal is playing a song on the flute\n"
+                )
         ),
     ]
 )
@@ -316,20 +316,20 @@ def test_elves_concert(elves, songs):
     "dwarves,feast_output",
     [
         (
-            [
-                DwarfWarrior(nickname="Thiddeal", _favourite_dish="French Fries", hummer_level=3),
-                DwarfWarrior(nickname="Dwarf", _favourite_dish="Caesar Salad", hummer_level=3),
-            ],
-            (
-                "Thiddeal is eating French Fries\n"
-                "Dwarf is eating Caesar Salad\n"
-            )
+                [
+                    DwarfWarrior(nickname="Thiddeal", favourite_dish="French Fries", hummer_level=3),
+                    DwarfWarrior(nickname="Dwarf", favourite_dish="Caesar Salad", hummer_level=3),
+                ],
+                (
+                        "Thiddeal is eating French Fries\n"
+                        "Dwarf is eating Caesar Salad\n"
+                )
         ),
         (
                 [
-                    DwarfWarrior(nickname="Thiddeal", _favourite_dish="French Fries", hummer_level=3),
-                    DwarfWarrior(nickname="Dwarf", _favourite_dish="Caesar Salad", hummer_level=3),
-                    DwarfWarrior(nickname="Dwarf2", _favourite_dish="French Fries", hummer_level=3),
+                    DwarfWarrior(nickname="Thiddeal", favourite_dish="French Fries", hummer_level=3),
+                    DwarfWarrior(nickname="Dwarf", favourite_dish="Caesar Salad", hummer_level=3),
+                    DwarfWarrior(nickname="Dwarf2", favourite_dish="French Fries", hummer_level=3),
                 ],
                 (
                         "Thiddeal is eating French Fries\n"

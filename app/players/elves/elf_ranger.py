@@ -5,10 +5,10 @@ class ElfRanger(Elf):
     def __init__(
             self,
             nickname: str,
-            _musical_instrument: str,
+            musical_instrument: str,
             bow_level: int
     ) -> None:
-        super().__init__(nickname, _musical_instrument)
+        super().__init__(nickname, musical_instrument)
         self._bow_level: int = bow_level
 
     def get_rating(self) -> int:
