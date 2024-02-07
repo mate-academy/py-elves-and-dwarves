@@ -5,19 +5,13 @@ from typing import List
 
 
 def calculate_team_total_rating(players: List[Player]) -> int:
-    res = []
-    for player in players:
-        res.append(player.get_rating())
-    return sum(res)
+    return sum([player.get_rating() for player in players])
 
 
 def elves_concert(elves: List[Elf]) -> None:
-    for elf in elves:
-        elf.play_elf_song()
-    pass
+    [elf.play_elf_song() for elf in elves]
 
 
 def feast_of_the_dwarves(dwarves: List[Dwarf]) -> None:
     for dwarf in dwarves:
         dwarf.eat_favourite_dish()
-    pass
