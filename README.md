@@ -7,9 +7,9 @@ In your universe, all players are divided into two races - `Elves` and `Dwarves`
 Both races are divided into two groups. For elves, these are the `ElfRanger` and `Druid` classes. 
 Dwarves have the `DwarfWarrior` and `DwarfBlacksmith` classes.
 
-Thould implement the abstract classes `Elf`, `Dwarf` and `Player`, 
-where you can put the common logic.hus, each player should be an instance of one of these four classes.
-But to have better code design, you s
+Thus, each player should be an instance of one of these four classes.
+But to have better code design, you should implement the abstract classes `Elf`, `Dwarf` and `Player`, 
+where you can put the common logic.
 
 The base class should be the `Player` class, 
 which should have a single `nickname` attribute, where the player's name will be stored. 
