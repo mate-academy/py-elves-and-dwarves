@@ -15,6 +15,5 @@ def elves_concert(elves: List[Elf]) -> None:
 
 
 def feast_of_the_dwarves(dwarfs: List[Dwarf]) -> None:
-    meals = (Dwarf.eat_favourite_dish(dwarf) for dwarf in dwarfs)
-    for _ in meals:
-        pass
+    for dwarf in dwarfs:
+        dwarf.eat_favourite_dish()
