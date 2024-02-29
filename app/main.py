@@ -1,4 +1,5 @@
 from typing import List
+
 from app.players.player import Player
 from app.players.elves.elf import Elf
 from app.players.dwarves.dwarf import Dwarf
@@ -14,4 +15,4 @@ def elves_concert(elves: List[Elf]) -> None:
 
 def feast_of_the_dwarves(dwarves: List[Dwarf]) -> None:
     for dwarf in dwarves:
-        print(f"{dwarf.nickname} is eating {dwarf._favourite_dish}")
+        dwarf.eat_favourite_dish()
