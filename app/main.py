@@ -1,7 +1,5 @@
 def calculate_team_total_rating(team: list) -> int:
-    all_rating = []
-    for i in team:
-        all_rating.append(i.get_rating())
+    all_rating = [i.get_rating() for i in team]
     return sum(all_rating)
 
 
