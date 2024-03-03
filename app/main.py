@@ -1,6 +1,6 @@
 
 def calculate_team_total_rating(players_group: list) -> int:
-    return sum(teammate.get_rafting() for teammate in players_group)
+    return sum(teammate.get_rating() for teammate in players_group)
 
 
 def elves_concert(elfs_group: list) -> None:
