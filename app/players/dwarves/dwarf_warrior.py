@@ -2,8 +2,8 @@ from app.players.dwarves.dwarf import Dwarf
 
 
 class DwarfWarrior(Dwarf):
-    def __init__(self, hummer_level: int, favorite_dish: str, nickname: str) -> None:
-        super().__init__(favorite_dish, nickname)
+    def __init__(self, hummer_level: int, favourite_dish: str, nickname: str) -> None:
+        super().__init__(favourite_dish, nickname)
         self._hummer_level = hummer_level
 
     def player_info(self) -> str:
