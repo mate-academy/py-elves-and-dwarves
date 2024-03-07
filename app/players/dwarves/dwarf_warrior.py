@@ -1,3 +1,6 @@
+from app.players.dwarves.dwarf import Dwarf
+
+
 class DwarfWarrior(Dwarf):
     def __init__(self, hummer_level: int, favorite_dish: str, nickname: str) -> None:
         super().__init__(favorite_dish, nickname)

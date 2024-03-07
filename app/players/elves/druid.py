@@ -1,3 +1,6 @@
+from app.players.elves.elf import Elf
+
+
 class Druid(Elf):
     def __init__(self, favorite_spell: str, musical_instrument: str, nickname: str) -> None:
         super().__init__(musical_instrument, nickname)
