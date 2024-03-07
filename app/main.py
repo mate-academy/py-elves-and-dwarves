@@ -24,5 +24,9 @@ class Elf(Player):
         print(f"{self.nickname} is playing a song on the {self._musical_instrument}")
 
 class Dwarf(Player):
-    pass
 
+    def __init__(self, favorite_dish: str, nickname:str) -> None:
+        super().__init__(nickname)
+        self._favorite_dish = favorite_dish
+
+    def
