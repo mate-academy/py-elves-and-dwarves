@@ -1,3 +1,6 @@
+from app.players.elves.elf import Elf
+
+
 class ElfRanger(Elf):
     def __init__(self, bow_level: int, musical_instrument: str, nickname: str):
         super().__init__(musical_instrument, nickname)
