@@ -4,14 +4,14 @@ from app.players.elves.elf import Elf
 
 
 def calculate_team_total_rating(players: Player) -> int:
-    return sum([player.get_rating() for player in players])
+    return sum(player.get_rating() for player in players)
 
 
-def elves_concert(elfs: Elf) -> None:
-    for elf in elfs:
+def elves_concert(elves: Elf) -> None:
+    for elf in elves:
         elf.play_elf_song()
 
 
-def feast_of_the_dwarves(dwarfs: Dwarf) -> None:
-    for dwarf in dwarfs:
+def feast_of_the_dwarves(dwarves: Dwarf) -> None:
+    for dwarf in dwarves:
         dwarf.eat_favourite_dish()
