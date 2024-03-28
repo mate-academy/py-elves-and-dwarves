@@ -13,9 +13,9 @@ class Druid(Elf):
 
     def player_info(self) -> str:
         return (
-            "Druid " + self.nickname + ". " + self.nickname
-            + " has a favourite spell: "
-            + self._favourite_spell
+            f"Druid {self.nickname}. {self.nickname}"
+            f" has a favourite spell: "
+            f"{self._favourite_spell}"
         )
 
     def get_rating(self) -> int:
