@@ -4,7 +4,7 @@ from app.players.elves.elf import Elf
 class Druid(Elf):
     def __init__(
             self,
-            nickname:str,
+            nickname: str,
             musical_instrument: str,
             favourite_spell: str
     ) -> None:
@@ -13,7 +13,8 @@ class Druid(Elf):
 
     def player_info(self) -> str:
         return (f"Druid {self.nickname}. "
-                f"{self.nickname} has a favourite spell: {self._favourite_spell}")
+                f"{self.nickname} has a "
+                f"favourite spell: {self._favourite_spell}")
 
     def get_rating(self) -> int:
         return len(self._favourite_spell)
