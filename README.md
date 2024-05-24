@@ -73,7 +73,7 @@ ranger = ElfRanger(
     bow_level=7
 )
 ranger.get_rating() == 21
-ranger.player_info() == "Elf ranger Nardual Chaekian. Nardual Chaekian has bow of the 7 level"
+ranger.player_info == "Elf ranger Nardual Chaekian. Nardual Chaekian has bow of the 7 level"
 ranger.play_elf_song()  # "Nardual Chaekian is playing a song on the flute" 
 ```
 
@@ -84,7 +84,7 @@ warrior = DwarfWarrior(
     hummer_level=7
 )
 warrior.get_rating() == 11
-warrior.player_info() == "Dwarf warrior Thiddeal. Thiddeal has a hummer of the 7 level"
+warrior.player_info == "Dwarf warrior Thiddeal. Thiddeal has a hummer of the 7 level"
 warrior.eat_favourite_dish()  # "Thiddeal is eating French Fries" 
 ```
 
