@@ -73,7 +73,7 @@ ranger = ElfRanger(
     bow_level=7
 )
 ranger.get_rating() == 21
-ranger.player_info == "Elf ranger Nardual Chaekian. Nardual Chaekian has bow of the 7 level"
+ranger.player_info() == "Elf ranger Nardual Chaekian. Nardual Chaekian has bow of the 7 level"
 ranger.play_elf_song()  # "Nardual Chaekian is playing a song on the flute" 
 ```
 
