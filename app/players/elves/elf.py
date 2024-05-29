@@ -6,9 +6,8 @@ class Elf(Player, ABC):
     def __init__(self,
                  nickname: str,
                  musical_instrument: str) -> None:
-        self.nickname = nickname
+        super().__init__(nickname)
         self._musical_instrument = musical_instrument
-        Player.nickname.append(self.nickname)
 
     def play_elf_song(self) -> None:
         print(f"{self.nickname} "
