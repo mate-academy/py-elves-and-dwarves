@@ -1,8 +1,10 @@
 from app.players.player import Player
-from abc import ABC
 
 
-class Dwarf(Player, ABC):
+class Dwarf(Player):
+    # Why don't the tests
+    # throw errors if I haven't
+    # specified the abstract methods get_rating and player_info?
     def __init__(self, nickname: str, favourite_dish: str) -> None:
         super().__init__(nickname)
         self.__favorite_dish = favourite_dish
