@@ -1,8 +1,7 @@
 from app.players.player import Player
-from abc import ABC
 
 
-class Dwarf(Player, ABC):
+class Dwarf(Player):
     def __init__(self, nickname: str, favorite_dish: str) -> None:
         super().__init__(nickname)
         self._favorite_dish = favorite_dish
