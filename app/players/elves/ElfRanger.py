@@ -1,4 +1,4 @@
-from players.elves.Elf import Elf
+from app.players.elves.Elf import Elf
 
 
 class ElfRanger(Elf):
