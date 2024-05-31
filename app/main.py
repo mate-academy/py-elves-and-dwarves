@@ -4,7 +4,7 @@ from .players.dwarves.dwarf_warrior import DwarfWarrior
 from .players.dwarves.dwarf_blacksmith import DwarfBlacksmith
 
 
-usage = [DwarfBlacksmith(), DwarfWarrior(), Druid(), ElfRanger()]
+usage = [DwarfBlacksmith, DwarfWarrior, Druid, ElfRanger]
 
 
 def calculate_team_total_rating(team: list) -> int:
