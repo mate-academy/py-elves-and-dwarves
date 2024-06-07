@@ -16,6 +16,7 @@ def elves_concert(elves: list) -> None:
         elf.play_elf_song()
 
 
-def feast_of_the_dwarves(dwarves: list["DwarfBlacksmith", "DwarfWarrior"]) -> None:
+def feast_of_the_dwarves(dwarves: list["DwarfBlacksmith", "DwarfWarrior"]) \
+        -> None:
     for dwarf in dwarves:
         dwarf.eat_favourite_dish()
