@@ -4,9 +4,7 @@ from app.players.player import Player
 
 
 def calculate_team_total_rating(team: list[Player]) -> int:
-    rating = 0
-    for member in team:
-        rating += member.get_rating()
+    rating = sum([member.get_rating() for member in team])
     return rating
 
 
