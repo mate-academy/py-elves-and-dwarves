@@ -1,11 +1,11 @@
-
+from __future__ import annotations
+from typing import List
 from app.players.dwarves.dwarf import Dwarf
 from app.players.elves.elf import Elf
 from app.players.player import Player
-from typing import List, Union
 
 
-def calculate_team_total_rating(players: List[Player]) -> Union[int, float]:
+def calculate_team_total_rating(players: List[Player]) -> int | float:
     return sum(player.get_rating() for player in players)
 
 
