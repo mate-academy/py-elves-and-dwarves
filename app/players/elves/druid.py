@@ -1,3 +1,6 @@
+from app.players.elves.elf import Elf
+
+
 class Druid(Elf):
     def __init__(
             self,
