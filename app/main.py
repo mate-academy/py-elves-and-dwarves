@@ -4,6 +4,7 @@ def calculate_team_total_rating(team: list) -> int:
 
 
 def elves_concert(elves: list) -> None:
+
     for elf in elves:
         elf.play_elf_song()
 
