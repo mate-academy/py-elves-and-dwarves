@@ -10,8 +10,7 @@ Dwarves have the `DwarfWarrior` and `DwarfBlacksmith` classes.
 Thus, each player should be an instance of one of these four classes.
 But to have better code design, you should implement the abstract classes `Elf`, `Dwarf` and `Player`, 
 where you can put the common logic.
-
-The base class should be the `Player` class, 
++
 which should have a single `nickname` attribute, where the player's name will be stored. 
 It must also have two empty abstract methods `get_rating`, `player_info`, declared, 
 thus we guarantee that all players in our universe will have them defined.
