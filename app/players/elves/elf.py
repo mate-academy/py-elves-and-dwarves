@@ -1,7 +1,7 @@
-from app.players import player
+from app.players.player import Player
 
 
-class Elf(player.Player):
+class Elf(Player):
     def __init__(
             self,
             nickname: str,
