@@ -1,4 +1,5 @@
 from abc import abstractmethod, ABC
+from typing import Any
 
 
 class Player(ABC):
@@ -6,7 +7,7 @@ class Player(ABC):
         self.nickname = nickname
 
     @abstractmethod
-    def get_rating(self) -> None:
+    def get_rating(self) -> Any:
         pass
 
     @abstractmethod
