@@ -1,5 +1,4 @@
-from .elf import Elf
-
+from app.players.elves.elf import Elf
 
 class ElfRanger(Elf):
     def __init__(
