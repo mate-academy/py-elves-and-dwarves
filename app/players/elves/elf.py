@@ -1,0 +1,17 @@
+from abc import abstractmethod
+from app.players.player import Player
+
+
+class Elf(Player):
+    def __init__(
+            self,
+            nickname: str,
+            musical_instrument: str
+    ) -> None:
+        self._musical_instrument = musical_instrument
+        super().__init__(nickname)
+
+    @abstractmethod
+    def play_elf_song(self) -> None:
+        print(f"{self.nickname} is playing a song on the "
+              f"{self._musical_instrument}")
