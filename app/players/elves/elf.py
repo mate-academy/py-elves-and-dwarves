@@ -1,8 +1,10 @@
 from app.players.player import Player
+from abc import ABC
 
 
-class Elf(Player):
-    def __init__(self, musical_instrument: str) -> None:
+class Elf(Player, ABC):
+    def __init__(self, nickname, musical_instrument: str) -> None:
+        super().__init__(nickname)
         self._musical_instrument = musical_instrument
 
     def play_elf_song(self) -> None:
