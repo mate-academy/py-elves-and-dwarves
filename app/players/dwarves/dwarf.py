@@ -1,19 +1,11 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 from ..player import Player
 
 
 class Dwarf(Player, ABC):
-    def __init__(self, nickname: str, favourite_dish: str):
+    def __init__(self, nickname: str, favourite_dish: str) -> None:
         super().__init__(nickname)
         self.favourite_dish = favourite_dish
 
-    def eat_favourite_dish(self):
+    def eat_favourite_dish(self) -> None:
         print(f"{self.nickname} is eating {self.favourite_dish}")
-
-    @abstractmethod
-    def get_rating(self):
-        pass
-
-    @abstractmethod
-    def player_info(self):
-        pass
