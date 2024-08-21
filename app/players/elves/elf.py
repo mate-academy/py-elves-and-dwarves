@@ -1,4 +1,4 @@
-from app.player.player import Player
+from app.players.player import Player
 
 
 class Elf(Player):
