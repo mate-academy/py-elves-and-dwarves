@@ -1,13 +1,17 @@
-from app.players.dwarves.dwarf import Dwarf
+from players.dwarves.dwarf import Dwarf
 
 
 class DwarfBlacksmith(Dwarf):
-    def __init__(self, nickname: str, favourite_dish: str, skill_level: int):
+    def __init__(self, nickname: str,
+                 favourite_dish: str,
+                 skill_level: int
+                 ) -> None:
         super().__init__(nickname, favourite_dish)
         self._skill_level = skill_level
 
-    def skill_level(self) -> int:
+    def get_rating(self) -> int:
         return self._skill_level
-    
+
     def player_info(self) -> None:
-        print(f"Dwarf blacksmith {self.nickname} with skill of the {self._skill_level} level")
+        return (f"Dwarf blacksmith {self.nickname} with skill of the "
+                f"{self._skill_level} level")
