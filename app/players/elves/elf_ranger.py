@@ -11,7 +11,7 @@ class ElfRanger(Elf):
 
     def player_info(self) -> None:
         return (
-            f"Elf ranger {self.nickname}."
+            f"Elf ranger {self.nickname}. "
             f"{self.nickname} has bow of the {self._bow_level} level"
         )
 

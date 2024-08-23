@@ -21,39 +21,8 @@ def feast_of_the_dwarves(dwarves: list[DwarfBlacksmith, DwarfWarrior]) -> None:
 
 
 if __name__ == "__main__":
-    ranger = ElfRanger(
-        nickname="Nardual Chaekian", musical_instrument="flute", bow_level=7
-    )
-    warrior = DwarfWarrior(
-        nickname="Thiddeal", favourite_dish="French Fries", hummer_level=7
-    )
 
-    team = [ranger, warrior]
-    print(calculate_team_total_rating(team))  # 21 + 11 = 32
+    ranger = ElfRanger("Nardual Chaekian", "flute", 7)
 
-    elves = [
-        Druid(
-            nickname="Nardual",
-            musical_instrument="flute",
-            favourite_spell="aaa"
-        ),
-        ElfRanger(
-            nickname="Rothilion",
-            musical_instrument="trumpet",
-            bow_level=33
-        ),
-    ]
-    elves_concert(elves)
-
-    dwarves = [
-        DwarfWarrior(
-            nickname="Thiddeal",
-            favourite_dish="French Fries",
-            hummer_level=3
-        ),
-        DwarfWarrior(nickname="Dwarf",
-                     favourite_dish="Caesar Salad",
-                     hummer_level=3
-                     ),
-    ]
-    feast_of_the_dwarves(dwarves)
+    print(ranger.get_rating())
+    print(ranger.player_info()) == "Elf ranger Nardual Chaekian. Nardual Chaekian has bow of the 7 level"
