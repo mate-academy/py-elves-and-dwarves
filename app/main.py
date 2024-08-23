@@ -25,4 +25,4 @@ if __name__ == "__main__":
     ranger = ElfRanger("Nardual Chaekian", "flute", 7)
 
     print(ranger.get_rating())
-    print(ranger.player_info()) == "Elf ranger Nardual Chaekian. Nardual Chaekian has bow of the 7 level"
+    print(ranger.player_info())
