@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from players.elves.elf_ranger import ElfRanger
 
 
 class Player(ABC):
