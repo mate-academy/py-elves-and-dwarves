@@ -1,18 +1,10 @@
 from app.players.player import Player
 from app.players.elves.elf import Elf
 from app.players.dwarves.dwarf import Dwarf
-from app.players.elves.druid import Druid
 
 
 def calculate_team_total_rating(team: list[Player]) -> int:
-    spell = 0
-    rating = 0
-    for player in team:
-        if isinstance(player, Druid):
-            spell += player.get_rating()
-        else:
-            rating += player.get_rating()
-    return spell + rating
+    return sum(player.get_rating() for player in team)
 
 
 def elves_concert(elves: list[Elf]) -> None:
