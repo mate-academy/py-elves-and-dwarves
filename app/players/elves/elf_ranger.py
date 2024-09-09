@@ -3,7 +3,8 @@ from app.players.elves.elf import Elf
 
 class ElfRanger(Elf):
     def __init__(
-            self, nickname: str,
+            self,
+            nickname: str,
             musical_instrument: str,
             bow_level: int
     ) -> None:
