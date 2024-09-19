@@ -3,7 +3,8 @@ import io
 from contextlib import redirect_stdout
 
 import pytest
-
+import sys
+sys.path.insert(0, '/home/runner/work/py-elves-and-dwarves/py-elves-and-dwarves')
 from app import main
 from app.main import calculate_team_total_rating, elves_concert, feast_of_the_dwarves
 from app.players.dwarves.dwarf import Dwarf
