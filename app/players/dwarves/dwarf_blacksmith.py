@@ -3,7 +3,7 @@ from app.players.dwarves.dwarf import Dwarf
 
 class DwarfBlacksmith(Dwarf):
     def __init__(
-            self,            
+            self,
             nickname: str,
             favourite_dish: str,
             skill_level: int
