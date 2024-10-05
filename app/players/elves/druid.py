@@ -2,8 +2,6 @@ from app.players.elves.elf import Elf
 
 
 class Druid(Elf):
-    _favourite_spell = ""
-
     def __init__(
             self,
             nickname: str,

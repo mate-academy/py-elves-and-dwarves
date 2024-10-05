@@ -2,8 +2,6 @@ from app.players.dwarves.dwarf import Dwarf
 
 
 class DwarfWarrior(Dwarf):
-    _hummer_level = 0
-
     def __init__(
             self,
             nickname: str,

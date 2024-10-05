@@ -2,8 +2,6 @@ from app.players.elves.elf import Elf
 
 
 class ElfRanger(Elf):
-    _bow_level = 0
-
     def __init__(
             self, nickname: str,
             musical_instrument: str,
