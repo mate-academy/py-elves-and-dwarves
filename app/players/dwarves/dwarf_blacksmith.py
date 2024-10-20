@@ -1,4 +1,4 @@
-from players.dwarves.dwarf import Dwarf
+from app.players.dwarves.dwarf import Dwarf
 
 
 class DwarfBlacksmith(Dwarf):
@@ -10,4 +10,4 @@ class DwarfBlacksmith(Dwarf):
         return self._skill_level
 
     def player_info(self) -> str:
-        return f"Dwarf Blacksmith: {self.nickname}"
+        return f"Dwarf blacksmith {self.nickname} with skill of the {self._skill_level} level"
