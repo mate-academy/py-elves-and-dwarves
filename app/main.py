@@ -31,8 +31,10 @@ if __name__ == "__main__":
     ]
     print("Total team rating:", calculate_team_total_rating(players))
 
-    elves = [ElfRanger("Legolas", "Harp", 10), Druid("Elrond", "Flute", "Healing Spell")]
+    elves = [ElfRanger("Legolas", "Harp", 10),
+             Druid("Elrond", "Flute", "Healing Spell")]
     elves_concert(elves)
 
-    dwarfs = [DwarfWarrior("Gimli", "Meat", 8), DwarfBlacksmith("Balin", "Ale", 7)]
+    dwarfs = [DwarfWarrior("Gimli", "Meat", 8),
+              DwarfBlacksmith("Balin", "Ale", 7)]
     feast_of_the_dwarves(dwarfs)
