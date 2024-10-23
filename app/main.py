@@ -13,11 +13,11 @@ def calculate_team_total_rating(team: list[Player]) -> int:
 
 def elves_concert(elves: list[Elf]) -> None:
     for elf in elves:
-        if isinstance(elf, Druid | ElfRanger):
+        if isinstance(elf, (Druid, ElfRanger)):
             elf.play_elf_song()
 
 
 def feast_of_the_dwarves(dwarves: list[Dwarf]) -> None:
     for dwarf in dwarves:
-        if isinstance(dwarf, DwarfWarrior | DwarfBlacksmith):
+        if isinstance(dwarf, (DwarfWarrior, DwarfBlacksmith)):
             dwarf.eat_favourite_dish()
