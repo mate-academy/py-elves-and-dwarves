@@ -15,4 +15,4 @@ class DwarfWarrior(Dwarf):
         return self._hummer_level + 4
 
     def eat_favourite_dish(self) -> None:
-        super().eat_favourite_dish()
+        print(f"{self.nickname} is eating {self._favourite_dish}")

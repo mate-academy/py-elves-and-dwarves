@@ -15,4 +15,5 @@ class ElfRanger(Elf):
         return self._bow_level * 3
 
     def play_elf_song(self) -> None:
-        super().play_elf_song()
+        print(f"{self.nickname} is "
+              f"playing a song on the {self._musical_instrument}")

@@ -15,4 +15,4 @@ class DwarfBlacksmith(Dwarf):
         return self._skill_level
 
     def eat_favourite_dish(self) -> None:
-        super().eat_favourite_dish()
+        print(f"{self.nickname} is eating {self._favourite_dish}")
