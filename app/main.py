@@ -16,9 +16,9 @@ def elves_concert(elves: List[Elf]) -> None:
         elf.play_elf_song()
 
 
-def feast_of_the_dwarves(dwarfs: List[Dwarf]) -> None:
-    if not all(isinstance(dwarf, Dwarf) for dwarf in dwarfs):
+def feast_of_the_dwarves(dwarves: List[Dwarf]) -> None:
+    if not all(isinstance(dwarf, Dwarf) for dwarf in dwarves):
         raise TypeError("All elements in the list must be instances of Dwarf")
 
-    for dwarf in dwarfs:
+    for dwarf in dwarves:
         dwarf.eat_favourite_dish()
