@@ -1,5 +1,3 @@
-from abc import ABC
-
 from app.players.elves.elf import Elf
 
 

@@ -2,7 +2,9 @@ from app.players.elves.elf import Elf
 
 
 class ElfRanger(Elf):
-    def __init__(self, bow_level: int, musical_instrument: str, nickname: str) -> None:
+    def __init__(self, bow_level: int,
+                 musical_instrument: str,
+                 nickname: str) -> None:
         super().__init__(musical_instrument, nickname)
         self._bow_level = bow_level
 
