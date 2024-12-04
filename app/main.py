@@ -1,9 +1,9 @@
-from typing import List  # Импортируем List для аннотаций типов
-from players.player import Player  # Импорт базового класса Player
-from players.elves.elf_ranger import ElfRanger
-from players.elves.druid import Druid
-from players.dwarves.dwarf_warrior import DwarfWarrior
-from players.dwarves.dwarf_blacksmith import DwarfBlacksmith
+from app.players.elves.elf_ranger import ElfRanger
+from app.players.elves.druid import Druid
+from app.players.dwarves.dwarf_warrior import DwarfWarrior
+from app.players.dwarves.dwarf_blacksmith import DwarfBlacksmith
+from app.players.player import Player
+from typing import List
 
 
 def calculate_team_total_rating(team: List[Player]) -> int:
