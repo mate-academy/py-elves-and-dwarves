@@ -1,5 +1,6 @@
 from __future__ import annotations
 from typing import List
+
 from app.players.player import Player
 from app.players.elves.elf import Elf
 from app.players.dwarves.dwarf_warrior import Dwarf
