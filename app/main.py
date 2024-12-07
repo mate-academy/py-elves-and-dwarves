@@ -1,4 +1,3 @@
-
 from app.players.dwarves.dwarf import Dwarf
 from app.players.elves.elf import Elf
 from app.players.player import Player
