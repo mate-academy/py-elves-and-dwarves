@@ -1,6 +1,3 @@
-from __future__ import annotations
-
-
 def calculate_team_total_rating(players: list) -> int:
     result = 0
 
@@ -9,11 +6,11 @@ def calculate_team_total_rating(players: list) -> int:
     return result
 
 
-def elves_concert(players: list) -> str:
+def elves_concert(players: list) -> None:
     for player in players:
         player.play_elf_song()
 
 
-def feast_of_the_dwarves(players: list) -> str:
+def feast_of_the_dwarves(players: list) -> None:
     for player in players:
         player.eat_favourite_dish()

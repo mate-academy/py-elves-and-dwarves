@@ -19,7 +19,7 @@ class Druid(Elf):
             f"{self._favourite_spell}"
         )
 
-    def play_elf_song(self) -> str:
+    def play_elf_song(self) -> None:
         print(f"{self.nickname} is playing a song on the "
               f"{self._musical_instrument}"
               )

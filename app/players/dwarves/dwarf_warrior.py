@@ -20,5 +20,5 @@ class DwarfWarrior(Dwarf):
             f"level"
         )
 
-    def eat_favourite_dish(self) -> str:
+    def eat_favourite_dish(self) -> None:
         print(f"{self.nickname} is eating {self._favourite_dish}")
