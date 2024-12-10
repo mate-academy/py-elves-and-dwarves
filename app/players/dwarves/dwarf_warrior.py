@@ -7,14 +7,14 @@ class DwarfWarrior(Dwarf):
             self,
             nickname: str,
             favourite_dish: str,
-            hammer_level: int
+            hummer_level: int
     ) -> None:
         super().__init__(nickname, favourite_dish)
-        self._hammer_level = hammer_level
+        self._hummer_level = hummer_level
 
     def player_info(self) -> str:
         return (f"Dwarf warrior {self.nickname}. {self.nickname} "
-                f"has a hummer of the {self._hammer_level} level")
+                f"has a hummer of the {self._hummer_level} level")
 
     def get_rating(self) -> int:
-        return self._hammer_level + 4
+        return self._hummer_level + 4
