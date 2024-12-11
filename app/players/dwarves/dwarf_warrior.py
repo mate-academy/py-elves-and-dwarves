@@ -18,6 +18,3 @@ class DwarfWarrior(Dwarf):
         return (f"Dwarf warrior "
                 f"{self.nickname}. {self.nickname} has a hummer of the "
                 f"{self._hummer_level} level")
-
-    def eat_favourite_dish(self) -> None:
-        print(f"{self.nickname} is eating {self._favourite_dish}")

@@ -1,4 +1,4 @@
-from abc import abstractmethod, ABC
+from abc import ABC
 from app.players.player import Player
 
 
@@ -11,6 +11,5 @@ class Dwarf(Player, ABC):
         super().__init__(nickname)
         self._favourite_dish = favourite_dish
 
-    @abstractmethod
     def eat_favourite_dish(self) -> None:
-        pass
+        print(f"{self.nickname} is eating {self._favourite_dish}")

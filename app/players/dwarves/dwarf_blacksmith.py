@@ -18,6 +18,3 @@ class DwarfBlacksmith(Dwarf):
         return (f"Dwarf blacksmith "
                 f"{self.nickname} with skill of the "
                 f"{self._skill_level} level")
-
-    def eat_favourite_dish(self) -> None:
-        print(f"{self.nickname} is eating {self._favourite_dish}")
