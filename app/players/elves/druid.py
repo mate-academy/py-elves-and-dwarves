@@ -1,5 +1,4 @@
 from app.players.elves.elf import Elf
-from app.players.player import Player
 
 
 class Druid(Elf):
@@ -17,4 +16,5 @@ class Druid(Elf):
         return len(self._favourite_spell)
 
     def play_elf_song(self) -> None:
-        print(f"{self._nickname} is playing a song on the {self._musical_instrument}")
+        print(f"{self._nickname} is playing a song "
+              f"on the {self._musical_instrument}")
