@@ -2,7 +2,8 @@ from app.players.dwarves.dwarf import Dwarf
 
 
 class DwarfBlacksmith(Dwarf):
-    def __init__(self, nickname: str, skill_level: int, favourite_dish: str) -> None:
+    def __init__(self, nickname: str, skill_level: int,
+                 favourite_dish: str) -> None:
         super().__init__(favourite_dish)
         self._skill_level = skill_level
         self._nickname = nickname
