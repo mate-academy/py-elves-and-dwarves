@@ -2,8 +2,10 @@ from app.players.elves.elf import Elf
 from app.players.dwarves.dwarf import Dwarf
 from typing import List
 
+from app.players.player import Player
 
-def calculate_team_total_rating(team: List[Elf | Dwarf]) -> int:
+
+def calculate_team_total_rating(team: List[Player]) -> int:
     return sum(player.get_rating() for player in team)
 
 
