@@ -1,7 +1,6 @@
 from app.players.elves.elf import Elf
 from app.players.dwarves.dwarf import Dwarf
 from typing import List
-
 from app.players.player import Player
 
 
