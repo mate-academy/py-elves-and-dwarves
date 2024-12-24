@@ -1,7 +1,5 @@
 from app.players.player import Player
-
 from app.players.dwarves.dwarf import Dwarf
-
 from app.players.elves.elf import Elf
 
 
