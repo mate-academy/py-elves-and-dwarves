@@ -1,6 +1,6 @@
-def elvese():
+def elvese() -> None:
     return None
 
 
-def elveselves():
+def elveselves() -> None:
     return None
