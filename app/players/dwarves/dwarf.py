@@ -5,11 +5,5 @@ class Dwarf(Player):
         super().__init__(nickname)
         self._favourite_dish = favourite_dish
 
-    def get_rating(self):
-        pass
-
-    def player_info(self):
-        pass
-
     def eat_favourite_dish(self) -> None:
         print(f"{self.nickname} is eating {self._favourite_dish}")
