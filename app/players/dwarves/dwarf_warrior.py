@@ -12,4 +12,4 @@ class DwarfWarrior(Dwarf):
                 f"has a hummer of the {self._hummer_level} level")
 
     def get_rating(self) -> int:
-        return self._hummer_level * 4
+        return self._hummer_level + 4
