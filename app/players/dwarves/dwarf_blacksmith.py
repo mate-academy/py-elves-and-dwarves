@@ -1,4 +1,4 @@
-from dwarf import Dwarf
+from .dwarf import Dwarf
 
 
 class DwarfBlacksmith (Dwarf):
