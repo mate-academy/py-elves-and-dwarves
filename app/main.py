@@ -29,3 +29,39 @@ class Dwarf(Player, ABC):
 
     def eat_favourite_dish(self) -> None:
         print(f"{self.nickname} is eating {self._favourite_dish}")
+
+
+class ElfRanger(Elf, ABC):
+    def __init__(self, bow_level: int) -> None:
+        super().__init__(self._musical_instrument)
+        self._bow_level = bow_level
+
+    def player_info(self) -> None:
+        print(f"Elf ranger {self.nickname}. {self.nickname} has bow of the {self._bow_level} level")
+
+
+class Druid(Elf, ABC):
+    def __init__(self, favourite_spell: str) -> None:
+        super().__init__(self._musical_instrument)
+        self._favourite_spell = favourite_spell
+
+    def player_info(self) -> None:
+        print(f"Druid {self.nickname}. {self.nickname} has a favourite spell: {self._favourite_spell}")
+
+
+class DwarfWarrior(Dwarf, ABC):
+    def __init__(self, hummer_level: int) -> None:
+        super().__init__(self._favourite_dish)
+        self._hummer_level = hummer_level
+
+    def player_info(self) -> None:
+        print(f"Dwarf warrior {self.nickname}. {self.nickname} has a hummer of the {self._hummer_level} level")
+
+
+class DwarfBlacksmith(Dwarf, ABC):
+    def __init__(self, skill_level: int) -> None:
+        super().__init__(self._favourite_dish)
+        self._skill_level = skill_level
+
+    def player_info(self) -> None:
+        print(f"Dwarf blacksmith {self.nickname} with skill of the {self._skill_level} level")
