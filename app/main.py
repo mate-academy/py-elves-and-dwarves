@@ -6,11 +6,11 @@ class Player(ABC):
         self.nickname = nickname
 
     @abstractmethod
-    def get_rating(self):
+    def get_rating(self) -> int:
         pass
 
     @abstractmethod
-    def player_info(self):
+    def player_info(self) -> int:
         pass
 
 
@@ -39,11 +39,17 @@ class ElfRanger(Elf, ABC):
     def player_info(self) -> None:
         print(f"Elf ranger {self.nickname}. {self.nickname} has bow of the {self._bow_level} level")
 
+    def get_rating(self) -> int:
+        return 3 * self._bow_level
+
 
 class Druid(Elf, ABC):
     def __init__(self, favourite_spell: str) -> None:
         super().__init__(self._musical_instrument)
         self._favourite_spell = favourite_spell
+
+    def get_rating(self) -> int:
+        return length(self._favourite_spell)
 
     def player_info(self) -> None:
         print(f"Druid {self.nickname}. {self.nickname} has a favourite spell: {self._favourite_spell}")
@@ -57,6 +63,9 @@ class DwarfWarrior(Dwarf, ABC):
     def player_info(self) -> None:
         print(f"Dwarf warrior {self.nickname}. {self.nickname} has a hummer of the {self._hummer_level} level")
 
+    def get_rating(self) -> int:
+        return self._hummer_level + 4
+
 
 class DwarfBlacksmith(Dwarf, ABC):
     def __init__(self, skill_level: int) -> None:
@@ -65,3 +74,6 @@ class DwarfBlacksmith(Dwarf, ABC):
 
     def player_info(self) -> None:
         print(f"Dwarf blacksmith {self.nickname} with skill of the {self._skill_level} level")
+
+    def get_rating(self) -> int:
+        return self._skill_level
