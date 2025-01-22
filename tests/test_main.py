@@ -4,6 +4,7 @@ from contextlib import redirect_stdout
 
 import pytest
 
+from app import main
 from app.main import calculate_team_total_rating, elves_concert, feast_of_the_dwarves
 from app.players.dwarves.dwarf import Dwarf
 from app.players.dwarves.dwarf_blacksmith import DwarfBlacksmith
@@ -55,6 +56,21 @@ def test_classes_should_not_be_abstract(class_):
     assert not inspect.isabstract(class_), (
         f"Class '{class_.__name__}' shouldn't be abstract"
     )
+
+
+@pytest.mark.parametrize(
+    "class_,methods",
+    [
+        (Elf, ["get_rating", "player_info"]),
+        (Dwarf, ["get_rating", "player_info"]),
+    ],
+)
+def test_abstract_methods_should_not_be_redefined(class_, methods):
+    for method in methods:
+        assert (
+            getattr(class_, method) is getattr(Player, method)
+        ), f"Class '{class_.__name__}' should not redefine " \
+           f"abstract method '{method}'"
 
 
 @pytest.mark.parametrize(
@@ -238,14 +254,14 @@ def test_dwarf_blacksmith_class(
                 Druid(nickname="Druid", musical_instrument="", favourite_spell="aaa"),
                 ElfRanger(nickname="Ranger", musical_instrument="", bow_level=33),
             ],
-            99
+            102
         ),
         (
             [
                 DwarfWarrior(nickname="Dwarf", favourite_dish="", hummer_level=6),
                 ElfRanger(nickname="Ranger", musical_instrument="", bow_level=2),
             ],
-            12
+            16
         ),
         (
             [
@@ -254,12 +270,12 @@ def test_dwarf_blacksmith_class(
                 ElfRanger(nickname="Ranger2", musical_instrument="", bow_level=6),
                 DwarfBlacksmith(nickname="DwarfBlacksmith", favourite_dish="", skill_level=10),
             ],
-            34
+            44
         ),
     ]
 )
 def test_calculate_team_total_rating(team, rating):
-    return calculate_team_total_rating(team) == rating
+    assert calculate_team_total_rating(team) == rating
 
 
 @pytest.mark.parametrize(
@@ -328,3 +344,19 @@ def test_feast_of_the_dwarves(dwarves, feast_output):
     with redirect_stdout(f):
         feast_of_the_dwarves(dwarves)
     assert f.getvalue() == feast_output
+
+
+@pytest.mark.parametrize(
+    "class_",
+    [
+        ElfRanger, Druid, DwarfWarrior, DwarfBlacksmith
+    ],
+)
+def test_some_classes_not_subclass_of_abc(class_):
+    lines = inspect.getsource(class_)
+    assert "ABC" not in lines
+
+
+def test_comment_deleted():
+    lines = inspect.getsource(main)
+    assert "# write your code here" not in lines
