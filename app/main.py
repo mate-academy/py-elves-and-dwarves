@@ -1,6 +1,6 @@
 from app.players.player import Player
-from players.elves.elf import Elf
-from players.dwarves.dwarf import Dwarf
+from app.players.elves.elf import Elf
+from app.players.dwarves.dwarf import Dwarf
 # from players.dwarves.dwarf_blacksmith import DwarfBlacksmith
 # from players.dwarves.dwarf_warrior import DwarfWarrior
 # from players.elves.druid import Druid
