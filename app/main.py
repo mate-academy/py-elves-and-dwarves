@@ -1,4 +1,4 @@
-from players.player import Player
+from app.players.player import Player
 from players.elves.elf import Elf
 from players.dwarves.dwarf import Dwarf
 # from players.dwarves.dwarf_blacksmith import DwarfBlacksmith
