@@ -4,7 +4,7 @@ from app.players.dwarves.dwarf_warrior import DwarfWarrior
 from app.players.dwarves.dwarf_blacksmith import DwarfBlacksmith
 
 
-def calculate_team_total_rating(list_of_player: list) -> total_rating:
+def calculate_team_total_rating(list_of_player: list) -> int:
     total_rating = 0
     for play in list_of_player:
         total_rating += play.get_rating()
