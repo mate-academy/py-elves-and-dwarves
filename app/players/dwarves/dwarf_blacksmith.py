@@ -9,7 +9,7 @@ class DwarfBlacksmith(Dwarf):
 
     def player_info(self) -> str:
         return f"Dwarf blacksmith {self.nickname} with skill" \
-            " of the {self.skill_level} level"
+            f" of the {self.skill_level} level"
 
     def get_rating(self) -> int:
         return self.skill_level
