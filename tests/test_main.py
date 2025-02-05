@@ -12,7 +12,7 @@ from app.players.dwarves.dwarf_warrior import DwarfWarrior
 from app.players.elves.druid import Druid
 from app.players.elves.elf import Elf
 from app.players.elves.elf_ranger import ElfRanger
-from app.players.player import Player
+from app.players.players import Player
 
 
 @pytest.mark.parametrize(
