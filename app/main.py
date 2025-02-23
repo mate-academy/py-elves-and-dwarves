@@ -4,7 +4,7 @@ from app.players.player import Player
 
 
 def calculate_team_total_rating(team: list[Player]) -> float:
-    return sum([player.get_rating() for player in team])
+    return sum(player.get_rating() for player in team)
 
 
 def elves_concert(team: list[Elf]) -> None:
@@ -14,4 +14,4 @@ def elves_concert(team: list[Elf]) -> None:
 
 def feast_of_the_dwarves(dw: list[Dwarf]) -> None:
     for dwarf in dw:
-        print(f"{dwarf.nickname} is eating {dwarf._favourite_dish}")
+        dwarf.eat_favourite_dish()
