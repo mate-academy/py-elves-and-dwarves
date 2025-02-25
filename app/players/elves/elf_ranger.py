@@ -8,13 +8,9 @@ class ElfRanger(Elf):
             musical_instrument: str,
             bow_level: int
     ) -> None:
+        super().__init__(musical_instrument)
         self._nickname = nickname
-        self._musical_instrument = musical_instrument
         self._bow_level = bow_level
-
-    def play_elf_song(self) -> None:
-        print(f"{self._nickname} is playing a song on the "
-              f"{self._musical_instrument}")
 
     def player_info(self) -> str:
         return (f"Elf ranger {self._nickname}. {self._nickname} "
