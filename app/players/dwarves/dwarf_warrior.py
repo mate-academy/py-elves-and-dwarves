@@ -1,3 +1,4 @@
+# flake8: noqa: E501, W293
 from app.players.dwarves.dwarf import Dwarf
 
 
@@ -12,9 +13,7 @@ class DwarfWarrior(Dwarf):
         self._hummer_level = hummer_level
 
     def player_info(self) -> None:
-        return f"Dwarf warrior {
-            self.nickname}. {self.nickname} has a hummer of the {
-                self._hummer_level} level"
+        return f"Dwarf warrior {self.nickname}. {self.nickname} has a hummer of the {self._hummer_level} level"
 
     def get_rating(self) -> None:
         return self._hummer_level + 4
