@@ -14,4 +14,4 @@ def elves_concert(musicians: list[Elf]) -> None:
 
 
 def calculate_team_total_rating(players: list[Player]) -> int | float:
-    return sum([player.get_rating() for player in players])
+    return sum(player.get_rating() for player in players)
