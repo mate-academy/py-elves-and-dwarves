@@ -1,12 +1,3 @@
-from app.players.elves.elf_ranger import ElfRanger
-from app.players.elves.druid import Druid
-from app.players.dwarves.dwarf_warrior import DwarfWarrior
-from app.players.dwarves.dwarf_blacksmith import DwarfBlacksmith
-from app.players.player import Player
-from app.players.elves.elf import Elf
-from app.players.dwarves.dwarf import Dwarf
-
-
 def elves_concert(elves: list) -> None:
     for elf in elves:
         elf.play_elf_song()
