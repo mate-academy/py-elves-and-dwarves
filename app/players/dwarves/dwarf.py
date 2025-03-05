@@ -13,8 +13,7 @@ class Dwarf(Player):
         print(f"{self.nickname} is eating {self._favourite_dish}")
 
     def get_rating(self) -> int:
-        return 0
+        pass
 
     def player_info(self) -> str:
-        return f"""Dwarf {self.nickname} loves 
-        to eat {self._favourite_dish}"""
+        pass

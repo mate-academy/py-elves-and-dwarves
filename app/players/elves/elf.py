@@ -10,12 +10,11 @@ class Elf(Player):
         self._musical_instrument = musical_instrument
 
     def play_elf_song(self) -> None:
-        print(f"""{self.nickname} is playing 
+        print(f"""{self.nickname} is playing
         a song on the {self._musical_instrument}""")
 
     def get_rating(self) -> int:
-        return 0
+        pass
 
     def player_info(self) -> str:
-        return f"""Elf {self.nickname} plays 
-        the {self._musical_instrument}"""
+        pass
