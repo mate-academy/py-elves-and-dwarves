@@ -16,4 +16,5 @@ class Dwarf(Player):
         return 0
 
     def player_info(self) -> str:
-        return f"Dwarf {self.nickname} loves to eat {self._favourite_dish}"
+        return f"""Dwarf {self.nickname} loves 
+        to eat {self._favourite_dish}"""
