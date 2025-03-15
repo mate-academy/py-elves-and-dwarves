@@ -7,8 +7,10 @@ class Player(ABC):
 
     @abstractmethod
     def get_rating(self) -> int:
-        pass
+        """Returns the player's rating."""
+        pass  # Явно указываем, что метод пустой
 
     @abstractmethod
     def player_info(self) -> str:
-        pass
+        """Returns player information."""
+        pass  # Добавили явный pass
