@@ -1,4 +1,4 @@
-def calculate_team_total_rating(team: list) -> None:
+def calculate_team_total_rating(team: list) -> int:
     total_rating = 0
     for player in team:
         total_rating += player.get_rating()
