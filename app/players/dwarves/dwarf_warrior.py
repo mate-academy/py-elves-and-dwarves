@@ -14,8 +14,8 @@ class DwarfWarrior(Dwarf):
 
     def player_info(self) -> None:
         print(
-            f"Dwarf warrior {self.nickname}."
-            f" {self.nickname} has a hummer of the {self._hummer_level} level"
+            f"Dwarf warrior {self.nickname}. "
+            f"{self.nickname} has a hummer of the {self._hummer_level} level"
         )
 
     def get_rating(self) -> int:

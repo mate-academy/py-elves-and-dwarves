@@ -14,8 +14,8 @@ class ElfRanger(Elf):
 
     def player_info(self) -> None:
         print(
-            f"Elf ranger {self.nickname}.",
-            f" {self.nickname} has bow of the {self._bow_level} level"
+            f"Elf ranger {self.nickname}. "
+            f"{self.nickname} has bow of the {self._bow_level} level"
         )
 
     def get_rating(self) -> int:
