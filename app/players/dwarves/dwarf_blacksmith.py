@@ -10,7 +10,6 @@ class DwarfBlacksmith(Dwarf):
     ) -> None:
         super().__init__(nickname, favourite_dish)
         self._skill_level = skill_level
-        self.nickname = nickname
 
     def player_info(self) -> str:
         return (f"Dwarf blacksmith {self.nickname}. {self.nickname} "
