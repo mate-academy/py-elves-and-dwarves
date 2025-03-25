@@ -1,4 +1,5 @@
 from app.players.elves.elf import Elf
+import logging
 
 
 def calculate_team_total_rating(team: list) -> int:
@@ -16,16 +17,14 @@ def feast_of_the_dwarves(dwarves: list) -> str:
     for dwarf in dwarves:
         dish = dwarf.eat_favourite_dish()
         if dish is None:
-            print(f"Warning: {dwarf.name} returned None!")
-            result.append(f"{dwarf.name} has no favourite dish")
-        else:
-            result.append(dish)
+            logging.warning(f"{dwarf.nickname} returned None!")
+            dish = f"{dwarf.nickname} has no favourite dish"
+        result.append(dish)
     return "\n".join(result)
 
 
-def eat_favourite_dish(self) -> str:
+def eat_favourite_dish(self: str) -> str:
     if self._favourite_dish:
         return f"{self.nickname} is eating {self._favourite_dish}"
     else:
         return f"{self.nickname} has no favourite dish"
-

@@ -19,5 +19,5 @@ class Druid(Elf):
         return len(self._favourite_spell)
 
     def play_elf_song(self) -> None:
-        print(f"{self.nickname} is playing a song on the {self._musical_instrument}")
-
+        print(f"{self.nickname} is playing "
+              f"a song on the {self._musical_instrument}")
