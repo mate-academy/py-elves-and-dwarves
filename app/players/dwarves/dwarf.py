@@ -1,5 +1,5 @@
 from abc import ABC
-from players.player import Player
+from app.players.player import Player
 
 class Dwarf(Player, ABC):
     def __init__(self, nickname: str, favourite_dish: str) -> None:
