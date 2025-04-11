@@ -1,5 +1,5 @@
 # app/dwarves/dwarf_blacksmith.py
-from app.dwarves.dwarf import Dwarf
+from app.players.dwarves.dwarf import Dwarf
 
 
 class DwarfBlacksmith(Dwarf):

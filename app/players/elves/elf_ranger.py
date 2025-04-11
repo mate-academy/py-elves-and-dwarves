@@ -1,5 +1,5 @@
 # app/elves/elf_ranger.py
-from app.elves.elf import Elf
+from app.players.elves.elf import Elf
 
 
 class ElfRanger(Elf):

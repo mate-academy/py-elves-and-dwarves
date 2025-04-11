@@ -1,5 +1,5 @@
 # app/elves/druid.py
-from app.elves.elf import Elf
+from app.players.elves.elf import Elf
 
 
 class Druid(Elf):
