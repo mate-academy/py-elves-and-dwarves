@@ -1,4 +1,5 @@
-from app.players.dwarves.dwarf import Dwarf
+# app/dwarves/dwarf_warrior.py
+from app.dwarves.dwarf import Dwarf
 
 
 class DwarfWarrior(Dwarf):
