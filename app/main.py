@@ -21,11 +21,16 @@ class Elf(Player):
         self._musical_instrument = musical_instrument
 
     def play_elf_song(self) -> None:
-        print(f"{self.nickname} is playing a song on the {self._musical_instrument}")
+        print(
+            f"{self.nickname} is playing a song on the "
+            f"{self._musical_instrument}"
+        )
 
 
 class ElfRanger(Elf):
-    def __init__(self, nickname: str, musical_instrument: str, bow_level: int) -> None:
+    def __init__(
+        self, nickname: str, musical_instrument: str, bow_level: int
+    ) -> None:
         super().__init__(nickname, musical_instrument)
         self._bow_level = bow_level
 
@@ -33,11 +38,16 @@ class ElfRanger(Elf):
         return 3 * self._bow_level
 
     def player_info(self) -> str:
-        return f"Elf ranger {self.nickname}. {self.nickname} has bow of the {self._bow_level} level"
+        return (
+            f"Elf ranger {self.nickname}. "
+            f"{self.nickname} has bow of the {self._bow_level} level"
+        )
 
 
 class Druid(Elf):
-    def __init__(self, nickname: str, musical_instrument: str, favourite_spell: str) -> None:
+    def __init__(
+        self, nickname: str, musical_instrument: str, favourite_spell: str
+    ) -> None:
         super().__init__(nickname, musical_instrument)
         self._favourite_spell = favourite_spell
 
@@ -45,7 +55,10 @@ class Druid(Elf):
         return len(self._favourite_spell)
 
     def player_info(self) -> str:
-        return f"Druid {self.nickname}. {self.nickname} has a favourite spell: {self._favourite_spell}"
+        return (
+            f"Druid {self.nickname}. "
+            f"{self.nickname} has a favourite spell: {self._favourite_spell}"
+        )
 
 
 class Dwarf(Player):
@@ -58,7 +71,9 @@ class Dwarf(Player):
 
 
 class DwarfWarrior(Dwarf):
-    def __init__(self, nickname: str, favourite_dish: str, hummer_level: int) -> None:
+    def __init__(
+        self, nickname: str, favourite_dish: str, hummer_level: int
+    ) -> None:
         super().__init__(nickname, favourite_dish)
         self._hummer_level = hummer_level
 
@@ -66,11 +81,16 @@ class DwarfWarrior(Dwarf):
         return self._hummer_level + 4
 
     def player_info(self) -> str:
-        return f"Dwarf warrior {self.nickname}. {self.nickname} has a hummer of the {self._hummer_level} level"
+        return (
+            f"Dwarf warrior {self.nickname}. "
+            f"{self.nickname} has a hummer of the {self._hummer_level} level"
+        )
 
 
 class DwarfBlacksmith(Dwarf):
-    def __init__(self, nickname: str, favourite_dish: str, skill_level: int) -> None:
+    def __init__(
+        self, nickname: str, favourite_dish: str, skill_level: int
+    ) -> None:
         super().__init__(nickname, favourite_dish)
         self._skill_level = skill_level
 
@@ -78,7 +98,10 @@ class DwarfBlacksmith(Dwarf):
         return self._skill_level
 
     def player_info(self) -> str:
-        return f"Dwarf blacksmith {self.nickname} with skill of the {self._skill_level} level"
+        return (
+            f"Dwarf blacksmith {self.nickname} with skill of the "
+            f"{self._skill_level} level"
+        )
 
 
 def calculate_team_total_rating(team: List[Player]) -> int:
