@@ -1,7 +1,6 @@
 from abc import ABC, abstractmethod
 
 
-# === app/players/player.py ===
 class Player(ABC):
     def __init__(self, nickname):
         self.nickname = nickname
@@ -15,10 +14,6 @@ class Player(ABC):
         pass
 
 
-# === app/players/elves/elf.py ===
-from app.players.player import Player
-
-
 class Elf(Player):
     def __init__(self, nickname, musical_instrument):
         super().__init__(nickname)
@@ -26,11 +21,6 @@ class Elf(Player):
 
     def play_elf_song(self):
         print(f"{self.nickname} is playing a song on the {self._musical_instrument}")
-
-
-# === app/players/elves/elf_ranger.py ===
-from app.players.elves.elf import Elf
-
 
 class ElfRanger(Elf):
     def __init__(self, nickname, musical_instrument, bow_level):
@@ -42,11 +32,6 @@ class ElfRanger(Elf):
 
     def player_info(self):
         return f"Elf ranger {self.nickname}. {self.nickname} has bow of the {self._bow_level} level"
-
-
-# === app/players/elves/druid.py ===
-from app.players.elves.elf import Elf
-
 
 class Druid(Elf):
     def __init__(self, nickname, musical_instrument, favourite_spell):
@@ -60,10 +45,6 @@ class Druid(Elf):
         return f"Druid {self.nickname}. {self.nickname} has a favourite spell: {self._favourite_spell}"
 
 
-# === app/players/dwarves/dwarf.py ===
-from app.players.player import Player
-
-
 class Dwarf(Player):
     def __init__(self, nickname, favourite_dish):
         super().__init__(nickname)
@@ -71,10 +52,6 @@ class Dwarf(Player):
 
     def eat_favourite_dish(self):
         print(f"{self.nickname} is eating {self._favourite_dish}")
-
-
-# === app/players/dwarves/dwarf_warrior.py ===
-from app.players.dwarves.dwarf import Dwarf
 
 
 class DwarfWarrior(Dwarf):
@@ -89,10 +66,6 @@ class DwarfWarrior(Dwarf):
         return f"Dwarf warrior {self.nickname}. {self.nickname} has a hummer of the {self._hummer_level} level"
 
 
-# === app/players/dwarves/dwarf_blacksmith.py ===
-from app.players.dwarves.dwarf import Dwarf
-
-
 class DwarfBlacksmith(Dwarf):
     def __init__(self, nickname, favourite_dish, skill_level):
         super().__init__(nickname, favourite_dish)
@@ -103,13 +76,6 @@ class DwarfBlacksmith(Dwarf):
 
     def player_info(self):
         return f"Dwarf blacksmith {self.nickname} with skill of the {self._skill_level} level"
-
-
-# === app/main.py ===
-from app.players.elves.druid import Druid
-from app.players.elves.elf_ranger import ElfRanger
-from app.players.dwarves.dwarf_warrior import DwarfWarrior
-from app.players.dwarves.dwarf_blacksmith import DwarfBlacksmith
 
 
 def calculate_team_total_rating(team):
