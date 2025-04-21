@@ -3,8 +3,8 @@ from app.players.elves.elf import Elf
 from app.players.dwarves.dwarf import Dwarf
 
 
-def calculate_team_total_rating(player: list[Player]) -> int:
-    return sum(rating.get_rating() for rating in player)
+def calculate_team_total_rating(players: list[Player]) -> int:
+    return sum(player.get_rating() for player in players)
 
 
 def elves_concert(elves: list[Elf]) -> None:
