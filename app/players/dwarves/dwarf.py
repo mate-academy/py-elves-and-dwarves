@@ -7,4 +7,4 @@ class Dwarf(Player):
         self._favourite_dish = favourite_dish
 
     def eat_favourite_dish(self) -> str:
-        print(f"{self.nickname} is eating {self._favourite_dish}")
+        return f"{self.nickname} is eating {self._favourite_dish}"
