@@ -41,10 +41,10 @@ if __name__ == "__main__":
     ]
     dwarves = [
         DwarfWarrior(
-            nickname="Thiddeal", favourite_dish="French Fries", hammer_level=3
+            nickname="Thiddeal", favourite_dish="French Fries", hummer_level=3
         ),
         DwarfWarrior(
-            nickname="Dwarf", favourite_dish="Caesar Salad", hammer_level=3
+            nickname="Dwarf", favourite_dish="Caesar Salad", hummer_level=3
         ),
     ]
 
