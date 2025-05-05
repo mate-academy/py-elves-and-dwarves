@@ -1,4 +1,4 @@
-from players.player import Player
+from .players.player import Player
 
 
 class Elves(Player):

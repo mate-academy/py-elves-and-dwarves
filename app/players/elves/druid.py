@@ -1,4 +1,4 @@
-from elf import Elves
+from .elf import Elves
 
 
 class Druid(Elves):
