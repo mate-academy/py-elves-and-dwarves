@@ -2,6 +2,7 @@ from players.dwarves.dwarf_warrior import DwarfWarrior
 from players.elves.druid import Druid
 from players.elves.elf_ranger import ElfRanger
 
+
 def calculate_team_total_rating() -> int:
     team = [
         Druid(nickname="Druid",
