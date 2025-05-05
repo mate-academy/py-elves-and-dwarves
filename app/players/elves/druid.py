@@ -3,6 +3,7 @@ from app.players.elves.elf import Elf
 
 class Druid(Elf):
     def __init__(self, _favourite_spell: str) -> None:
+        super().__init__("")
         self._favourite_spell = _favourite_spell
 
     def get_rating(self) -> int:

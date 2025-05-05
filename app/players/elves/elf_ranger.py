@@ -3,6 +3,7 @@ from app.players.elves.elf import Elf
 
 class ElfRanger(Elf):
     def __init__(self, _bow_level: int) -> None:
+        super().__init__("")
         self._bow_level = _bow_level
 
     def get_rating(self) -> int:

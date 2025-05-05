@@ -2,7 +2,8 @@ from abc import ABC, abstractmethod
 
 
 class Player(ABC):
-    nickname = ""
+    def __init__(self, nickname: str):
+        self.nickname = nickname
 
     @abstractmethod
     def get_rating(self) -> None:
