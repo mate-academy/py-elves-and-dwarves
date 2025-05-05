@@ -2,7 +2,8 @@ from elf import Elves
 
 
 class ElfRanger(Elves):
-    def __init__(self, _musical_instrument: str, nickname: str, _bow_level: int) -> None:
+    def __init__(self, _musical_instrument: str,
+                 nickname: str, _bow_level: int) -> None:
         super().__init__(_musical_instrument, nickname)
         self._bow_level = _bow_level
 
