@@ -1,4 +1,4 @@
-from elf import Elf
+from .elf import Elf
 
 class Druid(Elf):
     def __init__(self, nickname, musical_instrument, favourite_spell):
