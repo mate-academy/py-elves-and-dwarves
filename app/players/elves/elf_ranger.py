@@ -1,7 +1,7 @@
-from .elf import Elves
+from app.players.elves.elf import Elf
 
 
-class ElfRanger(Elves):
+class ElfRanger(Elf):
     def __init__(self, _musical_instrument: str,
                  nickname: str, _bow_level: int) -> None:
         super().__init__(_musical_instrument, nickname)
