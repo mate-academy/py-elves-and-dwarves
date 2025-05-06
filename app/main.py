@@ -17,3 +17,4 @@ def feast_of_the_dwarves(dwarves_: list[Dwarf]) -> None:
     for dwarf in dwarves_:
         if isinstance(dwarf, Dwarf):
             dwarf.eat_favourite_dish()
+
