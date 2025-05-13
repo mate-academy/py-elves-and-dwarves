@@ -2,8 +2,6 @@ from abc import ABC, abstractmethod
 
 
 class Player(ABC):
-    nickname = []
-
     @abstractmethod
     def get_rating(self) -> None:
         pass
@@ -19,13 +17,11 @@ class Elf(Player):
 
     @staticmethod
     def play_elf_song() -> None:
-        print("{self.nickname} is playing a song on the {self.musical_instrument}")
+        print(f"{self.nickname} is playing a song on the {self.musical_instrument}")
 
-    @abstractmethod
     def get_rating(self) -> None:
         pass
 
-    @abstractmethod
     def player_info(self) -> None:
         pass
 
@@ -36,13 +32,11 @@ class Dwarf(Player):
 
     @staticmethod
     def eat_favourite_dish() -> None:
-        print("{self.nickname} is eating {self.favourite_dish}")
+        print(f"{self.nickname} is eating {self.favourite_dish}")
 
-    @abstractmethod
     def get_rating(self) -> None:
         pass
 
-    @abstractmethod
     def player_info(self) -> None:
         pass
 
@@ -81,20 +75,18 @@ class DwarfWarrior(Dwarf):
     def get_rating(self) -> str:
         return "self.hummer_level + 4 for DwarfWarrior"
 
-    @abstractmethod
     def player_info(self) -> str:
         return "Dwarf warrior {self.nickname}. {self.nickname} has a hummer of the {self.hummer_level} level"
 
 
 class DwarfBlacksmith(Dwarf):
-    def __init__(self, skill_level: int) -> None:
+    def __init__(self, nickname: str, favourite_dish: str, skill_level: int):
+        super().__init__(nickname, favourite_dish)
         self.skill_level = skill_level
 
-    @abstractmethod
     def get_rating(self) -> str:
         return "self.skill_level for DwarfBlacksmith"
 
-    @abstractmethod
     def player_info(self) -> str:
         return "Dwarf blacksmith {self.nickname} with skill of the {self.skill_level} level"
 
