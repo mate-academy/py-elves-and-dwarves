@@ -12,11 +12,10 @@ class Player(ABC):
 
 
 class Elf(Player):
-    def __init__(self, musical_instrument: str) -> None:
+    def __init__(self, musical_instrument: str, nickname: str) -> None:
         self.musical_instrument = musical_instrument
 
-    @staticmethod
-    def play_elf_song() -> None:
+    def play_elf_song(self) -> None:
         print(f"{self.nickname} is playing a song on the {self.musical_instrument}")
 
     def get_rating(self) -> None:
@@ -27,11 +26,11 @@ class Elf(Player):
 
 
 class Dwarf(Player):
-    def __init__(self, favourite_dish: str) -> None:
-        self.favourite_dish = favourite_dish
+    def __init__(self, nickname: str, favourite_dish: str):
+        super().__init__(nickname)
+        self._favourite_dish = favourite_dish
 
-    @staticmethod
-    def eat_favourite_dish() -> None:
+    def eat_favourite_dish(self) -> None:
         print(f"{self.nickname} is eating {self.favourite_dish}")
 
     def get_rating(self) -> None:
@@ -42,8 +41,9 @@ class Dwarf(Player):
 
 
 class ElfRanger(Elf):
-    def __init__(self, bow_level: int) -> None:
-        self.bow_level = bow_level
+    def __init__(self, nickname: str, musical_instrument: str, bow_level: int):
+        super().__init__(nickname, musical_instrument)
+        self._bow_level = bow_level
 
     @abstractmethod
     def get_rating(self) -> str:
@@ -71,12 +71,11 @@ class DwarfWarrior(Dwarf):
     def __init__(self, hummer_level: int) -> None:
         self.hummer_level = hummer_level
 
-    @abstractmethod
-    def get_rating(self) -> str:
+    def get_rating(self) -> int:
         return "self.hummer_level + 4 for DwarfWarrior"
 
     def player_info(self) -> str:
-        return "Dwarf warrior {self.nickname}. {self.nickname} has a hummer of the {self.hummer_level} level"
+        return f"Dwarf warrior {self.nickname}. {self.nickname} has a hummer of the {self.hummer_level} level"
 
 
 class DwarfBlacksmith(Dwarf):
@@ -84,11 +83,11 @@ class DwarfBlacksmith(Dwarf):
         super().__init__(nickname, favourite_dish)
         self.skill_level = skill_level
 
-    def get_rating(self) -> str:
+    def get_rating(self) -> int:
         return "self.skill_level for DwarfBlacksmith"
 
     def player_info(self) -> str:
-        return "Dwarf blacksmith {self.nickname} with skill of the {self.skill_level} level"
+        return f"Dwarf blacksmith {self.nickname} with skill of the {self.skill_level} level"
 
 
 def calculate_team_total_rating(players: list[Player]) -> int:
