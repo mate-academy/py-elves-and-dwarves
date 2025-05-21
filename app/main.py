@@ -4,8 +4,10 @@ def calculate_team_total_rating(players: list) -> int:
 
 
 def elves_concert(elfs: list) -> None:
-    [elf.play_elf_song() for elf in elfs]
+    for elf in elfs:
+        elf.play_elf_song()
 
 
 def feast_of_the_dwarves(dwarfs: list) -> None:
-    [dwarf.eat_favourite_dish() for dwarf in dwarfs]
+    for dwarf in dwarfs:
+        dwarf.eat_favourite_dish()
