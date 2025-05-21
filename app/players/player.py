@@ -10,15 +10,8 @@ class Player:
         self.nickname = nickname
 
     @abstractmethod
-    def get_rating(self) -> int | None:
-        if isinstance(self, ElfRanger):
-            return self.bow_level * 3
-        elif isinstance(self, Druid):
-            return len(self.favourite_spell)
-        elif isinstance(self, DwarfWarrior):
-            return self.hummer_level + 4
-        elif isinstance(self, DwarfBlacksmith):
-            return self.skill_level
+    def get_rating(self) -> None:
+       pass
 
     @abstractmethod
     def player_info(self) -> None:
