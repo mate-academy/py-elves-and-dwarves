@@ -1,4 +1,4 @@
-from app.players.players import Player
+from app.players.player import Player
 
 
 class Dwarf(Player):
@@ -9,8 +9,3 @@ class Dwarf(Player):
     def eat_favourite_dish(self) -> None:
         print(f"{self.nickname} is eating {self.__favourite_dish}")
 
-    def get_rating(self) -> None:
-        pass
-
-    def player_info(self) -> None:
-        pass
