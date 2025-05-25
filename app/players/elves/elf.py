@@ -7,5 +7,5 @@ class Elf(Player):
         super().__init__(nickname)
 
     def play_elf_song(self) -> None:
-        print(f"{self.nickname} is playing a song one the {self.__musical_instrument}")
+        print(f"{self.nickname} is playing a song on the {self.__musical_instrument}")
 
