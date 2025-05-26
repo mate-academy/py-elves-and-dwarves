@@ -4,7 +4,7 @@ from .elf import Elf
 class ElfRanger(Elf):
     def __init__(self, nickname: str, musical_instrument: str,
                  bow_level: int) -> None:
-        super().__init__(musical_instrument, nickname)
+        super().__init__(nickname, musical_instrument)
         self._bow_level = bow_level
 
     def get_rating(self) -> float:
