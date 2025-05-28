@@ -9,9 +9,9 @@ class Player(ABC):
         Player.players.append(self.nickname)
 
     @abstractmethod
-    def get_rating(self) -> None:
+    def get_rating(self) -> int:
         pass
 
     @abstractmethod
-    def player_info(self) -> None:
+    def player_info(self) -> str:
         pass
