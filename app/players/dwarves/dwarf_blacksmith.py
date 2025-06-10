@@ -7,7 +7,7 @@ class DwarfBlacksmith(Dwarf):
     # `skill_level` - an integer that shows the level of blacksmith's skills.
     # The `__init__` method should store it in the protected attribute.
     def __init__(self, nickname: str,
-                 favourite_dish: str,  skill_level: int) -> None:
+                 favourite_dish: str, skill_level: int) -> None:
         super().__init__(nickname, favourite_dish)
         self._skill_level = skill_level
 
