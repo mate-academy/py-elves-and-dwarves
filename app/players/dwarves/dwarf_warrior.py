@@ -2,7 +2,7 @@ from app.players.dwarves.dwarf import Dwarf
 
 
 class DwarfWarrior(Dwarf):
-    def __init__(self, hummer_level: str, favourite_dish: str, nickname: str):
+    def __init__(self, hummer_level: int, favourite_dish: str, nickname: str):
         super().__init__(favourite_dish, nickname)
         self.hummer_level = hummer_level
 
@@ -11,4 +11,4 @@ class DwarfWarrior(Dwarf):
                 f"a hummer of the {self.hummer_level} level")
 
     def get_rating(self):
-        return self.hummer_level + 4
+        return int(self.hummer_level) + 4
