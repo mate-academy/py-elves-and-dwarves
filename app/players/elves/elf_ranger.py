@@ -15,5 +15,3 @@ class ElfRanger(Elf):
 
     def get_rating(self) -> int:
         return self._bow_level * 3
-
-
