@@ -22,9 +22,9 @@ from app.players.player import Player
         (Elf, ["get_rating", "player_info", "play_elf_song"]),
         (ElfRanger, ["get_rating", "player_info", "play_elf_song"]),
         (Druid, ["get_rating", "player_info", "play_elf_song"]),
-        (Dwarf, ["get_rating", "player_info", "eat_favourite_dish"]),
-        (DwarfWarrior, ["get_rating", "player_info", "eat_favourite_dish"]),
-        (DwarfBlacksmith, ["get_rating", "player_info", "eat_favourite_dish"]),
+        (Dwarf, ["get_rating", "player_info", "eat_favorite_dish"]),
+        (DwarfWarrior, ["get_rating", "player_info", "eat_favorite_dish"]),
+        (DwarfBlacksmith, ["get_rating", "player_info", "eat_favorite_dish"]),
     ],
 )
 def test_classes_should_have_corresponding_methods(class_, methods):
@@ -158,7 +158,7 @@ def test_druid_class(
 
 
 @pytest.mark.parametrize(
-    "nickname,favourite_dish,hummer_level,rating,eating_message,player_info",
+    "nickname,favorite_dish,hummer_level,rating,eating_message,player_info",
     [
         (
             "Thiddeal",
@@ -180,7 +180,7 @@ def test_druid_class(
 )
 def test_dwarf_warrior_class(
     nickname,
-    favourite_dish,
+    favorite_dish,
     hummer_level,
     rating,
     eating_message,
@@ -188,19 +188,19 @@ def test_dwarf_warrior_class(
 ):
     warrior = DwarfWarrior(
         nickname=nickname,
-        favourite_dish=favourite_dish,
+        favorite_dish=favorite_dish,
         hummer_level=hummer_level
     )
     assert warrior.get_rating() == rating
     assert warrior.player_info() == player_info
     f = io.StringIO()
     with redirect_stdout(f):
-        warrior.eat_favourite_dish()
+        warrior.eat_favorite_dish()
     assert f.getvalue() == eating_message
 
 
 @pytest.mark.parametrize(
-    "nickname,favourite_dish,skill_level,rating,eating_message,player_info",
+    "nickname,favorite_dish,skill_level,rating,eating_message,player_info",
     [
         (
             "Thiddeal",
@@ -222,7 +222,7 @@ def test_dwarf_warrior_class(
 )
 def test_dwarf_blacksmith_class(
     nickname,
-    favourite_dish,
+    favorite_dish,
     skill_level,
     rating,
     eating_message,
@@ -230,14 +230,14 @@ def test_dwarf_blacksmith_class(
 ):
     blacksmith = DwarfBlacksmith(
         nickname=nickname,
-        favourite_dish=favourite_dish,
+        favorite_dish=favorite_dish,
         skill_level=skill_level
     )
     assert blacksmith.get_rating() == rating
     assert blacksmith.player_info() == player_info
     f = io.StringIO()
     with redirect_stdout(f):
-        blacksmith.eat_favourite_dish()
+        blacksmith.eat_favorite_dish()
     assert f.getvalue() == eating_message
 
 
@@ -246,7 +246,7 @@ def test_dwarf_blacksmith_class(
     [
         ([],  0),
         (
-            [Druid(nickname="Druid", musical_instrument="", favourite_spell="aaa")],
+            [Druid(nickname="Druid", musical_instrument="", favorite_spell="aaa")],
             3
         ),
         (
@@ -258,17 +258,17 @@ def test_dwarf_blacksmith_class(
         ),
         (
             [
-                DwarfWarrior(nickname="Dwarf", favourite_dish="", hummer_level=6),
+                DwarfWarrior(nickname="Dwarf", favorite_dish="", hummer_level=6),
                 ElfRanger(nickname="Ranger", musical_instrument="", bow_level=2),
             ],
             16
         ),
         (
             [
-                DwarfWarrior(nickname="Dwarf", favourite_dish="", hummer_level=6),
+                DwarfWarrior(nickname="Dwarf", favorite_dish="", hummer_level=6),
                 ElfRanger(nickname="Ranger1", musical_instrument="", bow_level=2),
                 ElfRanger(nickname="Ranger2", musical_instrument="", bow_level=6),
-                DwarfBlacksmith(nickname="DwarfBlacksmith", favourite_dish="", skill_level=10),
+                DwarfBlacksmith(nickname="DwarfBlacksmith", favorite_dish="", skill_level=10),
             ],
             44
         ),
@@ -317,8 +317,8 @@ def test_elves_concert(elves, songs):
     [
         (
             [
-                DwarfWarrior(nickname="Thiddeal", favourite_dish="French Fries", hummer_level=3),
-                DwarfWarrior(nickname="Dwarf", favourite_dish="Caesar Salad", hummer_level=3),
+                DwarfWarrior(nickname="Thiddeal", favorite_dish="French Fries", hummer_level=3),
+                DwarfWarrior(nickname="Dwarf", favorite_dish="Caesar Salad", hummer_level=3),
             ],
             (
                 "Thiddeal is eating French Fries\n"
@@ -327,9 +327,9 @@ def test_elves_concert(elves, songs):
         ),
         (
                 [
-                    DwarfWarrior(nickname="Thiddeal", favourite_dish="French Fries", hummer_level=3),
-                    DwarfWarrior(nickname="Dwarf", favourite_dish="Caesar Salad", hummer_level=3),
-                    DwarfWarrior(nickname="Dwarf2", favourite_dish="French Fries", hummer_level=3),
+                    DwarfWarrior(nickname="Thiddeal", favorite_dish="French Fries", hummer_level=3),
+                    DwarfWarrior(nickname="Dwarf", favorite_dish="Caesar Salad", hummer_level=3),
+                    DwarfWarrior(nickname="Dwarf2", favorite_dish="French Fries", hummer_level=3),
                 ],
                 (
                         "Thiddeal is eating French Fries\n"
