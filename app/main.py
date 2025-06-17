@@ -22,5 +22,5 @@ def elves_concert(elves: list) -> None:
 
 def feast_of_the_dwarves(dwarf: list) -> None:
     if dwarf is not False:
-        for dwar in dwarf:
-            dwar.eat_favorite_dish()
+        for player in dwarf:
+            player.eat_favorite_dish()
