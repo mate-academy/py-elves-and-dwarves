@@ -7,8 +7,5 @@ class Dwarf(Player, ABC):
         super().__init__(nickname)
         self._favourite_dish = _favourite_dish
 
-    def play_elf_song(self) -> None:
-        print(f"{self.nickname} is eating {self._favourite_dish}")
-
     def eat_favourite_dish(self) -> None:
         print(f"{self.nickname} is eating {self._favourite_dish}")
