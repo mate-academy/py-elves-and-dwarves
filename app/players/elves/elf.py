@@ -1,9 +1,8 @@
-from abc import ABC, abstractmethod
 from app.players.player import Player
 
 
 class Elf(Player):
-    def __init__(self, musical_instrument: str, nickname) -> None:
+    def __init__(self, musical_instrument: str, nickname: str) -> None:
         super().__init__(nickname=nickname)
         self._musical_instrument = musical_instrument
 

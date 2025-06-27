@@ -4,7 +4,8 @@ from app.players.elves.elf import Elf
 class Druid(Elf):
     def __init__(self, favourite_spell: str,
                  musical_instrument: str, nickname: str) -> None:
-        super().__init__(musical_instrument=musical_instrument, nickname=nickname)
+        super().__init__(musical_instrument=musical_instrument,
+                         nickname=nickname)
         self._favourite_spell = favourite_spell
 
     def player_info(self) -> str:
