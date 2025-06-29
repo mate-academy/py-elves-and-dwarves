@@ -13,7 +13,7 @@ from app.players.elves.druid import Druid
 from app.players.elves.elf import Elf
 from app.players.elves.elf_ranger import ElfRanger
 from app.players.player import Player
-
+import sys
 
 @pytest.mark.parametrize(
     "class_,methods",
@@ -360,3 +360,5 @@ def test_some_classes_not_subclass_of_abc(class_):
 def test_comment_deleted():
     lines = inspect.getsource(main)
     assert "# write your code here" not in lines
+
+print(sys.path)
