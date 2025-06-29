@@ -360,3 +360,5 @@ def test_some_classes_not_subclass_of_abc(class_):
 def test_comment_deleted():
     lines = inspect.getsource(main)
     assert "# write your code here" not in lines
+
+
