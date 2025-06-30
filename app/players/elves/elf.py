@@ -3,7 +3,7 @@ from abc import ABC
 from app.players.player import Player
 
 
-class Elf(Player, ABC):
+class Elf(Player):
     def __init__(
         self,
         nickname: str,
