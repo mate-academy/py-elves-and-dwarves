@@ -2,8 +2,13 @@ from app.players.elves.elf import Elf
 
 
 class Druid(Elf):
-    def __init__(self, favourite_spell: str, **kwargs) -> None:
-        super().__init__(**kwargs)
+    def __init__(
+            self,
+            nickname: str,
+            musical_instrument: str,
+            favourite_spell: str
+    ) -> None:
+        super().__init__(nickname, musical_instrument)
         self.__favourite_spell = favourite_spell
 
     def player_info(self) -> str:

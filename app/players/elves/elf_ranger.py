@@ -2,8 +2,13 @@ from app.players.elves.elf import Elf
 
 
 class ElfRanger(Elf):
-    def __init__(self, bow_level: int, **kwargs) -> None:
-        super().__init__(**kwargs)
+    def __init__(
+            self,
+            nickname: str,
+            musical_instrument: str,
+            bow_level: int
+    ) -> None:
+        super().__init__(nickname, musical_instrument)
         self.__bow_level = bow_level
 
     def player_info(self) -> str:
