@@ -14,6 +14,6 @@ class ElfRanger(Elf):
     def get_rating(self) -> int:
         return 3 * self._bow_level
 
-    def player_info(self) -> None:
+    def player_info(self) -> str:
         return (f"Elf ranger {self._nickname}. {self._nickname} has "
                 f"bow of the {self._bow_level} level")
