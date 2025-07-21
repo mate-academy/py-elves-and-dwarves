@@ -1,5 +1,9 @@
 def calculate_team_total_rating(players: list) -> float:
-    pass
+    sum_of_rating = 0
+    for player in players:
+        sum_of_rating += player.get_rating()
+
+    return sum_of_rating
 
 
 def elves_concert(elves: list) -> float:
