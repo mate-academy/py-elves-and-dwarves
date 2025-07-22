@@ -158,7 +158,7 @@ def test_druid_class(
 
 
 @pytest.mark.parametrize(
-    "nickname,favourite_dish,hummer_level,rating,eating_message,player_info",
+    "nickname,favourite_dish,hammer_level,rating,eating_message,player_info",
     [
         (
             "Thiddeal",
@@ -181,7 +181,7 @@ def test_druid_class(
 def test_dwarf_warrior_class(
     nickname,
     favourite_dish,
-    hummer_level,
+    hammer_level,
     rating,
     eating_message,
     player_info,
@@ -189,7 +189,7 @@ def test_dwarf_warrior_class(
     warrior = DwarfWarrior(
         nickname=nickname,
         favourite_dish=favourite_dish,
-        hummer_level=hummer_level
+        hammer_level=hammer_level
     )
     assert warrior.get_rating() == rating
     assert warrior.player_info() == player_info
@@ -258,14 +258,14 @@ def test_dwarf_blacksmith_class(
         ),
         (
             [
-                DwarfWarrior(nickname="Dwarf", favourite_dish="", hummer_level=6),
+                DwarfWarrior(nickname="Dwarf", favourite_dish="", hammer_level=6),
                 ElfRanger(nickname="Ranger", musical_instrument="", bow_level=2),
             ],
             16
         ),
         (
             [
-                DwarfWarrior(nickname="Dwarf", favourite_dish="", hummer_level=6),
+                DwarfWarrior(nickname="Dwarf", favourite_dish="", hammer_level=6),
                 ElfRanger(nickname="Ranger1", musical_instrument="", bow_level=2),
                 ElfRanger(nickname="Ranger2", musical_instrument="", bow_level=6),
                 DwarfBlacksmith(nickname="DwarfBlacksmith", favourite_dish="", skill_level=10),
@@ -317,8 +317,8 @@ def test_elves_concert(elves, songs):
     [
         (
             [
-                DwarfWarrior(nickname="Thiddeal", favourite_dish="French Fries", hummer_level=3),
-                DwarfWarrior(nickname="Dwarf", favourite_dish="Caesar Salad", hummer_level=3),
+                DwarfWarrior(nickname="Thiddeal", favourite_dish="French Fries", hammer_level=3),
+                DwarfWarrior(nickname="Dwarf", favourite_dish="Caesar Salad", hammer_level=3),
             ],
             (
                 "Thiddeal is eating French Fries\n"
@@ -327,9 +327,9 @@ def test_elves_concert(elves, songs):
         ),
         (
                 [
-                    DwarfWarrior(nickname="Thiddeal", favourite_dish="French Fries", hummer_level=3),
-                    DwarfWarrior(nickname="Dwarf", favourite_dish="Caesar Salad", hummer_level=3),
-                    DwarfWarrior(nickname="Dwarf2", favourite_dish="French Fries", hummer_level=3),
+                    DwarfWarrior(nickname="Thiddeal", favourite_dish="French Fries", hammer_level=3),
+                    DwarfWarrior(nickname="Dwarf", favourite_dish="Caesar Salad", hammer_level=3),
+                    DwarfWarrior(nickname="Dwarf2", favourite_dish="French Fries", hammer_level=3),
                 ],
                 (
                         "Thiddeal is eating French Fries\n"
