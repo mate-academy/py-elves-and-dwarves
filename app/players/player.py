@@ -8,5 +8,6 @@ class Player(ABC):
     @abstractmethod
     def get_rating(self) -> int:
         pass
+
     def player_info(self) -> str:
         pass
