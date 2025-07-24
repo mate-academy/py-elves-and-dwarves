@@ -1,3 +1,6 @@
+from ..player import Player
+
+
 class Elf(Player):
     def __init__(self, nickname, musical_instrument):
         super().__init__(nickname)

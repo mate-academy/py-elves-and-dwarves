@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class Player(ABC)
+class Player(ABC):
     def __init__(self, nickname):
         self.nickname = nickname
 
