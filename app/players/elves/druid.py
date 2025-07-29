@@ -11,7 +11,7 @@ class Druid(Elf):
         self._favourite_spell = favourite_spell
         super().__init__(nickname, musical_instrument)
 
-    def get_rating(self) -> str:
+    def get_rating(self) -> int:
         return len(self._favourite_spell)
 
     def player_info(self) -> str:
