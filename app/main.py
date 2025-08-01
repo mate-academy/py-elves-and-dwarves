@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from typing import List
 
 
 class Player(ABC):
@@ -97,3 +98,20 @@ class DwarfBlacksmith(Dwarf):
 
     def get_rating(self) -> int:
         return self._skill_level
+
+
+def calculate_team_total_rating(players: List[Player]) -> int:
+    result = 0
+    for player in players:
+        result += player.get_rating()
+    return result
+
+
+def elves_concert(elves: List[Elf]) -> None:
+    for elf in elves:
+        elf.play_elf_song()
+
+
+def feast_of_the_dwarves(dwarves: List[Dwarf]) -> None:
+    for dwarf in dwarves:
+        dwarf.eat_favourite_dish()
