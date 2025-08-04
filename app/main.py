@@ -4,9 +4,10 @@ from .players.dwarves.dwarf import Dwarf
 from .players.elves.elf_ranger import ElfRanger
 from .players.elves.druid import Druid
 from .players.dwarves.dwarf_warrior import DwarfWarrior
+from .players.player import Player
 
 
-def calculate_team_total_rating(players: List) -> int:
+def calculate_team_total_rating(players: List[Player]) -> int:
     return sum(player.get_rating() for player in players)
 
 
