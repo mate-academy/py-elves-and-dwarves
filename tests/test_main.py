@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../app')))
 import inspect
 import io
 from contextlib import redirect_stdout
@@ -13,6 +16,7 @@ from app.players.elves.druid import Druid
 from app.players.elves.elf import Elf
 from app.players.elves.elf_ranger import ElfRanger
 from app.players.player import Player
+
 
 
 @pytest.mark.parametrize(
