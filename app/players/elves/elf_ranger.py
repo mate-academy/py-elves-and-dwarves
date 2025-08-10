@@ -10,5 +10,4 @@ class ElfRanger(Elf):
         return f"Elf ranger {self.nickname}. {self.nickname} has bow of the {self._bow_level} level"
 
     def get_rating(self) -> int:
-        bow_level = 3 * self._bow_level
-        return bow_level
+        return 3 * self._bow_level
