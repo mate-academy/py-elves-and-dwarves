@@ -6,7 +6,7 @@ class Player(ABC):
         self.nickname = nickname
 
     @abstractmethod
-    def get_rating(self) -> str:
+    def get_rating(self) -> int:
         pass
 
     @abstractmethod
