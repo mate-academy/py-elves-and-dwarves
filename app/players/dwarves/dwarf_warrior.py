@@ -13,5 +13,5 @@ class DwarfWarrior(Dwarf):
                 f"{self.nickname} has a hummer of the "
                 f"{self._hummer_level} level")
 
-    def get_rating(self) -> int | float:
+    def get_rating(self) -> int:
         return self._hummer_level + 4

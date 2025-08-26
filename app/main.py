@@ -7,7 +7,7 @@ from app.players.dwarves.dwarf import Dwarf
 #  from app.players.dwarves.dwarf_warrior import DwarfWarrior
 
 
-def calculate_team_total_rating(players_list: list[Player]) -> int | float:
+def calculate_team_total_rating(players_list: list[Player]) -> int:
     result = 0
     for person in players_list:
         result += person.get_rating()
