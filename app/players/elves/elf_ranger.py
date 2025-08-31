@@ -1,4 +1,4 @@
-from elf import Elf
+from app.players.elves.elf import Elf
 
 
 class ElfRanger(Elf):
@@ -8,7 +8,7 @@ class ElfRanger(Elf):
         super().__init__(nickname=nickname, musical_instrument=musical_instrument)
         self._bow_level = bow_level
 
-    def play(self) -> str:
+    def player_info(self) -> str:
         return f"Elf ranger {self.nickname}. {self.nickname} has bow of the {self._bow_level} level"
 
     def get_rating(self) -> int:
