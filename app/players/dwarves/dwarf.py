@@ -3,7 +3,7 @@ from abc import ABC
 from app.players.player import Player
 
 
-class Dwarf(ABC, Player):
+class Dwarf(Player, ABC):
     _favourite_dish: str
 
     def __init__(self, nickname: str, favourite_dish: str) -> None:
