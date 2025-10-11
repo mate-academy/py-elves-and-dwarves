@@ -1,8 +1,9 @@
 from app.elves.elf import Elf
 from app.dwarves.dwarf import Dwarf
+from app.players.player import Player
 
 
-def calculate_team_total_rating(team) -> None:
+def calculate_team_total_rating(team: list[Player]) -> None:
     return sum(player.get_rating() for player in team)
 
 
