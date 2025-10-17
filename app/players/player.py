@@ -7,7 +7,7 @@ class Player(ABC):
     
 
     @abstractmethod
-    def get_rating(self) -> float:
+    def get_rating(self) -> int:
         pass
 
 
