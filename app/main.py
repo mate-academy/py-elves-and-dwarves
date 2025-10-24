@@ -1,7 +1,7 @@
 from players.dwarves.dwarf import Dwarf
 
 
-if __name__ == "__main__":
+def main() -> None:
     dwarf = Dwarf("Thorin", "Roast Mutton")
     dwarf.eat_favourite_dish()
     print(dwarf.player_info())
