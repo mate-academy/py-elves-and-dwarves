@@ -1,4 +1,4 @@
-from players.dwarves.dwarf import Dwarf
+from app.players.dwarves.dwarf import Dwarf
 
 
 def main() -> None:
