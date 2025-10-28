@@ -1,19 +1,18 @@
-from players.elves.elf_ranger import ElfRanger
-from app.elves.druid import Druid
-from app.dwarves.dwarf_warrior import DwarfWarrior
-from app.dwarves.dwarf_blacksmith import DwarfBlacksmith
-
-def main():
-    players = [
-        ElfRanger("Legolas", 50),
-        Druid("Elrond", 40, 20),
-        DwarfWarrior("Gimli", 60),
-        DwarfBlacksmith("Thorin", 55, 30),
-    ]
-
-    for player in players:
-        print(player.player_info())
+from typing import List
+from app.players.player import Player
+from app.players.elves.elf import Elf
+from app.players.dwarves.dwarf import Dwarf
 
 
-if __name__ == "__main__":
-    main()
+def calculate_team_total_rating(players: List[Player]) -> int:
+    return sum(player.get_rating() for player in players)
+
+
+def elves_concert(elves: List[Elf]) -> None:
+    for elf in elves:
+        elf.play_elf_song()
+
+
+def feast_of_the_dwarves(dwarves: List[Dwarf]) -> None:
+    for dwarf in dwarves:
+        dwarf.eat_favourite_dish()
