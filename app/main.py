@@ -13,7 +13,7 @@ def calculate_team_total_rating(players: list[Player]) -> int:
 
 def elves_concert(elfs: list[Elf]) -> None:
     for elf in elfs:
-        elf.player_info()
+        elf.play_elf_song()
 
 
 def feast_of_the_dwarves(dwarves: list[Dwarf]) -> None:
