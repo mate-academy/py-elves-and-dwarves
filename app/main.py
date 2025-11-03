@@ -1,7 +1,6 @@
 from app.players.player import Player
 from app.players.elves.elf import Elf
 from app.players.dwarves.dwarf import Dwarf
-from app.players.elves.druid import Druid
 
 
 def calculate_team_total_rating(players_list: list[Player]) -> int:
