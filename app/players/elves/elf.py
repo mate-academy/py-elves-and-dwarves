@@ -12,7 +12,3 @@ class Elf(Player, ABC):
             f"{self.nickname} is playing"
             f" a song on the {self._musical_instrument}"
         )
-
-    @abstractmethod
-    def get_rating(self) -> int:
-        pass
