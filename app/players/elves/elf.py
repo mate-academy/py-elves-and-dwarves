@@ -1,4 +1,6 @@
-from app.players.player import Player, ABC
+from abc import ABC
+
+from app.players.player import Player
 
 
 class Elf(Player, ABC):
