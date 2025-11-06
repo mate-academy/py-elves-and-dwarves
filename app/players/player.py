@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from typing import Any
 
 
 class Player(ABC):
@@ -11,5 +10,5 @@ class Player(ABC):
         pass
 
     @abstractmethod
-    def get_rating(self) -> Any:
+    def get_rating(self) -> int:
         pass
