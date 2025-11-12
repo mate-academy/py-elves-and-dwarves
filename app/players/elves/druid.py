@@ -8,7 +8,7 @@ class Druid(Elf):
         self.favourite_spell = favourite_spell
 
     def player_info(self) -> str:
-        return (f"Druid{self.nickname}. {self.nickname} has a favorite spell:"
+        return (f"Druid {self.nickname}. {self.nickname} has a favourite spell:"
                 f" {self.favourite_spell}")
 
     def get_rating(self) -> int:
