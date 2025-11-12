@@ -6,11 +6,9 @@ from app.players.dwarves.dwarf import Dwarf
 from app.players.dwarves.dwarf_warrior import DwarfWarrior
 from app.players.dwarves.dwarf_blacksmith import DwarfBlacksmith
 
-def calculate_team_total_rating(player: list[Player]) -> int:
-    total = 0
-    for player in player:
-        total += player.get_rating()
-    return total
+def calculate_team_total_rating(players: list[Player]) -> int:
+
+    return sum(p.get_rating() for p in players)
 
 def elves_concert(elves: list[Elf]) -> None:
     for elf in elves:
