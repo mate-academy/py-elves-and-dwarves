@@ -9,12 +9,12 @@ class DwarfWarrior(Dwarf):
         self.hummer_level = hummer_level
 
     def eat_favourite_dish(self) -> str:
-        return (f"{self.nickname} is "
-                f"eating {self.favourite_dish}")
+        return f"{self.nickname} "\
+               f"is eating {self.favourite_dish}"
 
     def player_info(self) -> str:
-        return (f"Dwarf warrior {self.nickname}. {self.nickname}"
-                f" has a hummer of the {self.hummer_level} level")
+        return f"Dwarf warrior {self.nickname}. {self.nickname}"\
+               f" has a hummer of the {self.hummer_level} level"
 
     def get_rating(self) -> int:
         return self.hummer_level + 4
