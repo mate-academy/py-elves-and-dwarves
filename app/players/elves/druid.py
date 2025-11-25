@@ -14,4 +14,3 @@ class Druid(Elf):
 
     def get_rating(self) -> int:
         return len(self.favourite_spell)
- -> str
