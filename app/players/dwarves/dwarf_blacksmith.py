@@ -12,8 +12,8 @@ class DwarfBlacksmith(Dwarf):
         self.skill_level = skill_level
 
     def eat_favourite_dish(self):
-        print(f"{self.nickname} "
-              f"is eating {self.favourite_dish}")
+        return (f"{self.nickname} "
+                f"is eating {self.favourite_dish}")
 
     def player_info(self) -> str:
         return (f"Dwarf blacksmith {self.nickname}"
