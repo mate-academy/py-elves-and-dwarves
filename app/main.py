@@ -1,8 +1,9 @@
 from abc import ABC, abstractmethod
+from typing import List
 
 
 class Player(ABC):
-    def __init__(self, nickname: str):
+    def __init__(self, nickname: str) -> None:
         self.nickname = nickname
 
     @abstractmethod
@@ -15,23 +16,32 @@ class Player(ABC):
 
 
 class Elf(Player):
-    def __init__(self, nickname: str, musical_instrument: str):
+    def __init__(self, nickname: str, musical_instrument: str) -> None:
         super().__init__(nickname)
         self._musical_instrument = musical_instrument
 
     def play_elf_song(self) -> None:
-        print(f"{self.nickname} is playing a song on the {self._musical_instrument}")
+        print(
+            f"{self.nickname} is playing a song on the "
+            f"{self._musical_instrument}"
+        )
 
 
 class ElfRanger(Elf):
-    def __init__(self, nickname: str, musical_instrument: str, bow_level: int):
+    def __init__(
+        self,
+        nickname: str,
+        musical_instrument: str,
+        bow_level: int
+    ) -> None:
         super().__init__(nickname, musical_instrument)
         self._bow_level = bow_level
 
     def player_info(self) -> str:
         return (
             f"Elf ranger {self.nickname}. "
-            f"{self.nickname} has bow of the {self._bow_level} level"
+            f"{self.nickname} has bow of the "
+            f"{self._bow_level} level"
         )
 
     def get_rating(self) -> int:
@@ -39,14 +49,20 @@ class ElfRanger(Elf):
 
 
 class Druid(Elf):
-    def __init__(self, nickname: str, musical_instrument: str, favourite_spell: str):
+    def __init__(
+        self,
+        nickname: str,
+        musical_instrument: str,
+        favourite_spell: str
+    ) -> None:
         super().__init__(nickname, musical_instrument)
         self._favourite_spell = favourite_spell
 
     def player_info(self) -> str:
         return (
             f"Druid {self.nickname}. "
-            f"{self.nickname} has a favourite spell: {self._favourite_spell}"
+            f"{self.nickname} has a favourite spell: "
+            f"{self._favourite_spell}"
         )
 
     def get_rating(self) -> int:
@@ -54,23 +70,32 @@ class Druid(Elf):
 
 
 class Dwarf(Player):
-    def __init__(self, nickname: str, favourite_dish: str):
+    def __init__(self, nickname: str, favourite_dish: str) -> None:
         super().__init__(nickname)
         self._favourite_dish = favourite_dish
 
     def eat_favourite_dish(self) -> None:
-        print(f"{self.nickname} is eating {self._favourite_dish}")
+        print(
+            f"{self.nickname} is eating "
+            f"{self._favourite_dish}"
+        )
 
 
 class DwarfWarrior(Dwarf):
-    def __init__(self, nickname: str, favourite_dish: str, hummer_level: int):
+    def __init__(
+        self,
+        nickname: str,
+        favourite_dish: str,
+        hummer_level: int
+    ) -> None:
         super().__init__(nickname, favourite_dish)
         self._hummer_level = hummer_level
 
     def player_info(self) -> str:
         return (
             f"Dwarf warrior {self.nickname}. "
-            f"{self.nickname} has a hummer of the {self._hummer_level} level"
+            f"{self.nickname} has a hummer of the "
+            f"{self._hummer_level} level"
         )
 
     def get_rating(self) -> int:
@@ -78,30 +103,35 @@ class DwarfWarrior(Dwarf):
 
 
 class DwarfBlacksmith(Dwarf):
-    def __init__(self, nickname: str, favourite_dish: str, skill_level: int):
+    def __init__(
+        self,
+        nickname: str,
+        favourite_dish: str,
+        skill_level: int
+    ) -> None:
         super().__init__(nickname, favourite_dish)
         self._skill_level = skill_level
 
     def player_info(self) -> str:
         return (
-            f"Dwarf blacksmith {self.nickname} with skill of the "
-            f"{self._skill_level} level"
+            f"Dwarf blacksmith {self.nickname} with skill "
+            f"of the {self._skill_level} level"
         )
 
     def get_rating(self) -> int:
         return self._skill_level
 
 
-def calculate_team_total_rating(team):
+def calculate_team_total_rating(team: List[Player]) -> int:
     return sum(player.get_rating() for player in team)
 
 
-def elves_concert(elves):
+def elves_concert(elves: List[Elf]) -> None:
     for elf in elves:
         elf.play_elf_song()
 
 
-def feast_of_the_dwarves(dwarves):
+def feast_of_the_dwarves(dwarves: List[Dwarf]) -> None:
     for dwarf in dwarves:
         dwarf.eat_favourite_dish()
 
@@ -126,19 +156,44 @@ if __name__ == "__main__":
     warrior.eat_favourite_dish()
 
     team = [
-        Druid(nickname="Druid", musical_instrument="flute", favourite_spell="ABC"),
-        ElfRanger(nickname="Ranger", musical_instrument="trumpet", bow_level=33),
+        Druid(
+            nickname="Druid",
+            musical_instrument="flute",
+            favourite_spell="ABC"
+        ),
+        ElfRanger(
+            nickname="Ranger",
+            musical_instrument="trumpet",
+            bow_level=33
+        ),
     ]
+
     print(calculate_team_total_rating(team))
 
     elves = [
-        Druid(nickname="Nardual", musical_instrument="flute", favourite_spell="aaa"),
-        ElfRanger(nickname="Rothilion", musical_instrument="trumpet", bow_level=33),
+        Druid(
+            nickname="Nardual",
+            musical_instrument="flute",
+            favourite_spell="aaa"
+        ),
+        ElfRanger(
+            nickname="Rothilion",
+            musical_instrument="trumpet",
+            bow_level=33
+        ),
     ]
     elves_concert(elves)
 
     dwarves = [
-        DwarfWarrior(nickname="Thiddeal", favourite_dish="French Fries", hummer_level=3),
-        DwarfWarrior(nickname="Dwarf", favourite_dish="Caesar Salad", hummer_level=3),
+        DwarfWarrior(
+            nickname="Thiddeal",
+            favourite_dish="French Fries",
+            hummer_level=3
+        ),
+        DwarfWarrior(
+            nickname="Dwarf",
+            favourite_dish="Caesar Salad",
+            hummer_level=3
+        ),
     ]
     feast_of_the_dwarves(dwarves)
