@@ -11,7 +11,7 @@ class DwarfBlacksmith(Dwarf):
         super().__init__(nickname, favourite_dish)
         self.skill_level = skill_level
 
-    def eat_favourite_dish(self):
+    def eat_favourite_dish(self) -> str:
         return (f"{self.nickname} "
                 f"is eating {self.favourite_dish}")
 
