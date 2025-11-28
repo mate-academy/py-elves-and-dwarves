@@ -1,4 +1,7 @@
-def calculate_team_total_rating(team: list) -> int:
+from app.players.player import Player
+
+
+def calculate_team_total_rating(team: list[Player]) -> int:
     total_rate = 0
     for player in team:
         total_rate += player.get_rating()
