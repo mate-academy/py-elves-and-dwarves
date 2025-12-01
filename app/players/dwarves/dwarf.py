@@ -14,9 +14,3 @@ class Dwarf(Player):
         print(
             f"{self.nickname} is eating {self._favourite_dish}"
         )
-
-    def get_rating(self) -> None:
-        pass
-
-    def player_info(self) -> None:
-        pass

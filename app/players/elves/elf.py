@@ -15,9 +15,3 @@ class Elf(Player):
             f"{self.nickname} is playing a song "
             f"on the {self._musical_instrument}"
         )
-
-    def get_rating(self) -> None:
-        pass
-
-    def player_info(self) -> None:
-        pass
