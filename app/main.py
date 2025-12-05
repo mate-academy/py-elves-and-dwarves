@@ -2,15 +2,7 @@ from __future__ import annotations
 
 from typing import Iterable
 
-from app.players import (
-    Player,
-    Elf,
-    Druid,
-    ElfRanger,
-    Dwarf,
-    DwarfWarrior,
-    DwarfBlacksmith,
-)
+from app.players import Player, Elf, Dwarf
 
 
 def calculate_team_total_rating(team: Iterable[Player]) -> int:

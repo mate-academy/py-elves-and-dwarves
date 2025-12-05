@@ -4,7 +4,12 @@ from app.players import Elf
 
 
 class ElfRanger(Elf):
-    def __init__(self, nickname: str, musical_instrument: str, bow_level: int):
+    def __init__(
+            self,
+            nickname: str,
+            musical_instrument: str,
+            bow_level: int
+    ) -> None:
         super().__init__(nickname, musical_instrument)
         self._bow_level = int(bow_level)
 
