@@ -15,5 +15,5 @@ class Druid(Elf):
         return (f"Druid {self.nickname}. {self.nickname} "
                 f"has a favourite spell: {self._favourite_spell}")
 
-    def get_rating(self) -> int:
+    def get_rating(self) -> str:
         return len(self._favourite_spell)
