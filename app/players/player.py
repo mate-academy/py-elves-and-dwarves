@@ -11,5 +11,5 @@ class Player(ABC):
         pass
 
     @abstractmethod
-    def player_info(self) -> int:
+    def player_info(self) -> str:
         pass
