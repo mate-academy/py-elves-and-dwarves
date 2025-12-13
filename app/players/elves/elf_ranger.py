@@ -1,4 +1,4 @@
-from players.elves.elf import Elf
+from app.players.elves.elf import Elf
 
 class ElfRanger(Elf):
     def __init__(self, nickname: str, musical_instrument: str, bow_level: int):
