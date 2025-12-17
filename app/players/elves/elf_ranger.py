@@ -6,12 +6,12 @@ class ElfRanger(Elf):
             self,
             nickname: str,
             musical_instrument: str,
-            bow_level: int | float
+            bow_level: int
     ) -> None:
         super().__init__(nickname, musical_instrument)
         self._bow_level = bow_level
 
-    def get_rating(self) -> int | float:
+    def get_rating(self) -> int:
         return 3 * self._bow_level
 
     def player_info(self) -> str:
