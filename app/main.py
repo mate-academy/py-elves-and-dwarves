@@ -15,5 +15,3 @@ def elves_concert(team: List[Elf]) -> None:
 def feast_of_the_dwarves(team: List[Dwarf]) -> None:
     for player in team:
         player.eat_favourite_dish()
-
-
