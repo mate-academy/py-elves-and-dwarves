@@ -4,15 +4,12 @@ from app.players.dwarves.dwarf import Dwarf
 
 
 def calculate_team_total_rating(players: list[Player]) -> int:
-    team_total_rating = 0
-    for player in players:
-        team_total_rating += player.get_rating()
 
-    return team_total_rating
+    return sum(player.get_rating() for player in players)
 
 
-def elves_concert(elfs: list[Elf]) -> None:
-    for elf in elfs:
+def elves_concert(elves: list[Elf]) -> None:
+    for elf in elves:
         elf.play_elf_song()
 
 
