@@ -1,4 +1,4 @@
-from players.elves.elf import Elf
+from app.players.elves.elf import Elf
 
 
 class Druid(Elf):
@@ -14,6 +14,6 @@ class Druid(Elf):
         return len(self._favourite_spell)
 
     def player_info(self) -> str:
-        return (f"Druid {self.nickname}."
+        return (f"Druid {self.nickname}. "
                 f"{self.nickname} has a favourite spell: "
                 f"{self._favourite_spell}")
