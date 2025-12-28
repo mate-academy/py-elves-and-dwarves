@@ -1,5 +1,4 @@
 from app.players.elves.elf import Elf
-from app.players.player import Player
 
 
 class Druid(Elf):
