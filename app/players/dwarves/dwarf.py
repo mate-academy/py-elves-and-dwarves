@@ -12,7 +12,6 @@ class Dwarf(Player, ABC):
         print(f"{self.nickname} is eating {self._favourite_dish}")
 
 
-
 class DwarfWarrior(Dwarf):
     def __init__(self, nickname: str, favourite_dish: str,
                  hummer_level: int) -> None:
@@ -41,4 +40,3 @@ class DwarfBlacksmith(Dwarf):
 
     def get_rating(self) -> int:
         return self._skill_level
-

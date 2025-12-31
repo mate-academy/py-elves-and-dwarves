@@ -14,8 +14,6 @@ class Player(ABC):
         pass
 
 
-
-
 class Elf(Player, ABC):
     def __init__(self, nickname: str, musical_instrument: str) -> None:
         super().__init__(nickname)
@@ -24,6 +22,7 @@ class Elf(Player, ABC):
     def play_elf_song(self) -> None:
         print(f"{self.nickname}"
               f" is playing a song on the {self._musical_instrument}")
+
 
 class ElfRanger(Elf):
     def __init__(self, nickname: str, musical_instrument: str,
@@ -55,4 +54,3 @@ class Druid(Elf):
 
     def get_rating(self) -> int:
         return len(self._favourite_spell)
-
