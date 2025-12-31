@@ -20,7 +20,8 @@ class Elf(Player, ABC):
         self._musical_instrument = musical_instrument
 
     def play_elf_song(self) -> None:
-        print(f"{self.nickname} is playing a song on the {self._musical_instrument}")
+        print(f"{self.nickname}"
+              f" is playing a song on the {self._musical_instrument}")
 
 
 class Dwarf(Player, ABC):
@@ -33,7 +34,8 @@ class Dwarf(Player, ABC):
 
 
 class ElfRanger(Elf):
-    def __init__(self, nickname: str, musical_instrument: str, bow_level: int) -> None:
+    def __init__(self, nickname: str, musical_instrument: str,
+                 bow_level: int) -> None:
         super().__init__(nickname, musical_instrument)
         self._bow_level = bow_level
 
@@ -48,7 +50,8 @@ class ElfRanger(Elf):
 
 
 class Druid(Elf):
-    def __init__(self, nickname: str, musical_instrument: str, favourite_spell: str) -> None:
+    def __init__(self, nickname: str, musical_instrument: str,
+                 favourite_spell: str) -> None:
         super().__init__(nickname, musical_instrument)
         self._favourite_spell = favourite_spell
 
@@ -63,7 +66,8 @@ class Druid(Elf):
 
 
 class DwarfWarrior(Dwarf):
-    def __init__(self, nickname: str, favourite_dish: str, hummer_level: int) -> None:
+    def __init__(self, nickname: str, favourite_dish: str,
+                 hummer_level: int) -> None:
         super().__init__(nickname, favourite_dish)
         self._hummer_level = hummer_level
 
@@ -78,12 +82,14 @@ class DwarfWarrior(Dwarf):
 
 
 class DwarfBlacksmith(Dwarf):
-    def __init__(self, nickname: str, favourite_dish: str, skill_level: int) -> None:
+    def __init__(self, nickname: str, favourite_dish: str,
+                 skill_level: int) -> None:
         super().__init__(nickname, favourite_dish)
         self._skill_level = skill_level
 
     def player_info(self) -> str:
-        return f"Dwarf blacksmith {self.nickname} with skill of the {self._skill_level} level"
+        return (f"Dwarf blacksmith {self.nickname}"
+                f" with skill of the {self._skill_level} level")
 
     def get_rating(self) -> int:
         return self._skill_level
