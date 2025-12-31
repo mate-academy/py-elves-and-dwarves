@@ -1,17 +1,15 @@
 from app.players.dwarves.dwarf import Dwarf
 
 
-class DwarfWarrior(Dwarf):
+class DwarfBlacksmith(Dwarf):
     def __init__(self, nickname: str, favourite_dish: str,
-                 hummer_level: int) -> None:
+                 skill_level: int) -> None:
         super().__init__(nickname, favourite_dish)
-        self._hummer_level = hummer_level
+        self._skill_level = skill_level
 
     def player_info(self) -> str:
-        return (
-            f"Dwarf warrior {self.nickname}. "
-            f"{self.nickname} has a hummer of the {self._hummer_level} level"
-        )
+        return (f"Dwarf blacksmith {self.nickname}"
+                f" with skill of the {self._skill_level} level")
 
     def get_rating(self) -> int:
-        return self._hummer_level + 4
+        return self._skill_level
