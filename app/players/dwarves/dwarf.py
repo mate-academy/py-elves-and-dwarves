@@ -1,6 +1,6 @@
 from abc import ABC
 
-from app.main import Player
+from app.players.base import Player
 
 
 class Dwarf(Player, ABC):
