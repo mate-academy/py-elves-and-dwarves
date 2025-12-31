@@ -1,20 +1,6 @@
-from abc import ABC, abstractmethod
 
 from app.players.dwarves.dwarf import Dwarf
-from app.players.elves.elf import Elf
-
-
-class Player(ABC):
-    def __init__(self, nickname: str) -> None:
-        self.nickname = nickname
-
-    @abstractmethod
-    def get_rating(self) -> int:
-        pass
-
-    @abstractmethod
-    def player_info(self) -> str:
-        pass
+from app.players.elves.elf import Elf, Player
 
 
 def calculate_team_total_rating(players: list[Player]) -> int:
