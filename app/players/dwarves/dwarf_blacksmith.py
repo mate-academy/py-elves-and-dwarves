@@ -3,7 +3,7 @@ from app.players.player import Player
 
 
 class DwarfBlacksmith(Dwarf):
-    def __init__(self, nickname, favourite_dish, skill_level: int):
+    def __init__(self, nickname, favourite_dish, skill_level: int) -> None:
         super().__init__(nickname, favourite_dish)
         self._skill_level = skill_level
 
