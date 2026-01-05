@@ -1,10 +1,10 @@
 
 
 def calculate_team_total_rating(team: list) -> int:
-    s = 0
+    total = 0
     for i in team:
-        s += i.get_rating()
-    return s
+        total += i.get_rating()
+    return total
 
 
 def elves_concert(elves: list) -> str:
