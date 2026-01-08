@@ -6,8 +6,7 @@ class ElfRanger(Elf):
                  musical_instrument: str,
                  bow_level: int
                  ) -> None:
-        super().__init__(nickname)
-        self._musical_instrument = musical_instrument
+        super().__init__(nickname, musical_instrument)
         self._bow_level = bow_level
 
     def get_rating(self) -> int:
