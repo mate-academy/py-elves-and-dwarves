@@ -7,8 +7,8 @@ class Player(ABC):
 
     @abstractmethod
     def get_rating(self) -> int:
-        return self.get_rating()
+        pass
 
     @abstractmethod
     def player_info(self) -> str:
-        return self.player_info()
+        pass
