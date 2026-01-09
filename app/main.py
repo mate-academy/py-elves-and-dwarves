@@ -3,7 +3,7 @@ from app.players.elves.elf import Elf
 from app.players.dwarves.dwarf import Dwarf
 
 
-def calculate_team_total_rating(players_list: Player) -> int:
+def calculate_team_total_rating(players_list: list[Player]) -> int:
     return sum(char.get_rating() for char in players_list)
 
 
