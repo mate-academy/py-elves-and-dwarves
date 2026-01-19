@@ -1,5 +1,3 @@
-# TODO:calculate_team_total_rating, elves_concert, feast_of_the_dwarves
-
 def calculate_team_total_rating(team: list) -> int:
     return sum(player.get_rating() for player in team)
 

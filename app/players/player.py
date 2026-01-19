@@ -1,11 +1,3 @@
-"""
-The base class should be the Player class,
-which should have a single nickname attribute,
-where the player's name will be stored.
-It must also have two empty abstract methods get_rating,
-player_info, declared,
-thus we guarantee that all players in our universe will have them defined.
-"""
 from abc import abstractmethod, ABC
 
 
@@ -14,9 +6,9 @@ class Player(ABC):
         self.nickname = nickname
 
     @abstractmethod
-    def player_info(self) -> None:
+    def player_info(self) -> str:
         pass
 
     @abstractmethod
-    def get_rating(self) -> None:
+    def get_rating(self) -> int:
         pass
