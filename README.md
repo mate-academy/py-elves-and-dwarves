@@ -18,7 +18,7 @@ thus we guarantee that all players in our universe will have them defined.
 
 Two classes `Elf` and `Dwarf` should be inherited from the `Player`.
 
-All elves like playing songs so
+[All elves like playing songs so]()
 `Elf` `__init__` method should take an additional argument `musical_instrument` -  and stored it in the **protected** attribute.
 Also, it should have a method `play_elf_song` that should print the following string:
 `"{nickname} is playing a song on the {musical_instrument}"`
@@ -54,7 +54,7 @@ All of these classes should have implementations of `player_info` and
 `get_rating` methods.
 
 `player_info` method should return:
-* `"Elf ranger {nickname}. {nickname} has bow of the {bow_level} level"` for `ElfRanger` instances
+* ` for `ElfRanger` instances
 * `"Druid {nickname}. {nickname} has a favourite spell: {favourite_spell}"` for `Druid` instances
 * `"Dwarf warrior {nickname}. {nickname} has a hummer of the {hummer_level} level"` for `DwarfWarrior` instances
 * `"Dwarf blacksmith {nickname} with skill of the {skill_level} level"` for `DwarfBlacksmith` instances
