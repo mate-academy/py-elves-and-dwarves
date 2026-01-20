@@ -99,5 +99,5 @@ for i in players:
 
 ## Clean Code
 
-Add comments, prints, and functions to check your solution when you write your code. 
+Add comments, prints, and functions to check your solution when you write your code.
 Don't forget to delete them when you are ready to commit and push your code.
