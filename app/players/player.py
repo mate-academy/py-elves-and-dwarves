@@ -14,8 +14,3 @@ class Player(ABC):
     def player_info(self) -> str:
         """Return string with player info."""
         pass
-
-    @abstractmethod
-    def declared(self) -> None:
-        """Dummy abstract method required by task."""
-        pass

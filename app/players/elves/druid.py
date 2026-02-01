@@ -19,6 +19,3 @@ class Druid(Elf):
 
     def get_rating(self) -> int:
         return len(self._favourite_spell)
-
-    def declared(self) -> None:
-        pass
