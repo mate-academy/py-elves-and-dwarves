@@ -11,7 +11,7 @@ def calculate_team_total_rating(
         gamers: list[Player]
 ) -> int:
     """
-    Calculate the sum of the ranting of a party.
+    Calculate the sum of the rating of a party.
 
     Args:
         gamers (list[Player]): Players' avatars.
@@ -19,11 +19,7 @@ def calculate_team_total_rating(
     Returns:
         int: sum of the players' rating.
     """
-    total_rating = 0
-    for gamer in gamers:
-        total_rating += gamer.get_rating()
-
-    return total_rating
+    return sum(gamer.get_rating() for gamer in gamers)
 
 
 def elves_concert(

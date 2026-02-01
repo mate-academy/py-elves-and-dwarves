@@ -18,7 +18,7 @@ class DwarfWarrior(Dwarf):
         Args:
             nickname (str): Alias for the player (inherited).
             favorite_dish (str): The preferred food of this dwarf (inherited).
-            hummer_level (str): Level of the hummer.
+            hummer_level (int): Level of the hummer.
         """
         super().__init__(nickname, favourite_dish)
         self._hummer_level = hummer_level
