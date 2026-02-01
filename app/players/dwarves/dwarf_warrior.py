@@ -23,26 +23,27 @@ class DwarfWarrior(Dwarf):
         super().__init__(nickname, favourite_dish)
         self._hummer_level = hummer_level
 
-        def get_rating(
-            self
-        ) -> int:
-            """
-            Calculates and returns the character's power rating.
-            Returns:
-                int: The calculated rating value.
-            """
-            return self._hummer_level + 4
+    def get_rating(
+        self
+    ) -> int:
+        """
+        Calculates and returns the character's power rating.
 
-        def player_info(
-            self
-        ) -> str:
-            """
-            Returns a formatted string with the character's full information.
+        Returns:
+            int: The calculated rating value.
+        """
+        return self._hummer_level + 4
 
-            Returns:
-                str: Brief description and stats of the player.
-            """
-            print(
-                f"Dwarf warrior {self.nickname}. {self.nickname} "
-                f"has a hummer of the {self._hummer_level} level"
-            )
+    def player_info(
+        self
+    ) -> str:
+        """
+        Returns a formatted string with the character's full information.
+
+        Returns:
+            str: Brief description and stats of the player.
+        """
+        return (
+            f"Dwarf warrior {self.nickname}. {self.nickname} "
+            f"has a hummer of the {self._hummer_level} level"
+        )

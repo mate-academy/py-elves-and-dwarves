@@ -43,7 +43,7 @@ class DwarfBlacksmith(Dwarf):
         Returns:
             str: Brief description and stats of the player.
         """
-        print(
+        return (
             f"Dwarf blacksmith {self.nickname} "
             f"with skill of the {self._skill_level} level"
         )
