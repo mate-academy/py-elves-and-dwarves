@@ -98,7 +98,7 @@ team = [
     Druid(nickname="Druid", musical_instrument="flute", favourite_spell="ABC"),
     ElfRanger(nickname="Ranger", musical_instrument="trumpet", bow_level=33),
 ]
-calculate_team_total_rating(team) == 102  # 33 * 3 + 3
+calculate_team _total_rating(team) == 102  # 33 * 3 + 3
 ```
 * `elves_concert` - it should take a list of `Elf` and call `play_elf_song` method for each elf.
 ```python
