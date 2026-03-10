@@ -13,12 +13,7 @@ from app.players.dwarves.dwarf_blacksmith import DwarfBlacksmith
 
 def calculate_team_total_rating(players: list[Player]) -> int:
     """Calculate and return the combined rating of all players in a list."""
-    total_rating = 0
-
-    for player in players:
-        total_rating += player.get_rating()
-
-    return total_rating
+    return sum(player.get_rating() for player in players)
 
 
 def elves_concert(elves: list[Elf | ElfRanger | Druid]) -> None:
