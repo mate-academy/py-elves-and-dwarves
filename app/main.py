@@ -20,7 +20,7 @@ class Elf(Player):
         self._musical_instrument = _musical_instrument
 
     def play_elf_song(self):
-        return f"{self.nickname} is playing a song on the {self._musical_instrument}"
+        print(f"{self.nickname} is playing a song on the {self._musical_instrument}")
 
 
 class Dwarf(Player):
@@ -61,7 +61,7 @@ class DwarfWarrior(Dwarf):
         self._hummer_level = _hummer_level
 
     def player_info(self) -> str:
-        return f"Dwarf warrior {self.nickname}.{self.nickname} has a hummer of the {self._hummer_level} level"
+        return f"Dwarf warrior {self.nickname}. {self.nickname} has a hummer of the {self._hummer_level} level"
 
     def get_rating(self) -> int:
         return self._hummer_level + 4
@@ -69,7 +69,7 @@ class DwarfWarrior(Dwarf):
 
 class DwarfBlacksmith(Dwarf):
     def __init__(self, nickname: str, _favorite_dish: str, _skill_level: int):
-        super().__init__(self.nickname, self._favorite_dish)
+        super().__init__(nickname, self._favorite_dish)
         self._skill_level = _skill_level
 
     def player_info(self) -> str:
@@ -78,6 +78,14 @@ class DwarfBlacksmith(Dwarf):
     def get_rating(self) -> int:
         return self._skill_level
 
-    @staticmethod
-    def calculate_team_total_rating(players: list) -> int:
-        return sum(player.get_rating() for player in players)
+@staticmethod
+def calculate_team_total_rating(players: list) -> int:
+    return sum(player.get_rating() for player in players)
+
+def elves_concert(elves: list) -> None:
+    for elf in elves:
+        elf.play_elf_song()
+
+def feast_of_the_dwarves(dwarves: list) -> None:
+    for dwarf in dwarves:
+        dwarf.eat_favourite_dish()
