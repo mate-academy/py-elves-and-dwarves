@@ -1,3 +1,13 @@
+from player.player import Player
+from player.elves.elf import Elf
+from player.elves.druid import Druid
+from player.elves.elf_ranger import ElfRanger
+
+from player.dwarves.dwarf import Dwarf
+from player.dwarves.dwarf_warrior import DwarfWarrior
+from player.dwarves.dwarf_blacksmith import DwarfBlacksmith
+
+
 #from abc import ABC, abstractmethod
 
 # class Player(ABC):
@@ -84,7 +94,6 @@
 #         return self._skill_level
 
 def calculate_team_total_rating(team: list[Player]) -> int:
-    team_total_rating = 0
     return sum(player.get_rating() for player in team)
 
 def elves_concert(elves: list[Elf]) -> None:
@@ -130,6 +139,6 @@ elves_concert(elves)
 dwarves = [
     DwarfWarrior(nickname="Thiddeal", favourite_dish="French Fries", hummer_level=3),
     DwarfWarrior(nickname="Dwarf", favourite_dish="Caesar Salad", hummer_level=3),
-    DwarfWarrior(nickname="Thiddeal", favourite_dish="French Fries",hummer_level=7),
+    DwarfBlacksmith(nickname="Thiddeal", favourite_dish="French Fries", skill_level=15),
 ]
 feast_of_the_dwarves(dwarves)

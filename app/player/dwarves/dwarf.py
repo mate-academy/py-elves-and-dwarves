@@ -1,3 +1,5 @@
+from app.player.player import Player
+
 class Dwarf(Player):
     def __init__(self, nickname: str, favourite_dish: str) -> None:
         super().__init__(nickname)
