@@ -11,11 +11,11 @@ class Player(ABC):
     @abstractmethod
     def get_rating(
             self
-    ) -> None:
+    ) -> int:
         pass
 
     @abstractmethod
     def player_info(
             self
-    ) -> None:
+    ) -> str:
         pass
