@@ -1,7 +1,7 @@
-from abc import abstractmethod
+from abc import abstractmethod, ABC
 
 
-class Player:
+class Player(ABC):
     def __init__(self, nickname: str) -> None:
         self.nickname = nickname
 
