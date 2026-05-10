@@ -20,6 +20,3 @@ class DwarfWarrior(Dwarf):
             f"{self.nickname} has a hummer of the "
             f"{self._hummer_level} level"
         )
-
-    def declared(self) -> None:
-        pass

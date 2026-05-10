@@ -20,6 +20,3 @@ class DwarfBlacksmith(Dwarf):
             f"with skill of the "
             f"{self._skill_level} level"
         )
-
-    def declared(self) -> None:
-        pass
