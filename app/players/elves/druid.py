@@ -18,12 +18,3 @@ class Druid(Elf):
 
     def get_rating(self) -> int:
         return len(self._favourite_spell)
-
-
-if __name__ == "__main__":
-
-    print(dir(Druid))
-    druid = Druid("Roma", "guitar", "banka-test")
-    print(druid.get_rating())
-    print(druid.player_info())
-    druid.play_elf_song()

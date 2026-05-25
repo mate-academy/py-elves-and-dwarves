@@ -10,7 +10,3 @@ class Elf(Player):
     def play_elf_song(self) -> None:
         print(f"{self.nickname}"
               f" is playing a song on the {self._musical_instrument}")
-
-
-if __name__ == "__main__":
-    print(dir(Elf))

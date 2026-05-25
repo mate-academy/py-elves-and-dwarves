@@ -18,7 +18,3 @@ class DwarfBlacksmith(Dwarf):
 
     def get_rating(self) -> int:
         return self._skill_level
-
-
-if __name__ == "__main__":
-    print(dir(DwarfBlacksmith))
