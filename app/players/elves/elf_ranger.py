@@ -9,7 +9,7 @@ class ElfRanger(Elf):
                          nickname=nickname)
         self._bow_level = bow_level
 
-    def get_rating(self) -> None:
+    def get_rating(self) -> int:
         return 3 * self._bow_level
 
     def player_info(self) -> str:
