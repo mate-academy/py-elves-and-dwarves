@@ -16,5 +16,5 @@ class ElfRanger(Elf):
             f"{self.nickname} has bow of the {self._bow_level} level"
         )
 
-    def get_rating(self) -> float:
+    def get_rating(self) -> int:
         return self._bow_level * 3
