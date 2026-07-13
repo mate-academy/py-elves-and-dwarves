@@ -10,6 +10,3 @@ class Dwarf(Player, ABC):
 
     def eat_favourite_dish(self) -> None:
         print(f"{self.nickname} is eating {self._favourite_dish}")
-
-    def declared(self) -> None:
-        print(f"{self.nickname} the Dwarf has entered the game")

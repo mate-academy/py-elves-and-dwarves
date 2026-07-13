@@ -11,6 +11,3 @@ class Elf(Player, ABC):
     def play_elf_song(self) -> None:
         print(f"{self.nickname}"
               f" is playing a song on the {self._musical_instrument}")
-
-    def declared(self) -> None:
-        print(f"{self.nickname} the Elf has entered the game")
