@@ -32,3 +32,9 @@ class Dwarf(Player):
     def eat_favourite_dish(self):
         print(f"{self.nickname} is eating {self._favourite_dish}")
 
+
+class ElfRanger(Elf):
+    def __init__(self, nickname: str, musical_instrument: str, bow_level: int) -> None:
+        super().__init__(nickname, musical_instrument)
+        self._bow_level = bow_level
+
