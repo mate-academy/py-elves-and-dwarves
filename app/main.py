@@ -38,3 +38,9 @@ class ElfRanger(Elf):
         super().__init__(nickname, musical_instrument)
         self._bow_level = bow_level
 
+
+class Druid(Elf):
+    def __init__(self, nickname: str, musical_instrument: str, favourite_spell: str) -> None:
+        super().__init__(nickname, musical_instrument)
+        self._favourite_spell = favourite_spell
+
