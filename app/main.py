@@ -44,3 +44,9 @@ class Druid(Elf):
         super().__init__(nickname, musical_instrument)
         self._favourite_spell = favourite_spell
 
+
+class DwarfWarrior(Dwarf):
+    def __init__(self, nickname: str, musical_instrument: str, hummer_level: int) -> None:
+        super().__init__(nickname, musical_instrument)
+        self._hummer_level = hummer_level
+
