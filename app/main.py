@@ -15,7 +15,6 @@ class Player(ABC):
 
 
 class Elf(Player):
-
     def __init__(self, nickname: str, musical_instrument: str) -> None:
         super().__init__(nickname)
         self._musical_instrument = musical_instrument
@@ -46,12 +45,12 @@ class Druid(Elf):
 
 
 class DwarfWarrior(Dwarf):
-    def __init__(self, nickname: str, musical_instrument: str, hummer_level: int) -> None:
-        super().__init__(nickname, musical_instrument)
+    def __init__(self, nickname: str, favourite_dish: str, hummer_level: int) -> None:
+        super().__init__(nickname, favourite_dish)
         self._hummer_level = hummer_level
 
 
 class DwarfBlacksmith(Dwarf):
-    def __init__(self, nickname: str, musical_instrument: str, skill_level: int) -> None:
-        super().__init__(nickname, musical_instrument)
+    def __init__(self, nickname: str, favourite_dish: str, skill_level: int) -> None:
+        super().__init__(nickname, favourite_dish)
         self._skill_level = skill_level
