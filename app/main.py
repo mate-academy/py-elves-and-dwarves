@@ -50,3 +50,8 @@ class DwarfWarrior(Dwarf):
         super().__init__(nickname, musical_instrument)
         self._hummer_level = hummer_level
 
+
+class DwarfBlacksmith(Dwarf):
+    def __init__(self, nickname: str, musical_instrument: str, skill_level: int) -> None:
+        super().__init__(nickname, musical_instrument)
+        self._skill_level = skill_level
