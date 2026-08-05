@@ -12,7 +12,3 @@ class Player(ABC):
     @abstractmethod
     def player_info(self) -> None:
         pass
-
-    @abstractmethod
-    def declared(self) -> None:
-        pass

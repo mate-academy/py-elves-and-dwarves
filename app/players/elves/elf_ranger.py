@@ -16,6 +16,3 @@ class ElfRanger(Elf):
 
     def get_rating(self) -> int:
         return 3 * self._bow_level
-
-    def declared(self) -> bool:
-        return True
