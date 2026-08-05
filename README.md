@@ -1,6 +1,6 @@
 # Elves and Dwarves
 
-- Read [the guideline](https://github.com/mate-academy/py-task-guideline/blob/main/README.md) before starting.
+- Read [the guideline](https://github.com/mgitate-academy/py-task-guideline/blob/main/README.md) before starting.
 
 Imagine that you have started developing your meta universe.
 In your universe, all players are divided into two races - `Elves` and `Dwarves`. 
