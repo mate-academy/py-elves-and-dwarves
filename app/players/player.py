@@ -14,10 +14,13 @@ class Player(ABC):
         pass
 
 
-# noqa: E402
-from app.players.elves.elf import Elf  # noqa: F401
-from app.players.elves.druid import Druid  # noqa: F401
-from app.players.elves.elf_ranger import ElfRanger  # noqa: F401
-from app.players.dwarves.dwarf import Dwarf  # noqa: F401
-from app.players.dwarves.dwarf_warrior import DwarfWarrior  # noqa: F401
-from app.players.dwarves.dwarf_blacksmith import DwarfBlacksmith  # noqa: F401
+from app.players.elves.elf import (  # noqa: E402, F401
+    Elf,
+    Druid,
+    ElfRanger,
+)
+from app.players.dwarves.dwarf import (  # noqa: E402, F401
+    Dwarf,
+    DwarfWarrior,
+    DwarfBlacksmith,
+)
