@@ -6,11 +6,6 @@ class Elf(Player):
         super().__init__(nickname)
         self.__musical_instrument = musical_instrument
 
-    def get_rating(self) -> int:
-        pass
-
-    def player_info(self) -> None:
-        pass
-
     def play_elf_song(self) -> None:
-        print(f"{self.nickname} is playing a song on the {self.__musical_instrument}")
+        print(f"{self.nickname} is playing a song "
+              f"on the {self.__musical_instrument}")
