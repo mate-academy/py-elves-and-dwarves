@@ -1,7 +1,7 @@
 from __future__ import annotations
-from .players.dwarves.dwarf import Dwarf
-from .players.elves.elf import Elf
-from .players.player import Player
+from app.players.dwarves.dwarf import Dwarf
+from app.players.elves.elf import Elf
+from app.players.player import Player
 
 
 def calculate_team_total_rating(team: list[Player]) -> int:
