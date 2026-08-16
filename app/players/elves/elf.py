@@ -4,7 +4,6 @@ from app.players.player import Player
 
 
 class Elf(Player, ABC):
-
     def __init__(
             self,
             nickname: str,
