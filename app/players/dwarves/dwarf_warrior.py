@@ -11,7 +11,7 @@ class DwarfWarrior(Dwarf):
         super().__init__(nickname, favourite_dish)
         self._hummer_level = hummer_level
 
-    def player_info(self) -> None:
+    def player_info(self) -> str:
         return (
             f"Dwarf warrior {self.nickname}. {self.nickname} has "
             f"a hummer of the {self._hummer_level} level"
