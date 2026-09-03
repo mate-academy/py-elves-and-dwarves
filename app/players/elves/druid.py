@@ -11,5 +11,9 @@ class Druid(Elf):
     def get_rating(self) -> int:
         return len(self._favourite_spell)
 
-    def cast_spell(self) -> None:
+    def player_info(self) -> str:
+        return (f"Druid {self.nickname}. {self.nickname} "
+                f"has a favourite spell: {self._favourite_spell}")
+
+    def cast_spell(self) -> str:
         print(f"{self.nickname} is casting {self._favourite_spell}")

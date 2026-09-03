@@ -3,16 +3,21 @@ from app.players.dwarves.dwarf import Dwarf
 
 class DwarfWarrior(Dwarf):
     def __init__(
-        self, nickname: str, favourite_dish: str, hummer_power: int
+        self, nickname: str, favourite_dish: str, hummer_level: int
     ) -> None:
         super().__init__(nickname, favourite_dish)
-        self._hummer_power = hummer_power
+        self._hummer_level = hummer_level
 
     def get_rating(self) -> int:
-        return self._hummer_power + 3
+        return self._hummer_level + 4
 
-    def introduce(self) -> None:
+    def player_info(self) -> str:
+        return (f"Dwarf warrior {self.nickname}. "
+                f"{self.nickname} has a hummer "
+                f"of the {self._hummer_level} level")
+
+    def serve_dwarf_hummer(self) -> None:
         print(
             f"I'm {self.nickname} and I have "
-            f"a hummer power of {self._hummer_power}"
+            f"a hummer power of {self._hummer_level}"
         )
