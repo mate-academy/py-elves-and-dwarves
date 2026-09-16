@@ -38,8 +38,11 @@ class Druid(Elf):
 
 
 class DwarfWarrior(Dwarf):
-    pass
+    def __init__(self, hummer_level: int) -> None:
+        self._hummer_level = hummer_level
 
 
 class DwarfBlacksmit(Dwarf):
-    pass
+    def __init__(self, skill_level: int) -> None:
+        self._skill_level = skill_level
+
