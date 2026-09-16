@@ -35,6 +35,9 @@ class ElfRanger(Elf):
         print(f"Elf ranger {self.nickname}. {self.nickname} \
             has bow of the {self._bow_level} level")
 
+    def get_rating(self) -> int:
+        return 3 * self._bow_level
+
 class Druid(Elf):
     def __init__(self, favourite_spell: str) -> None:
         self._favourite_spell = favourite_spell
@@ -42,6 +45,9 @@ class Druid(Elf):
     def player_info(self) -> None:
         print(f"Druid {self.nickname}. {self.nickname} \
             has a favourite spell: {self._favourite_spell}")
+
+    def get_rating(self) -> int:
+        return len(self._favourite_spell)
 
 class DwarfWarrior(Dwarf):
     def __init__(self, hummer_level: int) -> None:
@@ -51,6 +57,9 @@ class DwarfWarrior(Dwarf):
         print(f"Dwarf warrior {self.nickname}. {self.nickname} \
             has a hummer of the {self._bow_level} level")
 
+    def get_rating(self) -> int:
+        return self._hummer_level + 4
+
 class DwarfBlacksmit(Dwarf):
     def __init__(self, skill_level: int) -> None:
         self._skill_level = skill_level
@@ -58,3 +67,6 @@ class DwarfBlacksmit(Dwarf):
     def player_info(self) -> None:
         print(f"Dwarf blacksmith {self.nickname} with skill \
             of the {self._skill_level} level")
+
+    def get_rating(self) -> int:
+        return self._skill_level
