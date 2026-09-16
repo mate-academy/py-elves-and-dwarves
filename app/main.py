@@ -5,7 +5,7 @@ class Player:
         self.nickname = nickname
 
     @abstractmethod
-    def get_rating(self) -> None:
+    def get_rating(self) -> int:
         pass
 
     @abstractmethod
@@ -70,3 +70,6 @@ class DwarfBlacksmit(Dwarf):
 
     def get_rating(self) -> int:
         return self._skill_level
+
+def calculate_team_total_rating(players: Player) -> int:
+    return sum(player.get_rating() for player in players)
