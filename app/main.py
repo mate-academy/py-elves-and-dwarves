@@ -28,11 +28,13 @@ class Dwarf(Player):
         print(f"{self.nickname} is eating {self.favourite_dish}")
 
 class ElfRanger(Elf):
-    pass
+    def __init__(self, bow_level: int) -> None:
+        self._bow_level = bow_level
 
 
 class Druid(Elf):
-    pass
+    def __init__(self, favourite_spell: str) -> None:
+        self._favourite_spell = favourite_spell
 
 
 class DwarfWarrior(Dwarf):
