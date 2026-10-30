@@ -22,7 +22,8 @@ from app.players.player import Player
 
 
 class Elf(Player, ABC):
-    def __init__(self, nickname: str, musical_instrument: str) -> None:
+    def __init__(self, nickname: str, 
+                 musical_instrument: str) -> None:
         super().__init__(nickname)
         self._musical_instrument = musical_instrument
 
@@ -88,7 +89,8 @@ from app.players.player import Player
 
 
 class Dwarf(Player, ABC):
-    def __init__(self, nickname: str, favourite_dish: str) -> None:
+    def __init__(self, nickname: str, 
+                 favourite_dish: str) -> None:
         super().__init__(nickname)
         self._favourite_dish = favourite_dish
 
