@@ -15,7 +15,7 @@ class Player(ABC):
     def player_info(self) -> str:
         pass
 
-  app/players/elves/elf.py
+app/players/elves/elf.py
 
 from abc import ABC
 from app.players.player import Player
@@ -33,7 +33,7 @@ class Elf(Player, ABC):
             f"{self._musical_instrument}"
         )
 
-  app/players/elves/elf_ranger.py
+app/players/elves/elf_ranger.py
 
 from app.players.elves.elf import Elf
 
@@ -57,7 +57,7 @@ class ElfRanger(Elf):
             f"{self.nickname} has bow of the {self._bow_level} level"
         )
 
-  app/players/elves/druid.py
+app/players/elves/druid.py
 
 from app.players.elves.elf import Elf
 
@@ -82,7 +82,7 @@ class Druid(Elf):
             f"{self._favourite_spell}"
         )
 
-  app/players/dwarves/dwarf.py
+app/players/dwarves/dwarf.py
 
 from abc import ABC
 from app.players.player import Player
@@ -97,7 +97,7 @@ class Dwarf(Player, ABC):
     def eat_favourite_dish(self) -> None:
         print(f"{self.nickname} is eating {self._favourite_dish}")
 
-  app/players/dwarves/dwarf_warrior.py
+app/players/dwarves/dwarf_warrior.py
 
 from app.players.dwarves.dwarf import Dwarf
 
@@ -121,7 +121,7 @@ class DwarfWarrior(Dwarf):
             f"{self.nickname} has a hummer of the {self._hummer_level} level"
         )
 
-  app/players/dwarves/dwarf_blacksmith.py
+app/players/dwarves/dwarf_blacksmith.py
 
 from app.players.dwarves.dwarf import Dwarf
 
@@ -145,7 +145,7 @@ class DwarfBlacksmith(Dwarf):
             f"with skill of the {self._skill_level} level"
         )
 
-  app/main.py
+app/main.py
 
 from app.players.player import Player
 from app.players.elves.elf import Elf
