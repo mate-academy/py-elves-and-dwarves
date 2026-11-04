@@ -1,4 +1,4 @@
-from ..player import Player
+from app.players.player import Player
 
 
 class Dwarf(Player):
