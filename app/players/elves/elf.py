@@ -10,4 +10,4 @@ class Elf(Player):
         print(
             f"{self.nickname} "
             f"is playing a song on the {self._musical_instrument}"
-            )
+        )
