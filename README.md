@@ -19,12 +19,14 @@ thus we guarantee that all players in our universe will have them defined.
 Two classes `Elf` and `Dwarf` should be inherited from the `Player`.
 
 All elves like playing songs so
-`Elf` `__init__` method should take an additional argument `musical_instrument` -  and stored it in the **protected** attribute.
+`Elf` `__init__` method should take an additional argument `musical_instrument` -  and stored it in 
+the **protected** attribute.
 Also, it should have a method `play_elf_song` that should print the following string:
 `"{nickname} is playing a song on the {musical_instrument}"`
 
 All dwarves like delicious food so
-`Dwarf` `__init__` method should take an additional argument `favourite_dish` -  and stored it in the **protected** attribute.
+`Dwarf` `__init__` method should take an additional argument `favourite_dish` -  and stored it in 
+the **protected** attribute.
 Also, it should have a method `eat_favourite_dish` that should print the following string:
 `"{nickname} is eating {favourite_dish}"`
 
@@ -56,7 +58,8 @@ All of these classes should have implementations of `player_info` and
 `player_info` method should return:
 * `"Elf ranger {nickname}. {nickname} has bow of the {bow_level} level"` for `ElfRanger` instances
 * `"Druid {nickname}. {nickname} has a favourite spell: {favourite_spell}"` for `Druid` instances
-* `"Dwarf warrior {nickname}. {nickname} has a hummer of the {hummer_level} level"` for `DwarfWarrior` instances
+* `"Dwarf warrior {nickname}. {nickname} has a hummer of the {hummer_level} level"` for `DwarfWarrior` 
+instances
 * `"Dwarf blacksmith {nickname} with skill of the {skill_level} level"` for `DwarfBlacksmith` instances
 
 
@@ -110,7 +113,8 @@ elves_concert(elves)
 # "Nardual is playing a song on the flute"
 # "Rothilion is playing a song on the trumpet"
 ```
-* `feast_of_the_dwarves` - it should take a list of `Dwarf` and call `eat_favourite_dish` method for each dwarf.
+* `feast_of_the_dwarves` - it should take a list of `Dwarf` and call `eat_favourite_dish` method for 
+each dwarf.
 ```python
 dwarves = [
     DwarfWarrior(nickname="Thiddeal", favourite_dish="French Fries", hummer_level=3),
