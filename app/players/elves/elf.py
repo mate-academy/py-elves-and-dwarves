@@ -5,14 +5,13 @@ class Elf(Player):
     def __init__(
         self,
         nickname: str,
-        musical_instrument: str | None = None,
+        musical_instrument: str,
     ) -> None:
         super().__init__(nickname)
         self._musical_instrument = musical_instrument
 
     def play_elf_song(self) -> None:
-        if self._musical_instrument:
-            print(
-                f"{self.nickname} is playing a song on the "
-                f"{self._musical_instrument}"
-            )
+        print(
+            f"{self.nickname} is playing a song on the "
+            f"{self._musical_instrument}"
+        )
