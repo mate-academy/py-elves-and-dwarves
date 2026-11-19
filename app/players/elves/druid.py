@@ -11,9 +11,6 @@ class Druid(Elf):
         super().__init__(nickname, musical_instrument)
         self._favourite_spell = favourite_spell
 
-    def play_elf_song(self) -> None:
-        super().play_elf_song()
-
     def player_info(self) -> str:
         return (
             f"Druid {self.nickname}. "
