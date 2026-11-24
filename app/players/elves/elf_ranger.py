@@ -11,7 +11,7 @@ class ElfRanger(Elf):
         super().__init__(nickname, musical_instrument)
         self._bow_level = bow_level
 
-    def player_info(self):
+    def player_info(self) -> None:
         return (f"Elf ranger {self.nickname}. {self.nickname} "
                 f"has bow of the {self._bow_level} level")
 
